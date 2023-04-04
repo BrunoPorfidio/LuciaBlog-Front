@@ -1,1 +1,348 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Simonetta;
+  scroll-behavior: smooth;
+  text-decoration: none !important;
+}
+
+body {
+  background-image: url(../src/assets/img/WallpaperLuci.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 16px;
+}
+
+/*---------------------- INICIO NAVBAR ----------------------*/
+
+.hero-navbar,
+.card-destacado,
+.footer {
+  color: #000;
+  width: 100%;
+  justify-content: space-evenly;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  max-width: 1200px;
+  height: 100%;
+  padding: 0px 1.25em;
+}
+
+nav {
+  height: 100%;
+}
+
+nav > ul {
+  height: 100%;
+  display: flex;
+}
+
+nav ul li {
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+nav > ul > li > a {
+  text-align: justify;
+  font-size: 1.6em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #000;
+  transition: all 300ms ease;
+}
+
+nav > ul > li {
+  padding: 0px 0px 0px 2.1875em;
+}
+
+nav > ul > li > a:hover {
+  transform: scale(1.3);
+}
+
+nav ul li ul {
+  width: 12.5em;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    rgba(217, 121, 168, 1) 0%,
+    rgba(128, 199, 255, 1) 100%
+  );
+  position: absolute;
+  top: 6.25em;
+  padding: 0.875em 0px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 100px;
+}
+
+nav ul li ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid rgb(80, 194, 255);
+  position: absolute;
+  top: -0.75em;
+  left: 1.25em;
+}
+
+nav ul li ul li a {
+  font-size: 1.1em;
+  display: block;
+  color: #000;
+  padding: 0.625em;
+  padding-left: 0.875em;
+  margin-top: 0.625em;
+  transition: all 200ms ease;
+}
+
+nav ul li ul li a:hover {
+  background: radial-gradient(
+    circle,
+    rgba(217, 121, 167, 0.705) 0%,
+    rgb(128, 200, 255) 100%
+  );
+  transform: scale(1.2);
+  padding-left: 1.875em;
+  font-size: 1.1em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.left-nav {
+  align-items: center;
+  display: flex;
+}
+
+.redes-icons {
+  color: #000;
+  font-size: 1.8em;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+/*---------------------- fIN NAVBAR ----------------------*/
+
+/*---------------------- INICIO ESTILOS GLOBALES ----------------------*/
+
+.buttons {
+  margin-top: 0.9375em;
+  text-decoration: none;
+  background-color: rgb(197, 197, 197);
+  border-radius: 10px;
+  padding: 0.6em 1.875em;
+}
+
+.titulo-navbar,
+.titulo-novedades,
+.titulo-txt,
+.titulo-sobremi {
+  font-size: 6em;
+  font-family: "AbibasMedium" !important;
+  justify-content: left;
+  padding: 0px 30px;
+}
+
+/*---------------------- FIN ESTILOS GLOBALES ----------------------*/
+
+/*---------------------- INICIO SOBRE MI ----------------------*/
+
+.sobremi-txt {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  width: 70%;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/*---------------------- FIN SOBRE MI ----------------------*/
+
+/*---------------------- INICIO SECCION DESTACADOS ----------------------*/
+
+.hero-destacado,
+.hero-novedades {
+  margin-top: 5%;
+}
+
+.card-destacado {
+  z-index: -1;
+  object-fit: none;
+  border-radius: 20px;
+}
+
+.card-img-top {
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-title-destacado {
+  font-size: 2em;
+}
+
+/*---------------------- FIN SECCION DESTACADOS ----------------------*/
+
+/*---------------------- INICIO MEDIA QUERIES ----------------------*/
+
+/*Escritorio*/
+
+@media screen and (max-width: 1360px) {
+  body {
+    font-size: 12px;
+  }
+
+  .buttons {
+    padding: 0.6em 1.575em;
+  }
+
+  .footer h2 {
+    font-size: 22px;
+  }
+
+  .menu {
+    padding: 0px 0px;
+  }
+}
+/*Fin Escritorio*/
+
+/*Tablet*/
+/*Portrait*/
+@media screen and (max-width: 1270px) {
+  body {
+    font-size: 10px;
+  }
+
+  .buttons {
+    padding: 0.6em 2.3em;
+  }
+
+  .footer h2 {
+    font-size: 20px;
+  }
+
+  .menu {
+    padding: 0px 0px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
+  body {
+    font-size: 7px;
+  }
+
+  .titulo-navbar {
+    font-size: 45px;
+  }
+
+  .buttons {
+    padding: 0.6em 2.3em;
+  }
+
+  .footer h2 {
+    font-size: 20px;
+  }
+
+  .menu {
+    padding: 0px 0px;
+  }
+}
+
+/*fin tablet*/
+
+/*movil*/
+/*Portrait*/
+/*Default*/
+@media (max-width: 575.98px) and (orientation: portrait) {
+  .titulo-navbar {
+    color: #fff;
+    font-size: 45px;
+    position: fixed;
+    padding-left: 130px;
+    width: 100%;
+  }
+
+  .buttons {
+    padding: 0.6em 2.3em;
+  }
+
+  nav > ul > li > a{
+    text-align: center;
+  }
+
+  nav ul li{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+nav > ul > li{
+  top: 90px;
+  padding: 0;
+  right: 15px;  
+}
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: fixed;
+    height: 300px;
+    width: 100%;
+    z-index: 100;
+    opacity: 1;
+  }
+
+  nav > ul > li > a:hover {
+    transform: scale(1);
+  }
+
+  .social-icons {
+    padding-left: 150px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    padding-top: 50px;
+  }
+
+  .redes-icons {
+    padding: 20px;
+  }
+
+  .sobremi-txt {
+    margin: 0;
+    width: 100%;
+  }
+}
+/*landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: landscape) {
+}
+/*fin movil*/
