@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ColaboracionesComponent } from './components/colaboraciones/colaboraciones.component';
-import { CuerpoComponent } from './components/cuerpo/cuerpo.component';
 import { DestacadosComponent } from './components/destacados/destacados.component';
 import { LuciblogComponent } from './components/luciblog/luciblog.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -13,7 +12,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/luciBlog', pathMatch: 'full' },
   { path: 'luciBlog', component: LuciblogComponent },
   { path: 'navbar', component: NavbarComponent },
-  { path: 'cuerpo', component: CuerpoComponent },
   { path: 'destacados', component: DestacadosComponent },
   { path: 'novedades', component: NovedadesComponent },
   { path: 'publicacion', component: PublicacionComponent },
