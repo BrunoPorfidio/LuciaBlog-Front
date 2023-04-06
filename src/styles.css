@@ -79,11 +79,7 @@ nav ul li ul {
   width: 12.5em;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(
-    circle,
-    rgba(217, 121, 168, 1) 0%,
-    rgba(128, 199, 255, 1) 100%
-  );
+  background-color:rgba(217, 121, 167, .7);
   position: absolute;
   top: 6.25em;
   padding: 0.875em 0px;
@@ -106,7 +102,7 @@ nav ul li ul::before {
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid rgb(80, 194, 255);
+  border-bottom: 12px solid rgba(217, 121, 167, .7);
   position: absolute;
   top: -0.75em;
   left: 1.25em;
@@ -213,13 +209,14 @@ nav ul li ul li a:hover {
 
 /*---------------------- FIN SECCION DESTACADOS ----------------------*/
 
+
 /*---------------------- INICIO MEDIA QUERIES ----------------------*/
 
 /*Escritorio*/
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1370px) {
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .buttons {
@@ -253,6 +250,15 @@ nav ul li ul li a:hover {
 
   .menu {
     padding: 0px 0px;
+  }
+
+  .titulo-navbar{
+    font-size: 35px;
+    padding-top: 10px;
+  }
+
+  nav  > ul{
+    font-size: 6px;
   }
 }
 
@@ -300,7 +306,12 @@ nav ul li ul li a:hover {
     text-align: center;
   }
 
-  nav ul li{
+  nav  > ul  > li{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vh;
+  }
+
+  nav ul li > div{
     background-color: rgba(0, 0, 0, 0.2);
   }
 
