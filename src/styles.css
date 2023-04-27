@@ -12,8 +12,7 @@
 body {
   background-image: url(../src/assets/img/WallpaperLuci.jpg);
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-size: 100vw 100vh;
   font-size: 16px;
 }
 
@@ -26,7 +25,7 @@ body {
   width: 100%;
   justify-content: space-evenly;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(164, 167, 212, 0.718);
   margin: auto;
 }
 
@@ -68,7 +67,7 @@ nav > ul > li > a {
 }
 
 nav > ul > li {
-  padding: 0px 0px 0px 2.1875em;
+  padding: 0px 0px 0px 3.1875em;
 }
 
 nav > ul > li > a:hover {
@@ -79,7 +78,7 @@ nav ul li ul {
   width: 12.5em;
   display: flex;
   flex-direction: column;
-  background-color:rgba(217, 121, 167, .7);
+  background-color: rgb(202, 204, 234);
   position: absolute;
   top: 6.25em;
   padding: 0.875em 0px;
@@ -102,7 +101,7 @@ nav ul li ul::before {
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid rgba(217, 121, 167, .7);
+  border-bottom: 12px solid rgb(202, 204, 234);
   position: absolute;
   top: -0.75em;
   left: 1.25em;
@@ -119,11 +118,7 @@ nav ul li ul li a {
 }
 
 nav ul li ul li a:hover {
-  background: radial-gradient(
-    circle,
-    rgba(217, 121, 167, 0.705) 0%,
-    rgb(128, 200, 255) 100%
-  );
+  background-color: rgb(202, 204, 234);
   transform: scale(1.2);
   padding-left: 1.875em;
   font-size: 1.1em;
@@ -146,34 +141,47 @@ nav ul li ul li a:hover {
   margin: auto;
 }
 
-/*---------------------- fIN NAVBAR ----------------------*/
+/*------------------------- fIN SECCION NAVBAR --------------------------*/
 
 /*---------------------- INICIO ESTILOS GLOBALES ----------------------*/
 
 .buttons {
   margin-top: 0.9375em;
   text-decoration: none;
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(202, 204, 234);
   border-radius: 10px;
   padding: 0.6em 1.875em;
 }
 
-.titulo-navbar,
-.titulo-novedades,
-.titulo-txt,
-.titulo-sobremi {
+.titulos {
   font-size: 6em;
-  font-family: "AbibasMedium" !important;
+  font-family: "AbibasMedium";
   justify-content: left;
-  padding: 0px 30px;
+  margin: 0px 25px 0px -15px;
 }
 
-/*---------------------- FIN ESTILOS GLOBALES ----------------------*/
+.subtitulos {
+  font-family: "AbibasMedium";
+  font-size: 4em;
+}
+
+.subtitulo-centrado {
+  margin: 20px;
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------------- FIN ESTILOS GLOBALES -------------------------*/
 
 /*---------------------- INICIO SOBRE MI ----------------------*/
 
 .sobremi-txt {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(164, 167, 212, 0.718);
   font-size: 1em;
   width: 70%;
   padding: 30px;
@@ -181,42 +189,269 @@ nav ul li ul li a:hover {
   border-radius: 10px;
 }
 
-/*---------------------- FIN SOBRE MI ----------------------*/
+/*------------------------- FIN SOBRE MI -------------------------*/
 
 /*---------------------- INICIO SECCION DESTACADOS ----------------------*/
-
 .hero-destacado,
-.hero-novedades {
-  margin-top: 5%;
+.hero-novedades,
+.hero-sobre-mi,
+.footer {
+  margin-top: 2%;
 }
 
 .card-destacado {
-  z-index: -1;
-  object-fit: none;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-destacado-lg {
+  object-fit: cover;
+}
+
+.card-img-top-lg {
+  height: 300px;
+  background-size: 100vw;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.card-img-top-lg:hover {
+  --escala: 1.1;
+  cursor: pointer;
 }
 
 .card-img-top {
   height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.card-img-top:hover {
+  --escala: 1.1;
+  cursor: pointer;
 }
 
 .card-title-destacado {
   font-size: 2em;
 }
 
-/*---------------------- FIN SECCION DESTACADOS ----------------------*/
+/*------------------------- FIN SECCION DESTACADOS -------------------------*/
 
+/*---------------------- INICIO SECCION RESEÑAS ----------------------*/
+
+.hero-publicaciones {
+  display: flex;
+}
+
+.publicaciones-row-main {
+  justify-content: center;
+}
+
+.imagen-publicacion {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.card-container {
+  margin: 20px 10px;
+  border: solid #000;
+  border-radius: 10px;
+  background-color: rgba(164, 167, 212, 0.718);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.card-container:hover {
+  --escala: 1.1;
+}
+
+.card-descrip {
+  font-size: 1.4em;
+}
+
+.btn-ir {
+  background-color: rgba(255, 255, 255, 0.647);
+  font-size: 1.3em;
+  width: 90%;
+  margin-bottom: 0.625em;
+}
+
+.btn-ir:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*------------------------- FIN SECCION RESEÑAS -------------------------*/
+
+/*------------------- INICIO SECCION COLABORACIONES -------------------*/
+
+.aviso-colaboracion {
+  display: flex;
+  padding-top: 2%;
+}
+
+.aviso-txt {
+  margin-left: 10em;
+  width: 70%;
+  font-size: 2em;
+  text-align: center;
+  border: solid #fff;
+  background-color: rgba(164, 167, 212, 0.718);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+/*------------------------- FIN SECCION COLABORACIONES -------------------------*/
+
+/*------------------- INICIO SECCION MODALES --------------------------*/
+
+.icon__sup,
+.icons,
+.btn-start,
+.submit__btn,
+.register__txt,
+.form__input__add,
+.icon__upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container{
+margin-left: 2em;
+}
+
+.col-11 > h2 {
+  text-align: center;
+  margin-left: 2em;
+}
+
+.btn-back{
+  font-size: 2.2em;
+  border-radius: 100%;
+  color: #fff;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  cursor: pointer;
+}
+
+.btn-back:hover,
+.bi-x-circle-fill:hover,
+.form__input__add:hover,
+.btn-send:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1) ;
+}
+
+.image-container {
+  max-width: 35em;
+  color: #fff;
+}
+
+.img-libro {
+  max-width: 35em;
+  margin: 200px 0 0 150px;
+}
+
+.form {
+  margin-top: 10%;
+  width: 100%;
+  background-color: rgba(164, 167, 212, 0.718);
+  border-radius: 50px;
+  padding: 1em 2em;
+  font-size: 1.25em;
+  color: #fff;
+}
+
+.logotipo__title {
+  margin-bottom: -1.375em;
+  margin-left: 30px;
+}
+
+.bi-plus-lg {
+  font-size: 2em;
+}
+
+.form__input__add {
+  margin: 25px 0px 0px 40px;
+  width: 4em;
+  height: 4em;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.img-btn {
+  display: none;
+}
+
+.img-btn + label {
+  display: flex;
+}
+
+.form__input {
+  width: 90%;
+  height: 2.5em;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.form__inputs__joined {
+  display: flex;
+}
+
+.form__input__name,
+.form__input__type {
+  width: 100%;
+  height: 2.5em;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.form__input__textarea {
+  font-size: 1.3em;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.icons__btn,
+.icons__btn__upload {
+  cursor: pointer;
+  display: flex;
+  background-color: #fff;
+  width: 9.625em;
+  height: 4.0625em;
+  border-radius: 10px;
+}
+
+.icons__btn__upload {
+  width: 15.625em;
+}
+
+.bi-upload {
+  margin: auto;
+}
+
+.btn-send {
+  font-size: 1em;
+  width: 12.5em;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  padding: 0.625em 0.625em;
+  cursor: pointer;
+}
+
+/*------------------------- FIN SECCION MODALES -------------------------*/
 
 /*---------------------- INICIO MEDIA QUERIES ----------------------*/
 
 /*Escritorio*/
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1360px) {
   body {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .buttons {
@@ -250,15 +485,6 @@ nav ul li ul li a:hover {
 
   .menu {
     padding: 0px 0px;
-  }
-
-  .titulo-navbar{
-    font-size: 35px;
-    padding-top: 10px;
-  }
-
-  nav  > ul{
-    font-size: 6px;
   }
 }
 
@@ -302,24 +528,19 @@ nav ul li ul li a:hover {
     padding: 0.6em 2.3em;
   }
 
-  nav > ul > li > a{
+  nav > ul > li > a {
     text-align: center;
   }
 
-  nav  > ul  > li{
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100vh;
-  }
-
-  nav ul li > div{
+  nav ul li {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
-nav > ul > li{
-  top: 90px;
-  padding: 0;
-  right: 15px;  
-}
+  nav > ul > li {
+    top: 90px;
+    padding: 0;
+    right: 15px;
+  }
 
   nav > ul {
     display: flex;
