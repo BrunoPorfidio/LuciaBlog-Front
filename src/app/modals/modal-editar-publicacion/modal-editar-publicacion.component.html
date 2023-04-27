@@ -1,0 +1,101 @@
+<ng-container>
+    <section class="container-fluid form-section">
+        <div class="row">
+            <div class="col-6">
+                <div class="image-container">
+                    <input (change)="capturarImagen($event)" type="file" class="img-btn" id="image-libro" accept="image/png, image/jpeg">
+                    <div class="foto-container" *ngIf="previsualizacion">
+                        <img class="img-libro" [src]="previsualizacion" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form">
+                    <div class="form__body">
+                        <form>
+                            <input type="hidden" name="id" formControlName="id" />
+                            <div class="row row-header">
+                                <div class="col-11">
+                                    <h2>EDITAR RESEÑA</h2>
+                                </div>
+                                <div class="col-1">
+                                    <i class="bi bi-x btn-back" routerLink="/luciBlog"></i>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row form__inputs__joined">
+                                <div class="col-4">
+                                    <div class="icon-container">
+                                        <p class="logotipo__title">FOTO LIBRO *</p>
+                                        <label for="image-libro">
+                                            <span class="container form__input__add img-btn___buscar">
+                                                <i class="bi bi-plus-lg"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <label for="titulo">NOMBRE DEL LIBRO *</label>
+                                    <br>
+                                    <input class="form__input__name" type="text" name="titulo" formControlName="titulo"
+                                        placeholder="Ej: Nacidos de la Bruma">
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <label for="autor">AUTOR *</label>
+                                    <br>
+                                    <input class="form__input__type" type="text" name="autor" formControlName="autor"
+                                        placeholder="Ej: Brandon Sanderson">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row form__inputs__joined">
+                                <div class="col-4">
+                                    <label for="anoPublicacion">AÑO DE PUBLICACION *</label>
+                                    <br>
+                                    <input class="form__input__name" type="text" name="anoPublicacion"
+                                        formControlName="anoPublicacion" placeholder="Ej: 2007">
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <label for="genero">GENERO *</label>
+                                    <br>
+                                    <input class="form__input__type" type="text" name="genero" formControlName="genero"
+                                        placeholder="Ej: Fantasia Epica">
+                                </div>
+                                <div class="col-4">
+                                    <label for="numPaginas">NUMERO DE PAGINAS *</label>
+                                    <br>
+                                    <input class="form__input__type" type="text" name="numPaginas" formControlName="numPaginas"
+                                         placeholder="Ej: 784">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="nameProyect">SINOPSIS *</label>
+                                    <br>
+                                    <textarea name="acercaMi" formControlName="acercaMi" formControlName="sinopsis"
+                                        placeholder="Ingrese la Sinopsis" class="form__input__textarea"></textarea>
+                                    <br>
+                                </div>
+                                <div class="col-6">
+                                    <label for="nameProyect">RESEÑA *</label>
+                                    <br>
+                                    <textarea name="acercaMi"  placeholder="Ingrese la Reseña" formControlName="reseña"
+                                        class="form__input__textarea"></textarea>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="submit__btn">
+                                <button class="btn btn-send" type="submit">Publicar Reseña</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-container>
