@@ -1,10 +1,9 @@
-export class Publicacion{
-
-    idPublicacion?: number;
+export class Colaboraciones{
+    idColaboraciones?: number;
 
     titulo: String;
 
-    fotoLibro: String;
+    fotoLibro: File;
 
     autor: String;
 
@@ -19,10 +18,11 @@ export class Publicacion{
     resenia: String;
 
     constructor(
+
         titulo: String,
 
-        fotoLibro: String,
-        
+        fotoLibro: File,
+
         autor: String,
 
         anoPublicacion: number,
@@ -34,16 +34,14 @@ export class Publicacion{
         sinopsis: String,
 
         resenia: String
-
-        ){
-
+    ){
         this.titulo = titulo;
 
         this.fotoLibro = fotoLibro;
 
         this.autor = autor;
 
-        this.anoPublicacion = anoPublicacion;
+        anoPublicacion = anoPublicacion;
 
         this.genero = genero;
 
@@ -53,4 +51,5 @@ export class Publicacion{
 
         this.resenia = resenia;
     }
+
 }

@@ -14,6 +14,10 @@ import { ReflexionesComponent } from './components/reflexiones/reflexiones.compo
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { ColaboracionesComponent } from './components/colaboraciones/colaboraciones.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { PublicacionesComponent } from './components/publicaciones/publicaciones.component';
+import { ModalNuevoPublicacionComponent } from './modals/modal-nuevo-publicacion/modal-nuevo-publicacion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalEditarPublicacionComponent } from './modals/modal-editar-publicacion/modal-editar-publicacion.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,17 @@ import { FilterPipe } from './pipes/filter.pipe';
     ReflexionesComponent,
     SobreMiComponent,
     ColaboracionesComponent,
-    FilterPipe
+    FilterPipe,
+    PublicacionesComponent,
+    ModalNuevoPublicacionComponent,
+    ModalEditarPublicacionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
