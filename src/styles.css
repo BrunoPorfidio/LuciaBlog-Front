@@ -449,7 +449,7 @@ margin-left: 2em;
 
 /*Escritorio*/
 
-@media screen and (max-width: 1360px) {
+@media (min-width: 1270px) and (max-width: 1366px) {
   body {
     font-size: 12px;
   }
@@ -465,6 +465,9 @@ margin-left: 2em;
   .menu {
     padding: 0px 0px;
   }
+
+
+
 }
 /*Fin Escritorio*/
 
@@ -486,6 +489,8 @@ margin-left: 2em;
   .menu {
     padding: 0px 0px;
   }
+
+
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
