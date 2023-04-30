@@ -5,7 +5,7 @@
                 <div class="image-container">
                     <input 
                     class="img-btn"
-                    
+                    (change)="capturarImagen($event)"
                     (onFileChanged)="obtener($event)"
                     type="file" 
                     id="image-libro" 
