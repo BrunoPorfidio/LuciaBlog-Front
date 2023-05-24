@@ -1,0 +1,6 @@
+.section-login{
+    display: grid;
+    place-content: center;
+    place-items: center;
+    margin-top: 30vh;
+}
