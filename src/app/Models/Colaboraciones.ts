@@ -1,17 +1,20 @@
 export class Colaboraciones{
+    
     idColaboraciones?: number;
 
     titulo: String;
 
-    fotoLibro: File;
+    fotoLibro: string;
 
     autor: String;
 
-    anoPublicacion: number;
+    anoPublicacion: Number;
+
+    editorial: String;
 
     genero: String;
 
-    numPaginas: number;
+    numPaginas: Number;
 
     sinopsis: String;
 
@@ -21,11 +24,13 @@ export class Colaboraciones{
 
         titulo: String,
 
-        fotoLibro: File,
+        fotoLibro: string,
 
         autor: String,
 
         anoPublicacion: number,
+
+        editorial: String,
 
         genero: String,
 
@@ -41,7 +46,9 @@ export class Colaboraciones{
 
         this.autor = autor;
 
-        anoPublicacion = anoPublicacion;
+        this.anoPublicacion = anoPublicacion;
+
+        this.editorial = editorial;
 
         this.genero = genero;
 

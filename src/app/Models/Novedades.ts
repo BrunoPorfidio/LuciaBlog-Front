@@ -4,22 +4,24 @@ export class Novedades{
 
     tituloNovedad: String;
 
+    fotoLibro: string;
+
     descripcionNovedad: String;
 
-    urlNovedad: String;
 
     constructor(
 
         tituloNovedad: String,
 
+        fotoLibro: string,
+
         descripcionNovedad: String,
     
-        urlNovedad: String
     ){
         this.tituloNovedad = tituloNovedad;
 
-        this.descripcionNovedad = descripcionNovedad;
+        this.fotoLibro = fotoLibro;
 
-        this.urlNovedad = urlNovedad
+        this.descripcionNovedad = descripcionNovedad;
     }
 }
