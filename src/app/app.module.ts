@@ -18,6 +18,17 @@ import { PublicacionesComponent } from './components/publicaciones/publicaciones
 import { ModalNuevoPublicacionComponent } from './modals/modal-nuevo-publicacion/modal-nuevo-publicacion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalEditarPublicacionComponent } from './modals/modal-editar-publicacion/modal-editar-publicacion.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { LoginComponent } from './components/login/login.component';
+import { interceptorPorvider } from './Services/interceptor.service';
+import { OrderByPipe } from './pipes/order-by.pipe';
+import { ModalNuevoNovedadComponent } from './modals/modal-nuevo-novedad/modal-nuevo-novedad.component';
+import { ModalEditarNovedadComponent } from './modals/modal-editar-novedad/modal-editar-novedad.component';
+import { NovedadComponent } from './components/novedad/novedad.component';
+import { ModalNuevoColaboracionComponent } from './modals/modal-nuevo-colaboracion/modal-nuevo-colaboracion.component';
+import { ModalEditarColaboracionComponent } from './modals/modal-editar-colaboracion/modal-editar-colaboracion.component';
+import { ColaboracionComponent } from './components/colaboracion/colaboracion.component';
+import { ReflexionComponent } from './components/reflexion/reflexion.component';
 
 @NgModule({
   declarations: [
@@ -35,15 +46,25 @@ import { ModalEditarPublicacionComponent } from './modals/modal-editar-publicaci
     PublicacionesComponent,
     ModalNuevoPublicacionComponent,
     ModalEditarPublicacionComponent,
+    LoginComponent,
+    OrderByPipe,
+    ModalNuevoNovedadComponent,
+    ModalEditarNovedadComponent,
+    NovedadComponent,
+    ModalNuevoColaboracionComponent,
+    ModalEditarColaboracionComponent,
+    ColaboracionComponent,
+    ReflexionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module
   ],
-  providers: [],
+  providers: [interceptorPorvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
