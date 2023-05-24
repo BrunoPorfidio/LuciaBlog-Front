@@ -22,6 +22,10 @@ export class PublicacionService {
     return this.http.get<Publicacion[]>(this.ApiPublicacion + 'ver');
   }
 
+  public verUltimo(){
+    return this.http.get<Publicacion>(this.ApiPublicacion + 'ultimo');
+  }
+
   public buscarPublicacion(id: number){
     return this.http.get<Publicacion>(`${this.ApiPublicacion}${id}`);
   }
