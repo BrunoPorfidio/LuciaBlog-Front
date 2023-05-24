@@ -3,6 +3,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Publicacion } from 'src/app/Models/Publicacion';
 import { PublicacionService } from 'src/app/Services/publicacion.service';
+import { TokenService } from 'src/app/Services/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-nuevo-publicacion',
@@ -10,63 +12,75 @@ import { PublicacionService } from 'src/app/Services/publicacion.service';
   styleUrls: ['./modal-nuevo-publicacion.component.css'],
 })
 export class ModalNuevoPublicacionComponent implements OnInit {
-  titulo: String;
-
-  fotoLibro: String;
-
-  autor: String;
-
-  anoPublicacion: number;
-
-  genero: String;
-
-  numPaginas: number;
-
-  sinopsis: String;
-
-  resenia: String;
+  publicacion: Publicacion = new Publicacion('', '', '', 0, '', '', 0, '', '');
 
   public imagenes: any = [];
   public previsualizacion: string;
 
+  roles: string[];
+  isAdmin = false;
+
   constructor(
     private publicacionService: PublicacionService,
     private sanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private tokenService: TokenService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach((rol)=> {
+      if (rol === 'ROLE_ADMIN'){
+        this.isAdmin = true;
+      }
+    })
+
+  }
 
   publicar(): void {
-    const publicacion = new Publicacion(
-      this.titulo,
-      this.fotoLibro,
-      this.autor,
-      this.anoPublicacion,
-      this.genero,
-      this.numPaginas,
-      this.sinopsis,
-      this.resenia
-    );
-    this.publicacionService.crearPublicacion(publicacion).subscribe(
+    const formData = {
+      titulo: this.publicacion.titulo,
+
+      fotoLibro: this.previsualizacion,
+
+      autor: this.publicacion.autor,
+
+      anoPublicacion: this.publicacion.anoPublicacion,
+
+      editorial: this.publicacion.editorial,
+
+      genero: this.publicacion.genero,
+
+      numPaginas: this.publicacion.numPaginas,
+
+      sinopsis: this.publicacion.sinopsis,
+
+      resenia: this.publicacion.resenia,
+    };
+    this.publicacionService.crearPublicacion(formData).subscribe(
       (data) => {
+        Swal.fire(
+          'Reseña Publicada!',
+          'Se ha publicado con exito',
+          'success'
+        )
         this.router.navigate(['/publicaciones']);
       },
       (err) => {
-        alert('Error al Crear la Reseña');
+        Swal.fire(
+          'ERROR!',
+          'Ah ocurrido un error al publicar la Reseña',
+          'error'
+        )
       }
     );
-  }
-
-  obtener(e: any) {
-    this.fotoLibro = e[0].base64;
   }
 
   capturarImagen(event: any) {
     const imagenCapturada = event.target.files[0];
     this.extraerBase64(imagenCapturada).then((imagen: any) => {
       this.previsualizacion = imagen.base;
-      console.log(imagenCapturada);
     });
   }
 
