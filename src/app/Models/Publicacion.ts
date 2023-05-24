@@ -4,11 +4,13 @@ export class Publicacion{
 
     titulo: String;
 
-    fotoLibro: String;
+    fotoLibro: string;
 
     autor: String;
 
     anoPublicacion: number;
+
+    editorial: String;
 
     genero: String;
 
@@ -19,13 +21,16 @@ export class Publicacion{
     resenia: String;
 
     constructor(
+        
         titulo: String,
 
-        fotoLibro: String,
+        fotoLibro: string,
         
         autor: String,
 
         anoPublicacion: number,
+
+        editorial: String,
 
         genero: String,
 
@@ -44,6 +49,8 @@ export class Publicacion{
         this.autor = autor;
 
         this.anoPublicacion = anoPublicacion;
+
+        this.editorial = editorial;
 
         this.genero = genero;
 
