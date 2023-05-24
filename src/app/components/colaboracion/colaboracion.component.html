@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="hero-publicacion" *ngIf="colaboracion" [id]="colaboracion.idColaboraciones">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="titulo-txt">{{colaboracion.titulo}}</p>
+                    <p class="subtitulo-txt">Por: <b>LuciBooksLu</b></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <img src="{{colaboracion.fotoLibro}}" alt="" style="width: 32em;">
+            </div>
+            <div class="col-6 publicacion-info">
+                <p>Autor: {{colaboracion.autor}}</p>
+                <p>Año Publicacion: {{colaboracion.anoPublicacion}}</p>
+                <p>Editorial: {{colaboracion.editorial}}</p>
+                <p>Genero: {{colaboracion.genero}}</p>
+                <p>Num. Paginas: {{colaboracion.numPaginas}}</p>
+                <br>
+                <br>
+                <br>
+                <div class="btn-admin" *ngIf="isAdmin">
+                    <i class="bi bi-pen btn-edit" routerLink="/editar-colaboracion/{{colaboracion.idColaboraciones}}"></i>
+                    <i class="bi bi-trash btn-delete" (click)="borrar(colaboracion.idColaboraciones)"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container mt-5">
+        <div class="contenido">
+            <h2>Sinopsis</h2>
+            <p class="long-text">{{this.colaboracion.sinopsis}} </p>
+            <hr>
+            <h2 class="mt-5">Reseña</h2>
+            <p class="long-text">{{this.colaboracion.resenia}}</p>
+        </div>
+    </div>
+</div>
