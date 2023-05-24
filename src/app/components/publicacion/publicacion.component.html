@@ -1,10 +1,12 @@
 <app-navbar></app-navbar>
-<div class="hero-publicacion" style="margin-top: 3em">
+<div class="hero-publicacion" style="margin-top: 3em" *ngIf="publicacion" [id]="publicacion.idPublicacion">
     <div class="container">
         <div class="container">
             <div class="row">
-                <div class="col"><h1 class="titulo-txt">Titulo</h1>
-                    <h2 class="subtitulo-txt">Por: <b style="font-size: 1em;">LuciBooksLu</b></h2></div>
+                <div class="col">
+                    <h1 class="titulo-txt">{{publicacion.titulo}}</h1>
+                    <h2 class="subtitulo-txt">Por: <b>LuciBooksLu</b></h2>
+                </div>
             </div>
 
         </div>
@@ -12,31 +14,32 @@
     <div class="container">
         <div class="row">
             <div class="col-5">
-                <img src="../../../assets/img/281847268_435495748386587_4187174966247722617_n.jfif" alt="" style="width: 32em;">
+                <img src="{{publicacion.fotoLibro}}" alt="" style="width: 32em;">
             </div>
-            <div class="col-6">
-                <p  style="font-size: 2em;">Autor: Colaloca</p>
-                <p style="font-size: 2em;">Año Publicacion: 2786</p>
-                <p style="font-size: 2em;">Editorial: Culo Sucio</p>
-                <p style="font-size: 2em;">Genero: ?</p>
-                <p style="font-size: 2em;">Num. Paginas: 9999</p>
+            <div class="col-6 publicacion-info">
+                <p>Autor: {{publicacion.autor}}</p>
+                <p>Año Publicacion: {{publicacion.anoPublicacion}}</p>
+                <p>Editorial: {{publicacion.editorial}}</p>
+                <p>Genero: {{publicacion.genero}}</p>
+                <p>Num. Paginas: {{publicacion.numPaginas}}</p>
+                <br>
+                <br>
+                <br>
+                <div class="btn-admin" *ngIf="isAdmin">
+                    <i class="bi bi-pen btn-edit" routerLink="/editar-publicacion/{{publicacion.idPublicacion}}"></i>
+                    <i class="bi bi-trash btn-delete" (click)="borrar(publicacion.idPublicacion)"></i>
+                </div>
             </div>
         </div>
-        
+        <hr>
     </div>
-    <div class="container" style="margin-top: 50px;">
+    <div class="container mt-5">
         <div class="contenido">
-            <h2 style="font-size: 4em;">Sinopsis</h2>
-            <p style="font-size: 2em; width: 85%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui at nulla facilis tempore eos laborum
-                sunt minus delectus dolores? Enim quidem eligendi expedita adipisci quibusdam rerum voluptates cum iure!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui at nulla facilis tempore eos laborum
-                sunt minus delectus dolores? Enim quidem eligendi expedita adipisci quibusdam rerum voluptates cum iure!
-            </p>
-            <h2 style="font-size: 4em; margin-top: 25px;">Reseña</h2>
-            <p style="font-size: 2em; width: 85%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui at nulla facilis tempore eos laborum
-                sunt minus delectus dolores? Enim quidem eligendi expedita adipisci quibusdam rerum voluptates cum iure!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui at nulla facilis tempore eos laborum
-                sunt minus delectus dolores? Enim quidem eligendi expedita adipisci quibusdam rerum voluptates cum iure!</p>
+            <h2>Sinopsis</h2>
+            <p class="long-text">{{this.publicacion.sinopsis}} </p>
+            <hr>
+            <h2 class="mt-5">Reseña</h2>
+            <p class="long-text">{{this.publicacion.resenia}}</p>
         </div>
     </div>
 </div>

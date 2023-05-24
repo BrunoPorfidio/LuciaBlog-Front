@@ -1,7 +1,9 @@
-import { Component, OnInit, SecurityContext } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Publicacion } from 'src/app/Models/Publicacion'; 
 import { PublicacionService } from 'src/app/Services/publicacion.service';
+import { TokenService } from 'src/app/Services/token.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -13,36 +15,24 @@ export class PublicacionesComponent implements OnInit {
 
   public publicacion: Publicacion[] = [];
 
-  public publicacionimg: any;
-
-  base: string="";
+  roles: string[];
+  isAdmin = false;
 
   constructor(
     private publicacionService: PublicacionService,
-    private sanitizer: DomSanitizer) {}
+    private tokenService: TokenService,
+    private router: Router) {}
     
-
 
   ngOnInit(): void {
     this.mostrarPublicaciones();
-  }
 
-
-  handleFileInput(files: FileList) {
-    var reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-    reader.onload = () => {
-      if (reader.result) {
-      this.publicacionimg = reader.result.toString();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach((rol)=> {
+      if (rol === 'ROLE_ADMIN'){
+        this.isAdmin = true;
       }
-    };
-  this.publicacionimg = this.sanitizer.bypassSecurityTrustUrl('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUXFxgXGBgVGBgWGBgYGBgXGBYXGBgYHSggGBolGxYVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH...');
-
-  }
-
-
-  obtener(e:any){
-    this.base=e[0].base64;
+    })
   }
 
   private mostrarPublicaciones() {
@@ -51,7 +41,12 @@ export class PublicacionesComponent implements OnInit {
         this.publicacion = data;
       },
       (err) => {
-        console.log(err);
+        Swal.fire(
+          'ERROR!',
+          'Error al cargar los Datos',
+          'error'
+        )
+        this.router.navigate(['/publicaciones']);
       }
     );
   }

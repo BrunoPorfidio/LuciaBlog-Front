@@ -2,14 +2,15 @@
 <div class="hero-publicaciones">
     <div class="container-fluid">
         <h1 class="subtitulos subtitulo-centrado">RESEÑAS</h1>
+        <div class="btn__add" *ngIf="isAdmin">
+            <i class="bi bi-journal-plus btn-add" routerLink="/nueva-publicacion"></i>
+        </div>
         <div class="row publicaciones-row-main">
-            <div class="col-5" *ngFor="let publicaciones of publicacion">
-                <div class="row card-container" >
+            <div class="col-5" *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion'" [id]="publicaciones.idPublicacion">
+                <div class="row card-container">
                     <div class="col-4">
                         <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                [src]="publicacionimg"
-                                alt="" srcset="">
+                            <img class="imagen-publicacion" src="{{publicaciones.fotoLibro}}" alt="" srcset="">
                         </div>
                     </div>
                     <div class="col-8">
@@ -18,119 +19,10 @@
                             <h3>{{publicaciones.autor}}</h3>
                             <p class="card-descrip">{{publicaciones.sinopsis}}</p>
                         </div>
-                        <button class="btn-ir">Seguir leyendo</button>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="col-5">
-                <div class="row card-container">
-                    <div class="col-4">
-                        <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                src="../../../assets/img/lucibookslu_313348579_172849815413332_8806256741260612902_n.jpg"
-                                alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="seccion-cuerpo">
-                            <h2>Percy Jackson</h2>
-                            <h3>Autor/a: Rick Riordan</h3>
-                            <p class="card-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ex
-                                quos neque modi cupiditate ipsam consequuntur aliquid nesciunt suscipit sequi non,
-                                fugiat aperiam laboriosam iste dicta ullam aliquam?</p>
-                        </div>
-                        <button class="btn-ir">Seguir leyendo</button>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-        <!-- <div class="row publicaciones-row-main">
-            <div class="col-5">
-                <div class="row card-container">
-                    <div class="col-4">
-                        <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                src="../../../assets/img/lucibookslu_313348579_172849815413332_8806256741260612902_n.jpg"
-                                alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="seccion-cuerpo">
-                            <h2>Percy Jackson</h2>
-                            <h3>Autor/a: Rick Riordan</h3>
-                            <p class="card-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ex
-                                quos neque modi cupiditate ipsam consequuntur aliquid nesciunt suscipit sequi non,
-                                fugiat aperiam laboriosam iste dicta ullam aliquam?</p>
-                        </div>
-                        <button class="btn-ir">Seguir leyendo</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-5">
-                <div class="row card-container">
-                    <div class="col-4">
-                        <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                src="../../../assets/img/lucibookslu_313348579_172849815413332_8806256741260612902_n.jpg"
-                                alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="seccion-cuerpo">
-                            <h2>Percy Jackson</h2>
-                            <h3>Autor/a: Rick Riordan</h3>
-                            <p class="card-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ex
-                                quos neque modi cupiditate ipsam consequuntur aliquid nesciunt suscipit sequi non,
-                                fugiat aperiam laboriosam iste dicta ullam aliquam?</p>
-                        </div>
-                        <button class="btn-ir">Seguir leyendo</button>
+                        <button class="btn-ir" routerLink="/publicacion/{{publicaciones.idPublicacion}}">Seguir
+                            leyendo</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row publicaciones-row-main">
-            <div class="col-5">
-                <div class="row card-container">
-                    <div class="col-4">
-                        <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                src="../../../assets/img/lucibookslu_313348579_172849815413332_8806256741260612902_n.jpg"
-                                alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="seccion-cuerpo">
-                            <h2>Percy Jackson</h2>
-                            <h3>Autor/a: Rick Riordan</h3>
-                            <p class="card-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ex
-                                quos neque modi cupiditate ipsam consequuntur aliquid nesciunt suscipit sequi non,
-                                fugiat aperiam laboriosam iste dicta ullam aliquam?</p>
-                        </div>
-                        <button class="btn-ir">Seguir leyendo</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-5">
-                <div class="row card-container">
-                    <div class="col-4">
-                        <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                src="../../../assets/img/lucibookslu_313348579_172849815413332_8806256741260612902_n.jpg"
-                                alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="seccion-cuerpo">
-                            <h2>Percy Jackson</h2>
-                            <h3>Autor/a: Rick Riordan</h3>
-                            <p class="card-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ex
-                                quos neque modi cupiditate ipsam consequuntur aliquid nesciunt suscipit sequi non,
-                                fugiat aperiam laboriosam iste dicta ullam aliquam?</p>
-                        </div>
-                        <button class="btn-ir">Seguir leyendo</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
-</div>
