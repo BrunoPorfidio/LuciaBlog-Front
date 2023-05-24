@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class ColaboracionesService {
-  private ApiColaboraciones = `${environments.Api}/Colaboracion/`;
+  private ApiColaboraciones = `${environments.Api}/colaboracion/`;
 
   constructor(private http: HttpClient) {}
 
@@ -34,7 +34,7 @@ export class ColaboracionesService {
     return this.http.put<any>(`${this.ApiColaboraciones}editar/${id}`, colaboraciones, httpOptions);
   }
   
-  public borrarColaboracion(colaboraciones: Colaboraciones) {
-    return this.http.delete<Colaboraciones>(`${this.ApiColaboraciones}borrar/`+ colaboraciones.idColaboraciones);
+  public borrarColaboracion(id: number): Observable<any> {
+    return this.http.delete<Colaboraciones>(`${this.ApiColaboraciones}borrar/${id}`, httpOptions);
   }
 }

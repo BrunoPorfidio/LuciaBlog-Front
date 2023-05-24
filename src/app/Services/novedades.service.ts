@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class NovedadesService {
-  private ApiNovedades = `${environments.Api}/Novedades/`;
+  private ApiNovedades = `${environments.Api}/novedades/`;
 
   constructor(private http: HttpClient) {}
 
@@ -26,15 +26,15 @@ export class NovedadesService {
     return this.http.get<Novedades>(`${this.ApiNovedades}${id}`);
   }
 
-  public crearNovedades(novedades: Novedades){
+  public crearNovedad(novedades: Novedades){
     return this.http.post<Novedades>(`${this.ApiNovedades}nuevo`, novedades, httpOptions);
   }
   
-  public editarNovedades(id: number, novedades: Novedades):Observable<any> {
+  public editarNovedad(id: number, novedades: Novedades):Observable<any> {
     return this.http.put<any>(`${this.ApiNovedades}editar/${id}`, novedades, httpOptions);
   }
   
-  public borrarNovedades(id: number): Observable<any> {
+  public borrarNovedad(id: number): Observable<any> {
     return this.http.delete<Novedades>(`${this.ApiNovedades}borrar/${id}`, httpOptions);
   }
 }
