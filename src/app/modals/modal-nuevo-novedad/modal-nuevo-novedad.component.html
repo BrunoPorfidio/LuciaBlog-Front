@@ -1,0 +1,80 @@
+<ng-container>
+    <section class="container-fluid form-section">
+        <div class="row">
+            <div class="col-6">
+                <div class="image-container">
+                    <input 
+                    [(ngModel)]="novedades.fotoLibro"
+                    class="img-btn mb-5"
+                    name="image-libro"
+                    (change)="capturarImagen($event)"
+                    type="file" 
+                    alife-file-to-base64  
+                    id="image-libro" 
+                    accept="image/png, image/jpeg" 
+                    >
+                    <div class="foto-container" *ngIf="previsualizacion">
+                        <img class="img-libro" [src]="previsualizacion" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form">
+                    <div class="form__body">
+                        <form (ngSubmit)="publicar()" novalidate #f="ngForm">
+                            <div class="row row-header">
+                                <div class="col-11">
+                                    <h2>PUBLICAR NOVEDAD</h2>
+                                </div>
+                                <div class="col-1">
+                                    <i class="bi bi-x btn-desing" routerLink="/publicaciones"></i>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row form__inputs__joined">
+                                <div class="col-6">
+                                    <div class="icon-container-novedades">
+                                        <p class="logotipo__title">FOTO NOVEDAD *</p>
+                                        <label for="image-libro">
+                                            <span class="container form__input__add form__input__add-novedades img-btn___buscar">
+                                                <i class="bi bi-plus-lg"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="tituloNovedad">NOMBRE DE LA NOVEDAD *</label>
+                                    <br>
+                                    <input 
+                                    class="form__input__name form__input__name_novedad" 
+                                    type="text" name="tituloNovedad"
+                                    placeholder="Ej: Libro del Dia" 
+                                    [(ngModel)]="novedades.tituloNovedad" required>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="descripcionNovedad">Descripcion de Novedad *</label>
+                                    <br>
+                                    <textarea 
+                                    class="form__input__textarea" 
+                                    name="descripcionNovedad"
+                                    placeholder="Ingrese la Descripcion" 
+                                    [(ngModel)]="novedades.descripcionNovedad" required></textarea>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="submit__btn">
+                                <button class="btn btn-send" type="submit">Publicar Novedad</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-container>
