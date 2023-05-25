@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="hero-publicacion" style="margin-top: 3em" *ngIf="novedades" [id]="novedades.idNovedad">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="titulo-txt">{{novedades.tituloNovedad}}</h1>
+                    <h2 class="subtitulo-txt">Por: <b>LuciBooksLu</b></h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <img src="{{novedades.fotoLibro}}" alt="" style="width: 32em;">
+            </div>
+            <div class="col-6 publicacion-info">
+                <!-- <p>Autor: </p>
+                <p>Año Publicacion: </p>
+                <p>Editorial: </p>
+                <p>Genero: </p>
+                <p>Num. Paginas: </p>
+                <br>
+                <br>
+                <br> -->
+                <div class="btn-admin" *ngIf="isAdmin">
+                    <i class="bi bi-pen btn-edit" routerLink="/editar-novedad/{{novedades.idNovedad}}"></i>
+                    <i class="bi bi-trash btn-delete" (click)="borrar(novedades.idNovedad)"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container mt-5">
+        <div class="contenido">
+            <h2>Sinopsis</h2>
+            <p class="long-text">{{novedades.descripcionNovedad}} </p>
+            <hr>
+            <!-- <h2 class="mt-5">Reseña</h2>
+            <p class="long-text"></p> -->
+        </div>
+    </div>
+</div>
