@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="hero-publicacion" style="margin-top: 3em" *ngIf="reflexion" [id]="reflexion.idReflexion">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="titulo-txt">{{reflexion.titulo}}</h1>
+                    <h2 class="subtitulo-txt">Por: <b>LuciBooksLu</b></h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <img src="{{reflexion.fotoReflexion}}" alt="" style="width: 32em;">
+            </div>
+            <div class="col-6 publicacion-info">
+                <p> {{reflexion.subtitulo}}</p>
+                <br>
+                <br>
+                <br>
+                <div class="btn-admin" *ngIf="isAdmin">
+                    <i class="bi bi-pen btn-edit" routerLink="/editar-publicacion/{{reflexion.idReflexion}}"></i>
+                    <i class="bi bi-trash btn-delete" (click)="borrar(reflexion.idReflexion)"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container mt-5">
+        <div class="contenido">
+            <h2 class="mt-5">Contenido</h2>
+            <p class="long-text">{{this.reflexion.cuerpoReflexion}}</p>
+        </div>
+    </div>
+</div>
