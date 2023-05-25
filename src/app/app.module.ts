@@ -29,6 +29,8 @@ import { ModalNuevoColaboracionComponent } from './modals/modal-nuevo-colaboraci
 import { ModalEditarColaboracionComponent } from './modals/modal-editar-colaboracion/modal-editar-colaboracion.component';
 import { ColaboracionComponent } from './components/colaboracion/colaboracion.component';
 import { ReflexionComponent } from './components/reflexion/reflexion.component';
+import { ModalNuevoReflexionComponent } from './modals/modal-nuevo-reflexion/modal-nuevo-reflexion.component';
+import { ModalEditarReflexionComponent } from './modals/modal-editar-reflexion/modal-editar-reflexion.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { ReflexionComponent } from './components/reflexion/reflexion.component';
     ModalEditarColaboracionComponent,
     ColaboracionComponent,
     ReflexionComponent,
+    ModalNuevoReflexionComponent,
+    ModalEditarReflexionComponent,
   ],
   imports: [
     BrowserModule,
