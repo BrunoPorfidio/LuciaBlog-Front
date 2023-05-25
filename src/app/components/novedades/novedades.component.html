@@ -1,73 +1,30 @@
-<div class="hero-novedades"> 
+<div class="hero-novedades">
   <div class="container-fluid">
-    <h1 class="subtitulos mb-5" style="font-size: 4em; margin: 20px;">Novedades</h1>
+    <div class="row">
+      <div class="col-2">
+        <h1 class="subtitulos mb-5" >Novedades</h1>
+
+      </div>
+      <div class="col-1">
+        <div class="btn__add" *ngIf="isAdmin">
+          <i class="bi bi-journal-plus btn-add btn-novedades" routerLink="/nueva-novedad"></i>
+      </div>
+
+      </div>
+    </div>
   </div>
 
-  <div class="container-fluid" >
-    <div class="row">
-      <div class="col-4 col-sm-6 col-lg-4" style=" color:white;">
-        <div class="card card-destacado">
-          <img class="card-img-top" src="../../../assets/img/336270833_228485696297723_4139568929901356251_n.jfif"
-            alt="Card image cap">
+  <div class="container-fluid novedades-container ">
+    <div class="row novedades-row">
+      <div class="col-4 col-sm-6 col-lg-5 novedades-card novedades-especific"
+       *ngFor="let novedad of novedades " [id]="novedad.idNovedad">
+        <div class="card card-destacado card-novedades">
+          <img class="card-img-top" [src]="novedad.fotoLibro" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title txt-color">Titulo</h5>
-            <p class="card-text txt-color">Descripcion.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #000;">Ir</a>
+            <h5 class="card-title titulo-novedad">{{novedad.tituloNovedad}}</h5>
+            <p class="card-text descrip-novedad">{{novedad.descripcionNovedad}}</p>
           </div>
-        </div>
-      </div>
-      <div class="col-4 col-sm-6 col-lg-4">
-        <div class="card card-destacado">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title txt-color">Titulo</h5>
-            <p class="card-text txt-color">Descripcion.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #000;">Ir</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="padding-top: 30px;">
-      <div class="col-4 col-sm-6 col-lg-4">
-        <div class="card card-destacado">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title txt-color">Titulo</h5>
-            <p class="card-text txt-color">Descripcion.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #000;">Ir</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4 col-sm-6 col-lg-4">
-        <div class="card card-destacado">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title txt-color">Titulo</h5>
-            <p class="card-text txt-color">Descripcion.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #000;">Ir</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="padding-top: 30px;">
-      <div class="col-4 col-sm-6 col-lg-4">
-        <div class="card card-destacado">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title txt-color">Titulo</h5>
-            <p class="card-text txt-color">Descripcion.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #000;">Ir</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4 col-sm-6 col-lg-4">
-        <div class="card card-destacado">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title txt-color">Titulo</h5>
-            <p class="card-text txt-color">Descripcion.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #000;">Ir</a>
-          </div>
+          <button class="btn btn-send" routerLink="/novedad/{{novedad.idNovedad}}">Seguir Leyendo</button>
         </div>
       </div>
     </div>
