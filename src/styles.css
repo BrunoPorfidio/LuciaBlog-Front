@@ -16,7 +16,24 @@ body {
   font-size: 16px;
 }
 
-/*---------------------- INICIO NAVBAR ----------------------*/
+.swal2-popup {
+  background-color: rgb(202, 204, 234) !important;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #fd9d4b !important;
+  color: #fd9d4b !important;
+}
+
+.swal2-success-line-tip,
+.swal2-success-line-long {
+  background-color: rgb(0 199 0) !important;
+}
+.swal2-success-ring {
+  border: 0.25em solid rgb(0 199 0) !important;
+}
+
+/*---------------------- INICIO ESTILOS NAVBAR ----------------------*/
 
 .hero-navbar,
 .card-destacado,
@@ -33,6 +50,17 @@ header {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.btn-login,
+.btn-logout {
+  padding: 0.1em 1.7em !important;
+  cursor: pointer !important;
+}
+
+.login--txt {
+  margin-top: 0.4em;
+  font-size: 0.7em;
 }
 
 .menu {
@@ -67,7 +95,7 @@ nav > ul > li > a {
 }
 
 nav > ul > li {
-  padding: 0px 0px 0px 3.1875em;
+  padding: 0px 0px 0px 2.1875em;
 }
 
 nav > ul > li > a:hover {
@@ -141,7 +169,25 @@ nav ul li ul li a:hover {
   margin: auto;
 }
 
-/*------------------------- fIN SECCION NAVBAR --------------------------*/
+.bi-box-arrow-in-left {
+  color: #a33434;
+}
+
+/*------------------------- FIN ESTILOS NAVBAR --------------------------*/
+
+/*---------------------- INICIO ESTILOS LOGIN ----------------------*/
+.login-section {
+  margin: 10% 0em 0em 30%;
+}
+
+.login_txt {
+  text-align: center;
+}
+
+.login_subtext {
+  font-size: 1.5em;
+}
+/*--------------------------- FIN ESTILOS LOGIN--------------------------*/
 
 /*---------------------- INICIO ESTILOS GLOBALES ----------------------*/
 
@@ -176,20 +222,11 @@ nav ul li ul li a:hover {
   align-items: center;
 }
 
-/*------------------------- FIN ESTILOS GLOBALES -------------------------*/
-
-/*---------------------- INICIO SOBRE MI ----------------------*/
-
-.sobremi-txt {
-  background-color: rgba(164, 167, 212, 0.718);
-  font-size: 1em;
-  width: 70%;
-  padding: 30px;
-  margin: 20px;
-  border-radius: 10px;
+hr {
+  border: solid 0.18em #000;
 }
 
-/*------------------------- FIN SOBRE MI -------------------------*/
+/*------------------------- FIN ESTILOS GLOBALES -------------------------*/
 
 /*---------------------- INICIO SECCION DESTACADOS ----------------------*/
 .hero-destacado,
@@ -199,9 +236,18 @@ nav ul li ul li a:hover {
   margin-top: 2%;
 }
 
+.novedades-container {
+  width: 75%;
+  margin: 0em;
+}
+
 .card-destacado {
   border-radius: 20px;
   overflow: hidden;
+}
+
+.novedades-especific {
+  margin: 0em -2em 2em 2em;
 }
 
 .card-destacado-lg {
@@ -209,7 +255,7 @@ nav ul li ul li a:hover {
 }
 
 .card-img-top-lg {
-  height: 300px;
+  max-height: 25em;
   background-size: 100vw;
   transform: scale(var(--escala, 1));
   transition: transform 0.25s;
@@ -221,7 +267,7 @@ nav ul li ul li a:hover {
 }
 
 .card-img-top {
-  height: 300px;
+  max-height: 25em;
   background-size: 100vw;
   transform: scale(var(--escala, 1));
   transition: transform 0.25s;
@@ -238,6 +284,40 @@ nav ul li ul li a:hover {
 
 /*------------------------- FIN SECCION DESTACADOS -------------------------*/
 
+/*---------------------- INICIO SOBRE MI ----------------------*/
+
+.sobremi-txt {
+  background-color: rgba(164, 167, 212, 0.718);
+  font-size: 1em;
+  width: 70%;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/*------------------------- FIN SOBRE MI -------------------------*/
+
+/*---------------------- INICIO SECCION NOVEDADES ----------------------*/
+
+.card-novedades {
+  max-height: 1400px;
+}
+
+.titulo-novedad {
+  font-size: 2.5em;
+}
+
+.descrip-novedad {
+  font-size: 1.5em;
+  height: 100px;
+}
+
+.card-destacado > .card-body {
+  overflow: hidden;
+}
+
+/*------------------------- FIN SECCION NOVEDADES -------------------------*/
+
 /*---------------------- INICIO SECCION RESEÑAS ----------------------*/
 
 .hero-publicaciones {
@@ -251,6 +331,15 @@ nav ul li ul li a:hover {
 .imagen-publicacion {
   margin-top: 1em;
   width: 100%;
+}
+
+.seccion-cuerpo > h2 {
+  font-family: "AbibasMedium";
+  word-break: break-all;
+}
+
+.publicacion-info {
+  font-size: 2em;
 }
 
 .card-container {
@@ -267,8 +356,13 @@ nav ul li ul li a:hover {
   --escala: 1.1;
 }
 
+.seccion-cuerpo {
+  overflow: hidden;
+}
+
 .card-descrip {
   font-size: 1.4em;
+  height: 150px;
 }
 
 .btn-ir {
@@ -278,11 +372,35 @@ nav ul li ul li a:hover {
   margin-bottom: 0.625em;
 }
 
-.btn-ir:hover {
+.btn-ir:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+  color: #fff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: rgba(164, 167, 212, 0.718);
 }
 
 /*------------------------- FIN SECCION RESEÑAS -------------------------*/
+
+/*------------------- INICIO SECCION RESEÑA -------------------*/
+
+.titulo-txt {
+  font-size: 4em;
+  font-family: "AbibasMedium";
+
+}
+
+.long-text {
+  font-size: 2em;
+  width: 85%;
+  white-space: pre-line;
+}
+
+.contenido h2 {
+  font-size: 4em;
+}
+
+/*------------------------- FIN SECCION RESEÑA -------------------------*/
 
 /*------------------- INICIO SECCION COLABORACIONES -------------------*/
 
@@ -296,7 +414,7 @@ nav ul li ul li a:hover {
   width: 70%;
   font-size: 2em;
   text-align: center;
-  border: solid #fff;
+  border: solid rgb(255, 255, 0);
   background-color: rgba(164, 167, 212, 0.718);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
@@ -317,30 +435,6 @@ nav ul li ul li a:hover {
   align-items: center;
 }
 
-.icon-container{
-margin-left: 2em;
-}
-
-.col-11 > h2 {
-  text-align: center;
-  margin-left: 2em;
-}
-
-.btn-back{
-  font-size: 2.2em;
-  border-radius: 100%;
-  color: #fff;
-  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
-  cursor: pointer;
-}
-
-.btn-back:hover,
-.bi-x-circle-fill:hover,
-.form__input__add:hover,
-.btn-send:hover{
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1) ;
-}
-
 .image-container {
   max-width: 35em;
   color: #fff;
@@ -348,7 +442,85 @@ margin-left: 2em;
 
 .img-libro {
   max-width: 35em;
-  margin: 200px 0 0 150px;
+  margin: 12.5em 0 0 9.375em;
+}
+
+.icon-container {
+  margin-left: 2em;
+}
+
+.icon-container-novedades {
+  display: grid;
+  margin-left: 0;
+  place-content: center;
+}
+
+.col-11 > h2 {
+  text-align: center;
+  margin-left: 2em;
+}
+
+.btn-desing {
+  font-size: 2.2em;
+  border-radius: 100%;
+  color: #fff;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  cursor: pointer;
+}
+
+.btn-edit,
+.btn-delete {
+  font-size: 1.5em;
+  border-radius: 15px;
+  margin: 0em 1em 0em 1em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.btn__add {
+  display: flex;
+  justify-content: center;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.btn__add:hover {
+  --escala: 1.1;
+}
+
+.btn-add {
+  font-size: 3.5em;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+/* .btn-novedades{
+font-size: 1em;
+} */
+
+.btn-add:hover {
+  --scale: 1.1;
+}
+
+.btn-back:hover,
+.bi-x-circle-fill:hover,
+.form__input__add:hover,
+.btn-send:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+.btn-send {
+  font-size: 1em;
+  width: 100%;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  padding: 0.625em 0.625em;
+  cursor: pointer;
 }
 
 .form {
@@ -379,6 +551,10 @@ margin-left: 2em;
   cursor: pointer;
 }
 
+.form__input__add-novedades {
+  margin: 25px 0px 0px 60px;
+}
+
 .img-btn {
   display: none;
 }
@@ -396,6 +572,10 @@ margin-left: 2em;
 
 .form__inputs__joined {
   display: flex;
+}
+
+.large_text {
+  margin-top: -1.5em;
 }
 
 .form__input__name,
@@ -432,24 +612,13 @@ margin-left: 2em;
   margin: auto;
 }
 
-.btn-send {
-  font-size: 1em;
-  width: 12.5em;
-  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
-  border-radius: 5px;
-  border: 0;
-  color: white;
-  padding: 0.625em 0.625em;
-  cursor: pointer;
-}
-
 /*------------------------- FIN SECCION MODALES -------------------------*/
 
 /*---------------------- INICIO MEDIA QUERIES ----------------------*/
 
 /*Escritorio*/
 
-@media (min-width: 1270px) and (max-width: 1366px) {
+@media screen and (max-width: 1360px) {
   body {
     font-size: 12px;
   }
@@ -466,8 +635,28 @@ margin-left: 2em;
     padding: 0px 0px;
   }
 
+  .long-text {
+    width: 80%;
+  }
 
+  .btn-login,
+  .btn-logout {
+    padding: 0.1em 1em !important;
+    cursor: pointer !important;
+  }
 
+  .login--txt {
+    font-size: 0.7em;
+    margin-top: 0.8em;
+  }
+
+  .card-img-top-lg {
+    max-height: 20em;
+  }
+
+  .card-img-top {
+    max-height: 20em;
+  }
 }
 /*Fin Escritorio*/
 
@@ -489,8 +678,6 @@ margin-left: 2em;
   .menu {
     padding: 0px 0px;
   }
-
-
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
