@@ -2,6 +2,9 @@
 <div class="hero-publicaciones">
     <div class="container-fluid">
         <h1 class="subtitulos subtitulo-centrado">REFLEXIONES</h1>
+        <div class="btn__add" *ngIf="isAdmin">
+            <i class="bi bi-journal-plus btn-add" routerLink="/nueva-reflexion"></i>
+        </div>
         <div class="row publicaciones-row-main">
             <div class="col-5" *ngFor="let reflexion of reflexiones | orderBy: '-idReflexion'" [id]="reflexion.idReflexion">
                 <div class="row card-container">
