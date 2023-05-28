@@ -1,1 +1,80 @@
-<p>modal-nuevo-reflexion works!</p>
+<ng-container>
+    <section class="container-fluid form-section">
+        <div class="row">
+            <div class="col-6">
+                <div class="image-container">
+                    <input 
+                    [(ngModel)]="reflexiones.fotoReflexion"
+                    class="img-btn mb-5"
+                    name="image-libro"
+                    (change)="capturarImagen($event)"
+                    type="file" 
+                    alife-file-to-base64  
+                    id="image-libro" 
+                    accept="image/png, image/jpeg" 
+                    >
+                    <div class="foto-container" *ngIf="previsualizacion">
+                        <img class="img-libro" [src]="previsualizacion" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form">
+                    <div class="form__body">
+                        <form (ngSubmit)="publicar()" novalidate #f="ngForm">
+                            <div class="row row-header">
+                                <div class="col-11">
+                                    <h2>PUBLICAR REFLEXION</h2>
+                                </div>
+                                <div class="col-1">
+                                    <i class="bi bi-x btn-desing" routerLink="/reflexiones"></i>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row form__inputs__joined">
+                                <div class="col-6">
+                                    <div class="icon-container-novedades">
+                                        <p class="logotipo__title">FOTO REFLEXION *</p>
+                                        <label for="image-libro">
+                                            <span class="container form__input__add form__input__add-novedades img-btn___buscar">
+                                                <i class="bi bi-plus-lg"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="tituloReflexion">NOMBRE DE LA REFLEXION *</label>
+                                    <br>
+                                    <input 
+                                    class="form__input__name form__input__name_novedad" 
+                                    type="text" name="tituloReflexion"
+                                    placeholder="Ej: Libro del Dia" 
+                                    [(ngModel)]="reflexiones.titulo" required>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="descripcionReflexion">Descripcion de Novedad *</label>
+                                    <br>
+                                    <textarea 
+                                    class="form__input__textarea" 
+                                    name="descripcionReflexion"
+                                    placeholder="Ingrese la Descripcion" 
+                                    [(ngModel)]="reflexiones.cuerpoReflexion" required></textarea>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="submit__btn">
+                                <button class="btn btn-send" type="submit">Publicar Reflexion</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-container>
