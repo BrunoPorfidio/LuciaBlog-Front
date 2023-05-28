@@ -173,6 +173,10 @@ nav ul li ul li a:hover {
   color: #a33434;
 }
 
+.titulos > u{
+  font-family: "AbibasMedium";
+}
+
 /*------------------------- FIN ESTILOS NAVBAR --------------------------*/
 
 /*---------------------- INICIO ESTILOS LOGIN ----------------------*/
@@ -419,6 +423,14 @@ hr {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
+.info-detail{
+  width: 27vw;
+  padding: 1em 2em;
+  border-radius: 1em;
+  background-color: rgba(164, 167, 212, 0.484);
+}
+
+
 /*------------------------- FIN SECCION COLABORACIONES -------------------------*/
 
 /*------------------- INICIO SECCION MODALES --------------------------*/
@@ -496,10 +508,6 @@ hr {
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
-
-/* .btn-novedades{
-font-size: 1em;
-} */
 
 .btn-add:hover {
   --scale: 1.1;
@@ -618,13 +626,17 @@ font-size: 1em;
 
 /*Escritorio*/
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1367px) {
   body {
     font-size: 12px;
   }
 
+  nav ul li:hover ul {
+    top: 90px;
+  }
+
   .buttons {
-    padding: 0.6em 1.575em;
+    padding: 0.6em 2.3em;
   }
 
   .footer h2 {
@@ -632,17 +644,11 @@ font-size: 1em;
   }
 
   .menu {
-    padding: 0px 0px;
+    padding: 0px;
   }
 
   .long-text {
     width: 80%;
-  }
-
-  .btn-login,
-  .btn-logout {
-    padding: 0.1em 1em !important;
-    cursor: pointer !important;
   }
 
   .login--txt {
@@ -651,12 +657,17 @@ font-size: 1em;
   }
 
   .card-img-top-lg {
-    max-height: 20em;
+    max-height: 25em;
   }
 
   .card-img-top {
-    max-height: 20em;
+    max-height: 25em;
   }
+
+  .subtitulo-txt{
+    font-size: 1.7em;
+  }
+
 }
 /*Fin Escritorio*/
 
