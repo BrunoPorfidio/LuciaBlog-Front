@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PublicacionComponent } from './components/publicacion/publicacion.component';
 import { NovedadesComponent } from './components/novedades/novedades.component';
@@ -16,7 +17,6 @@ import { ColaboracionesComponent } from './components/colaboraciones/colaboracio
 import { FilterPipe } from './pipes/filter.pipe';
 import { PublicacionesComponent } from './components/publicaciones/publicaciones.component';
 import { ModalNuevoPublicacionComponent } from './modals/modal-nuevo-publicacion/modal-nuevo-publicacion.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalEditarPublicacionComponent } from './modals/modal-editar-publicacion/modal-editar-publicacion.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { LoginComponent } from './components/login/login.component';
