@@ -17,12 +17,12 @@
                 <img src="{{reflexion.fotoReflexion}}" alt="" style="width: 32em;">
             </div>
             <div class="col-6 publicacion-info">
-                <p> {{reflexion.subtitulo}}</p>
+
                 <br>
                 <br>
                 <br>
                 <div class="btn-admin" *ngIf="isAdmin">
-                    <i class="bi bi-pen btn-edit" routerLink="/editar-publicacion/{{reflexion.idReflexion}}"></i>
+                    <i class="bi bi-pen btn-edit" routerLink="/editar-reflexion/{{reflexion.idReflexion}}"></i>
                     <i class="bi bi-trash btn-delete" (click)="borrar(reflexion.idReflexion)"></i>
                 </div>
             </div>
