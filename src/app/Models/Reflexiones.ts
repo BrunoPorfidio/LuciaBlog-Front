@@ -4,8 +4,6 @@ export class Reflexiones {
 
   titulo: String;
 
-  subtitulo: String;
-
   fotoReflexion: string;
 
   cuerpoReflexion: String;
@@ -13,16 +11,12 @@ export class Reflexiones {
   constructor(
     titulo: String,
 
-    subtitulo: String,
-
     fotoReflexion: string,
 
     cuerpoReflexion: String,
   ){
 
     this.titulo = titulo;
-
-    this.subtitulo = subtitulo;
 
     this.fotoReflexion = fotoReflexion;
 
