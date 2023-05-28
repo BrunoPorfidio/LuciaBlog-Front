@@ -62,7 +62,7 @@ export class ModalEditarColaboracionComponent implements OnInit{
           'Se ha editado con exito',
           'success'
         )
-        this.router.navigate(['/colaboraciones'])
+        this.router.navigate(['/colaboracion/'+ id])
       }, err => {
         Swal.fire(
           'ERROR!',

@@ -54,8 +54,10 @@ export class ModalEditarNovedadComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['idNovedad'];
     this.novedadesService.editarNovedad(id, this.novedades).subscribe(
       (data) => {
-        Swal.fire('Novedad Editada!', 'Se ha editado con exito', 'success');
-        this.router.navigate(['/luciBlog']);
+        Swal.fire('Novedad Editada!', 
+        'Se ha editado con exito', 
+        'success');
+        this.router.navigate(['/novedad/' + id]);
       },
       (err) => {
         Swal.fire(

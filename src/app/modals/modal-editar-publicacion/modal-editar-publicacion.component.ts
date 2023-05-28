@@ -62,7 +62,7 @@ export class ModalEditarPublicacionComponent implements OnInit{
           'Se ha editado con exito',
           'success'
         )
-        this.router.navigate(['/publicaciones'])
+        this.router.navigate(['/publicacion/' + id])
       }, err => {
         Swal.fire(
           'ERROR!',
