@@ -5,7 +5,7 @@
                 <nav>
                     <ul>
                         <div class="nav">
-                            <h1 class="titulos">Lucibookslu </h1>
+                            <h1 class="titulos"><u routerLink="/login">L</u>ucibookslu </h1>
                         </div>
                         <div class="social-icons">
                             <a href="https://www.instagram.com/lucibookslu/" target="_blank" class="insta"> <i
@@ -27,12 +27,7 @@
                         </li>
                         <li><a class="buttons" routerLink="/colaboraciones">Colaboraciones</a></li>
                         <li><a class="buttons" routerLink="/reflexiones">Reflexiones</a></li>
-                        <li class="btn-search"><a class="buttons" routerLink="/editar-novedad/"><i class="bi bi-search"></i></a></li>
-                        <li>
-                            <a class="buttons btn-login" routerLink="/login" *ngIf="!isLogged"><p class="login--txt">Iniciar Sesion</p></a>
-                            <a class="buttons btn-logout" (click)="cerrarsesion()" *ngIf="isLogged"><p class="login--txt">Cerrar Sesion</p></a>
-                        </li>
-
+                        <li class="btn-search"><a class="buttons"><i class="bi bi-search"></i></a></li>
                     </ul>
                 </nav>
             </div>
