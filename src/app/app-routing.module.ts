@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { ColaboracionComponent } from './components/colaboracion/colaboracion.component';
 import { ColaboracionesComponent } from './components/colaboraciones/colaboraciones.component';
 import { DestacadosComponent } from './components/destacados/destacados.component';
@@ -16,6 +17,7 @@ import { ModalEditarColaboracionComponent } from './modals/modal-editar-colabora
 import { ModalEditarNovedadComponent } from './modals/modal-editar-novedad/modal-editar-novedad.component';
 import { ModalEditarPublicacionComponent } from './modals/modal-editar-publicacion/modal-editar-publicacion.component';
 import { ModalEditarReflexionComponent } from './modals/modal-editar-reflexion/modal-editar-reflexion.component';
+import { ModalEditarSobreMiComponent } from './modals/modal-editar-sobre-mi/modal-editar-sobre-mi.component';
 import { ModalNuevoColaboracionComponent } from './modals/modal-nuevo-colaboracion/modal-nuevo-colaboracion.component';
 import { ModalNuevoNovedadComponent } from './modals/modal-nuevo-novedad/modal-nuevo-novedad.component';
 import { ModalNuevoPublicacionComponent } from './modals/modal-nuevo-publicacion/modal-nuevo-publicacion.component';
@@ -39,6 +41,14 @@ const routes: Routes = [
   { 
     path: 'navbar', 
     component: NavbarComponent
+   },
+   {
+    path: 'busqueda',
+    component: BusquedaComponent
+   },
+   {
+    path: 'editar-persona/:id',
+    component: ModalEditarSobreMiComponent
    },
   {
      path: 'destacados', 

@@ -1,0 +1,127 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <p class="search-title">Que estas buscando?</p>
+    <div class="input-container d-f jc-c">
+        <input type="text" class="input-search " name="filterPost" placeholder=" Buscar..." [(ngModel)]="filterPost">
+    </div>
+
+    <hr>
+    <div class="row">
+
+        <div class="hero-publicaciones">
+            <div class="container-fluid">
+                <h1 class="subtitulos subtitulo-centrado">RESEÑAS</h1>
+                <div class="row publicaciones-row-main">
+                    <div class="col-6" *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion' | filter:filterPost"
+                        [id]="publicaciones.idPublicacion">
+                        <div class="row card-container">
+                            <div class="col-4">
+                                <div class="seccion-imagen">
+                                    <img class="imagen-publicacion" src="{{publicaciones.fotoLibro}}" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="seccion-cuerpo">
+                                    <h2>{{publicaciones.titulo}}</h2>
+                                    <h3>{{publicaciones.autor}}</h3>
+                                    <p class="card-descrip">{{publicaciones.sinopsis}}</p>
+                                </div>
+                                <button class="btn-ir" routerLink="/publicacion/{{publicaciones.idPublicacion}}">Seguir
+                                    leyendo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h1 class="subtitulos subtitulo-centrado">COLABORACIONES</h1>
+            <div class="hero-publicaciones">
+                <div class="container-fluid">
+                    <div class="row publicaciones-row-main">
+                        <div class="col-6" *ngFor="let colaboracion of colaboraciones | filter:filterPost"
+                            [id]="colaboracion.idColaboraciones">
+                            <div class="row card-container">
+                                <div class="col-4">
+                                    <div class="seccion-imagen">
+                                        <img class="imagen-publicacion" [src]="colaboracion.fotoLibro" alt="" srcset="">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="seccion-cuerpo">
+                                        <h2>{{colaboracion.titulo}}</h2>
+                                        <h3>Autor/a: {{colaboracion.autor}}</h3>
+                                        <p class="card-descrip">{{colaboracion.sinopsis}}</p>
+                                    </div>
+                                    <button class="btn-ir"
+                                        routerLink="/colaboracion/{{colaboracion.idColaboraciones}}">Seguir
+                                        leyendo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="hero-publicaciones">
+                <div class="container-fluid">
+                    <h1 class="subtitulos subtitulo-centrado">REFLEXIONES</h1>
+                    <div class="row publicaciones-row-main">
+                        <div class="col-6" *ngFor="let reflexion of reflexiones | orderBy: '-idReflexion' | filter:filterPost" [id]="reflexion.idReflexion">
+                            <div class="row card-container">
+                                <div class="col-4">
+                                    <div class="seccion-imagen">
+                                        <img class="imagen-publicacion"
+                                            [src]="reflexion.fotoReflexion" alt="" srcset="">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="seccion-cuerpo">
+                                        <h2>{{reflexion.titulo}}</h2>
+                                        <h3>{{reflexion.subtitulos}}</h3>
+                                        <p class="card-descrip">{{reflexion.cuerpoReflexion}}</p>
+                                    </div>
+                                    <button class="btn-ir" routerLink="/reflexion/{{reflexion.idReflexion}}">Seguir leyendo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <hr> -->
+        <!-- <br>
+            <br>
+            <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <h2>Titulo</h2>
+                        </th>
+                        <th>
+                            <h2>sinopsis</h2>
+                        </th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody>
+                    <tr *ngFor="let dato of publicacion | filter:filterPost">
+                        <td>
+                            <h2> {{dato.titulo}}</h2>
+                        </td>
+                        <td>
+                            <h4>{{dato.sinopsis}} </h4>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->
