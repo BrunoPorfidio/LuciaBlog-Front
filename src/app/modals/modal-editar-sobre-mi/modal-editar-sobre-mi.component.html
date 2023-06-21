@@ -1,0 +1,89 @@
+<div class="form-about" *ngIf="persona">
+    <div class="form__body ">
+        <form (ngSubmit)="editar()" novalidate #f="ngForm">
+            <div class="row row-header">
+                <div class="col-11">
+                    <h2 >EDITAR INFORMACION PERSONAL</h2>
+                </div>
+                <div class="col-1">
+                    <i class="bi bi-x btn-back btn-desing" routerLink="/luciBlog"></i>
+                </div>
+            </div>
+            <br>
+            <div class="row form__inputs__joined">
+                <div class="col-6">
+                    <label for="nombre"> NOMBRE *</label>
+                    <br>
+                    <input 
+                    class="form__input__name" 
+                    type="text" name="nombre"
+                    placeholder="Ej: Lucia" 
+                    [(ngModel)]="persona.nombre" required>
+                    <br>
+                </div>
+                <div class="col-6">
+                    <label for="apellido"> APELLIDO *</label>
+                    <br>
+                    <input 
+                    class="form__input__type" 
+                    type="text" 
+                    name="apellido"
+                    placeholder="Ej: Medina" 
+                    [(ngModel)]="persona.apellido" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <label for="acercaMi"> ACERCA DE MI *</label>
+                    <br>
+                    <textarea 
+                    class="form__input__textarea" 
+                    name="acercaMi"
+                    placeholder="Ingrese Descripcion" 
+                    [(ngModel)]="persona.acercaMi" required></textarea>
+                </div>
+            </div>
+            <div class="row form__inputs__joined mt-5">
+                <div class="col-4">
+                    <label for="celular"> CELULAR *</label>
+                    <br>
+                    <input 
+                    class="form__input__name" 
+                    type="number" 
+                    name="celular"
+                    placeholder="Ej: 11243643" 
+                    [(ngModel)]="persona.celular" required>
+                    <br>
+                </div>
+                <div class="col-4">
+                    <label for="email"> EMAIL *</label>
+                    <br>
+                    <input 
+                    class="form__input__name" 
+                    type="text" 
+                    name="email"
+                    placeholder="Ej: Luciamedina72@gmail.com" 
+                    [(ngModel)]="persona.email" required>
+                    <br>
+                </div>
+                <br>
+                <div class="col-4">
+                    <label for="ubicacion"> UBICACION *</label>
+                    <br>
+                    <input 
+                    class="form__input__type" 
+                    type="text" 
+                    name="ubicacion"
+                    placeholder="Ej: Buenos Aires." 
+                    [(ngModel)]="persona.ubicacion" required>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="submit__btn">
+                <button class="btn btn-send" type="submit">Editar Reseña</button>
+            </div>
+        </form>
+    </div>
+</div>
