@@ -31,6 +31,8 @@ import { ColaboracionComponent } from './components/colaboracion/colaboracion.co
 import { ReflexionComponent } from './components/reflexion/reflexion.component';
 import { ModalNuevoReflexionComponent } from './modals/modal-nuevo-reflexion/modal-nuevo-reflexion.component';
 import { ModalEditarReflexionComponent } from './modals/modal-editar-reflexion/modal-editar-reflexion.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { ModalEditarSobreMiComponent } from './modals/modal-editar-sobre-mi/modal-editar-sobre-mi.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { ModalEditarReflexionComponent } from './modals/modal-editar-reflexion/m
     ReflexionComponent,
     ModalNuevoReflexionComponent,
     ModalEditarReflexionComponent,
+    BusquedaComponent,
+    ModalEditarSobreMiComponent,
   ],
   imports: [
     BrowserModule,
