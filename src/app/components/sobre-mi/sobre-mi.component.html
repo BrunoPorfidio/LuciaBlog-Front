@@ -1,8 +1,17 @@
 <div class="hero-sobre-mi" style="margin-top: 3em;">
     <div class="container-fluid">
-        <h1 class="subtitulos mb-5">¿Quien soy?</h1>
+        <div class="row">
+            <div class="col-3">
+                <h1 class="subtitulos mb-5">¿Quien soy?</h1>
+            </div>
+            <div class="col-1">
+                <div class="btn__add" *ngIf="isAdmin">
+                    <i class="bi bi-pen btn-edit btn-add" routerLink="/editar-persona/1"></i>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="sobremi-txt" *ngFor="let personas of persona">
-        <h2>{{personas.acercaMi}}</h2>
+    <div class="sobremi-txt" *ngIf="persona">
+        <h2>{{persona.acercaMi}}</h2>
     </div>
 </div>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/Models/Persona';
 import { PersonaService } from 'src/app/Services/persona.service';
+import { TokenService } from 'src/app/Services/token.service'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -8,24 +11,40 @@ import { PersonaService } from 'src/app/Services/persona.service';
   styleUrls: ['./sobre-mi.component.css'],
 })
 export class SobreMiComponent implements OnInit {
-  persona: Persona[] = [];
+  persona: Persona;
 
-  constructor(private personaService: PersonaService) {}
+  roles: string[];
+  isAdmin = false;
+
+  constructor(
+    private personaService: PersonaService,
+    private tokenService: TokenService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    ) {}
 
   ngOnInit(): void {
 
-    this.mostrarPersona();
-
-  }
-
-  private mostrarPersona() {
-    this.personaService.verPersona().subscribe(
-      (data) => {
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach((rol)=> {
+      if (rol === 'ROLE_ADMIN'){
+        this.isAdmin = true;
+      }
+    })
+    const id = 1;
+    this.personaService.buscarPersona(id).subscribe(
+      data => {
         this.persona = data;
       },
-      (err) => {
-        console.log(err);
+      err => {
+        Swal.fire(
+          'ERROR!',
+          'Ah ocurrido un error al cargar los Datos Personales',
+          'error'
+        )
+        this.router.navigate(['/publicaciones']);
       }
-    );
+    )
+
   }
 }
