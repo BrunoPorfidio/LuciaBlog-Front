@@ -9,6 +9,18 @@
   text-decoration: none !important;
 }
 
+.d-f{
+  display: flex;
+}
+
+.jc-c{
+  justify-content: center;
+}
+
+.al-c{
+  align-items: center;
+}
+
 body {
   background-image: url(../src/assets/img/WallpaperLuci.jpg);
   background-attachment: fixed;
@@ -95,7 +107,7 @@ nav > ul > li > a {
 }
 
 nav > ul > li {
-  padding: 0px 0px 0px 2.1875em;
+  padding: 0px 0px 0px 3.5em;
 }
 
 nav > ul > li > a:hover {
@@ -178,6 +190,24 @@ nav ul li ul li a:hover {
 }
 
 /*------------------------- FIN ESTILOS NAVBAR --------------------------*/
+
+/*---------------------- INICIO ESTILOS BUSQUEDA ----------------------*/
+
+.search-title{
+  font-family: "AbibasMedium";
+  font-size: 4em;
+  margin: 1em;
+  text-align: center;
+}
+
+.input-search{
+  width: 60%;
+  height: 2em;
+  border-radius: .5em;
+  font-size: 1.7em;
+}
+
+/*------------------------- FIN ESTILOS BUSQUEDA --------------------------*/
 
 /*---------------------- INICIO ESTILOS LOGIN ----------------------*/
 .login-section {
@@ -297,6 +327,9 @@ hr {
   padding: 30px;
   margin: 20px;
   border-radius: 10px;
+  white-space: pre-line;
+
+
 }
 
 /*------------------------- FIN SOBRE MI -------------------------*/
@@ -407,6 +440,8 @@ hr {
 /*------------------------- FIN SECCION RESEÑA -------------------------*/
 
 /*------------------- INICIO SECCION COLABORACIONES -------------------*/
+
+
 
 .aviso-colaboracion {
   display: flex;
@@ -541,6 +576,16 @@ hr {
   color: #fff;
 }
 
+.form-about{
+  margin: 5em 25em;
+  width: 50%;
+  background-color: rgba(164, 167, 212, 0.718);
+  border-radius: 50px;
+  padding: 1em 2em;
+  font-size: 1.25em;
+  color: #fff;
+}
+
 .logotipo__title {
   margin-bottom: -1.375em;
   margin-left: 30px;
@@ -629,6 +674,10 @@ hr {
 @media screen and (max-width: 1367px) {
   body {
     font-size: 12px;
+  }
+
+  nav > ul > li{
+    padding: 0px 0px 0px 1.5em;
   }
 
   nav ul li:hover ul {

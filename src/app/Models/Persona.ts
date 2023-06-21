@@ -9,8 +9,6 @@ export class Persona {
 
   acercaMi: String;
 
-  foto: File;
-
   celular: number;
 
   email: String;
@@ -27,8 +25,6 @@ export class Persona {
 
     acercaMi: String,
 
-    foto: File,
-
     celular: number,
 
     email: String,
@@ -43,8 +39,6 @@ export class Persona {
     this.apellido = apellido;
 
     this.acercaMi = acercaMi;
-
-    this.foto = foto;
 
     this.celular = celular;
 
