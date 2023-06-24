@@ -453,7 +453,7 @@ hr {
   width: 70%;
   font-size: 2em;
   text-align: center;
-  border: solid rgb(255, 255, 0);
+  border: solid rgb(83, 32, 138);
   background-color: rgba(164, 167, 212, 0.718);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
@@ -677,7 +677,7 @@ hr {
   }
 
   nav > ul > li{
-    padding: 0px 0px 0px 1.5em;
+    padding: 0px 0px 0px 2em;
   }
 
   nav ul li:hover ul {
@@ -694,6 +694,10 @@ hr {
 
   .menu {
     padding: 0px;
+  }
+
+  .sobremi-txt > h2{
+    font-size: 2.2em;
   }
 
   .long-text {
