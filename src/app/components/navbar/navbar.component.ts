@@ -14,6 +14,8 @@ export class NavbarComponent implements OnInit{
   isAdmin = false;
   roles: string[];
 
+  public active : boolean = false;
+
   constructor(
     private auth: AuthService,
     private tokenService: TokenService
@@ -38,6 +40,10 @@ export class NavbarComponent implements OnInit{
   cerrarsesion(): void {
     this.tokenService.logOut();
     window.location.reload();
+  }
+
+  setActive() : void {
+    this.active = !this.active;
   }
 
 }

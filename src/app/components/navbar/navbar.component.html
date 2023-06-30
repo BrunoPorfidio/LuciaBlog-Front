@@ -1,10 +1,13 @@
 <header>
-    <div class="container-fluid hero-navbar">
+    <div class="hero-navbar">
         <div class="left-nav">
+            <button (click)="setActive()" class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
             <div class="menu">
-                <nav>
+                <nav class="nav__item" [ngClass]="{ 'nav__item--activo': active }">
                     <ul>
-                        <div class="nav">
+                        <div class="nav" >
                             <h1 class="titulos"><u routerLink="/login">L</u>ucibookslu </h1>
                         </div>
                         <div class="social-icons">
@@ -34,3 +37,43 @@
         </div>
     </div>
 </header>
+
+<!-- <div class="hero-nav">
+    <div class="container-fluid navbar">
+        <button (click)="setActive()" class="menu-btn">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="nav__item" [ngClass]="{ 'nav__item--activo': active }">
+            <a (click)="toHome()"><button class="buttons btn-nav">
+                    <p class="nav-txt"><i class="bi bi-house"></i> Inicio</p>
+                </button></a>
+            <a (click)="toAbout()"><button class="buttons btn-nav">
+                    <p class="nav-txt">
+                        <i class="bi bi-file-earmark-person"></i> Sobre Mi
+                    </p>
+                </button></a>
+            <a (click)="toExperience()"><button class="buttons btn-nav">
+                <p class="nav-txt"><i class="bi bi-code-square"></i> Experiencia</p>
+            </button></a>
+            <a (click)="toProyects()"><button class="buttons btn-nav">
+                    <p class="nav-txt"><i class="bi bi-view-list"></i> Mis Proyectos</p>
+                </button></a>
+            <a (click)="toContact()"><button class="buttons btn-nav">
+                <p class="nav-txt"><i class="bi bi-person-plus"></i> Contacto</p>
+            </button></a>
+             
+            <a href="/login" class="buttons lgnbtn" (click)="login()" *ngIf="!isLogged">
+                <p class="login-txt">
+                    <i class="bi bi-box-arrow-in-right"></i> Iniciar sesion
+                </p>
+            </a>
+            <button class="buttons lgnbtn" (click)="onLogout()" *ngIf="isLogged">
+                <p class="logout-txt" style="color: yellow">
+                    <i class="bi bi-box-arrow-in-left"></i> Cerrar Sesion
+                </p>
+            </button>
+        </div>
+    </div>
+</div> -->
+
+
