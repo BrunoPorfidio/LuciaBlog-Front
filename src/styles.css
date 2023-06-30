@@ -22,9 +22,12 @@
 }
 
 body {
-  background-image: url(../src/assets/img/WallpaperLuci.jpg);
+  
+  background: radial-gradient(circle, rgba(255,205,205,1) 3%, rgba(148,185,255,1) 100%);
+  /* background-image: url(/src/assets/img/Corazonbackground-min.png); */
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100vw 100vh;
+  /* background-size: 100vw 100vh; */
   font-size: 16px;
 }
 
@@ -47,7 +50,6 @@ body {
 
 /*---------------------- INICIO ESTILOS NAVBAR ----------------------*/
 
-.hero-navbar,
 .card-destacado,
 .footer {
   color: #000;
@@ -57,157 +59,6 @@ body {
   background-color: rgba(164, 167, 212, 0.718);
   margin: auto;
 }
-
-header {
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.btn-login,
-.btn-logout {
-  padding: 0.1em 1.7em !important;
-  cursor: pointer !important;
-}
-
-.login--txt {
-  margin-top: 0.4em;
-  font-size: 0.7em;
-}
-
-.menu {
-  max-width: 1200px;
-  height: 100%;
-  padding: 0px 1.25em;
-}
-
-nav {
-  height: 100%;
-}
-
-nav > ul {
-  height: 100%;
-  display: flex;
-}
-
-nav ul li {
-  height: 100%;
-  list-style: none;
-  position: relative;
-}
-
-nav > ul > li > a {
-  text-align: justify;
-  font-size: 1.6em;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  color: #000;
-  transition: all 300ms ease;
-}
-
-nav > ul > li {
-  padding: 0px 0px 0px 3.5em;
-}
-
-nav > ul > li > a:hover {
-  transform: scale(1.3);
-}
-
-nav ul li ul {
-  width: 12.5em;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(202, 204, 234);
-  position: absolute;
-  top: 6.25em;
-  padding: 0.875em 0px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  z-index: 10;
-  transition: all 300ms ease;
-}
-
-nav ul li:hover ul {
-  visibility: visible;
-  opacity: 1;
-  top: 100px;
-}
-
-nav ul li ul::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12px solid rgb(202, 204, 234);
-  position: absolute;
-  top: -0.75em;
-  left: 1.25em;
-}
-
-nav ul li ul li a {
-  font-size: 1.1em;
-  display: block;
-  color: #000;
-  padding: 0.625em;
-  padding-left: 0.875em;
-  margin-top: 0.625em;
-  transition: all 200ms ease;
-}
-
-nav ul li ul li a:hover {
-  background-color: rgb(202, 204, 234);
-  transform: scale(1.2);
-  padding-left: 1.875em;
-  font-size: 1.1em;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-.left-nav {
-  align-items: center;
-  display: flex;
-}
-
-.redes-icons {
-  color: #000;
-  font-size: 1.8em;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
-.bi-box-arrow-in-left {
-  color: #a33434;
-}
-
-.titulos > u{
-  font-family: "AbibasMedium";
-}
-
-/*------------------------- FIN ESTILOS NAVBAR --------------------------*/
-
-/*---------------------- INICIO ESTILOS BUSQUEDA ----------------------*/
-
-.search-title{
-  font-family: "AbibasMedium";
-  font-size: 4em;
-  margin: 1em;
-  text-align: center;
-}
-
-.input-search{
-  width: 60%;
-  height: 2em;
-  border-radius: .5em;
-  font-size: 1.7em;
-}
-
-/*------------------------- FIN ESTILOS BUSQUEDA --------------------------*/
 
 /*---------------------- INICIO ESTILOS LOGIN ----------------------*/
 .login-section {
@@ -676,25 +527,7 @@ hr {
     font-size: 12px;
   }
 
-  nav > ul > li{
-    padding: 0px 0px 0px 2em;
-  }
-
-  nav ul li:hover ul {
-    top: 90px;
-  }
-
-  .buttons {
-    padding: 0.6em 2.3em;
-  }
-
-  .footer h2 {
-    font-size: 22px;
-  }
-
-  .menu {
-    padding: 0px;
-  }
+  
 
   .sobremi-txt > h2{
     font-size: 2.2em;
@@ -731,9 +564,7 @@ hr {
     font-size: 10px;
   }
 
-  .buttons {
-    padding: 0.6em 2.3em;
-  }
+ 
 
   .footer h2 {
     font-size: 20px;
@@ -753,10 +584,6 @@ hr {
     font-size: 45px;
   }
 
-  .buttons {
-    padding: 0.6em 2.3em;
-  }
-
   .footer h2 {
     font-size: 20px;
   }
@@ -772,58 +599,6 @@ hr {
 /*Portrait*/
 /*Default*/
 @media (max-width: 575.98px) and (orientation: portrait) {
-  .titulo-navbar {
-    color: #fff;
-    font-size: 45px;
-    position: fixed;
-    padding-left: 130px;
-    width: 100%;
-  }
-
-  .buttons {
-    padding: 0.6em 2.3em;
-  }
-
-  nav > ul > li > a {
-    text-align: center;
-  }
-
-  nav ul li {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  nav > ul > li {
-    top: 90px;
-    padding: 0;
-    right: 15px;
-  }
-
-  nav > ul {
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    position: fixed;
-    height: 300px;
-    width: 100%;
-    z-index: 100;
-    opacity: 1;
-  }
-
-  nav > ul > li > a:hover {
-    transform: scale(1);
-  }
-
-  .social-icons {
-    padding-left: 150px;
-    width: 100%;
-    display: block;
-    position: fixed;
-    padding-top: 50px;
-  }
-
-  .redes-icons {
-    padding: 20px;
-  }
 
   .sobremi-txt {
     margin: 0;
