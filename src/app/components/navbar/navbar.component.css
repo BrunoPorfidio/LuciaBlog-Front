@@ -1,5 +1,17 @@
 /*---------------------- INICIO ESTILOS BLOG ----------------------*/
 
+.d-f{
+  display: flex;
+}
+
+.jc-c{
+  justify-content: center;
+}
+
+.ai-c{
+  align-items: center;
+}
+
 .hero-navbar {
   display: flex;
   flex-flow: row wrap;
@@ -24,17 +36,6 @@ header {
   left: 0;
 }
 
-.btn-login,
-.btn-logout {
-  padding: 0.1em 1.7em !important;
-  cursor: pointer !important;
-}
-
-.login--txt {
-  margin-top: 0.4em;
-  font-size: 0.7em;
-}
-
 .menu {
   max-width: 1200px;
   height: 100%;
@@ -51,13 +52,12 @@ nav > ul {
 }
 
 nav ul li {
-  height: 100%;
   list-style: none;
   position: relative;
 }
 
 nav > ul > li > a {
-  text-align: justify;
+  text-align: center;
   font-size: 1.6em;
   width: 100%;
   display: flex;
@@ -287,12 +287,6 @@ nav ul li ul li a:hover {
   display: none;
 }
 
-.lgnbtn {
-  font-size: 0.7375em;
-  border: 1px solid #d4af37;
-  float: right;
-  margin: auto;
-}
 /*   
   .buttons:active {
     box-shadow: 5px 3px 3px #d4af37;
@@ -313,22 +307,39 @@ nav ul li ul li a:hover {
     top: 0;
   }
 
+  .menu-btn{
+    display: flex;
+    z-index: 100;
+    height: 3rem;
+  }
+
   .titulos{
     font-size: 3em;
+    margin-left: 1.2em;
   }
 
   nav > ul {
     display: block;
+    /* height: 400px; */
+  }
+
+  nav > ul > li > a {
+    font-size: 1.5em;
+    text-align: center;
   }
   .menu-btn {
     font-size: 35px;
   }
 
-  .menu-btn {
-    display: flex;
-    cursor: pointer;
-    top:0;
-  }
+  .buttons {
+    padding: 0.6em 1em;
+}
+.social-icons{
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
 
   .nav__item {
     height: 0vh;
@@ -364,26 +375,13 @@ nav ul li ul li a:hover {
 @media screen and (max-width: 768px) {
   .menu-btn {
     font-size: 30px;
-  }
+    /* height: 2rem; */
 
-  .btn-nav {
-    height: 20px;
   }
-
-  .nav-txt {
-    margin-top: -12px;
-  }
-
-  .nav__item,
-  .login-txt,
-  .logout-txt {
+  .nav__item {
     font-size: 15px;
   }
 
-  .lgnbtn {
-    width: 30%;
-    height: 50px;
-  }
 }
 
 @media screen and (max-width: 480) {
@@ -393,6 +391,10 @@ nav ul li ul li a:hover {
 
   .menu-btn {
     font-size: 20px;
+  }
+
+  .nav__item {
+    font-size: 13px;
   }
 
   .navbar {
@@ -405,9 +407,8 @@ nav ul li ul li a:hover {
 }
 
 @media screen and (max-width: 350px) {
-  .lgnbtn {
-    width: 40%;
-    height: 50px;
+  .nav__item {
+    font-size: 12px;
   }
 
   .menu-btn {

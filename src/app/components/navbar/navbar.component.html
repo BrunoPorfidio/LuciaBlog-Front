@@ -1,13 +1,13 @@
 <header>
-    <div class="hero-navbar">
-        <div class="left-nav">
+    <div class="hero-navbar d-f">
+        <!-- <div class="left-nav"> -->
             <button (click)="setActive()" class="menu-btn">
                 <i class="bi bi-list"></i>
             </button>
-            <div class="menu">
-                <nav class="nav__item" [ngClass]="{ 'nav__item--activo': active }">
+            <div class="menu d-f ">
+                <nav class="nav__item jc-c" [ngClass]="{ 'nav__item--activo': active }">
                     <ul>
-                        <div class="nav" >
+                        <div class="nav jc-c" >
                             <h1 class="titulos"><u routerLink="/login">L</u>ucibookslu </h1>
                         </div>
                         <div class="social-icons">
@@ -34,7 +34,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </header>
 
