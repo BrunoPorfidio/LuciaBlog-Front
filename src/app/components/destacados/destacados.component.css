@@ -1,0 +1,69 @@
+.hero-destacado{
+  margin-top: 2%;
+}
+
+.card-destacado {
+  color: #000;
+  width: 100%;
+  justify-content: space-evenly;
+  justify-content: center;
+  background-color: rgba(164, 167, 212, 0.718);
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.subtitulos {
+  font-family: "AbibasMedium";
+  font-size: 4em;
+}
+
+.novedades-especific {
+  margin: 0em -2em 2em 2em;
+}
+
+.card-destacado-lg {
+  object-fit: cover;
+}
+
+.card-img-top-lg {
+  max-height: 25em;
+  background-size: 100vw;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.card-img-top-lg:hover {
+  --escala: 1.1;
+  cursor: pointer;
+}
+
+.card-img-top {
+  max-height: 25em;
+  background-size: 100vw;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.card-img-top:hover {
+  --escala: 1.1;
+  cursor: pointer;
+}
+
+.card-title-destacado {
+  font-size: 2em;
+}
+
+.card-img-top-lg {
+    max-height: 25em;
+  }
+
+  .card-img-top {
+    max-height: 25em;
+  }
+
+  @media all and (min-width: 990px) {
+
+    
+    
+  }

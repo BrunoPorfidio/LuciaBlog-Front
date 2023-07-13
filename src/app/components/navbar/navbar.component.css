@@ -1,14 +1,14 @@
 /*---------------------- INICIO ESTILOS BLOG ----------------------*/
 
-.d-f{
+.d-f {
   display: flex;
 }
 
-.jc-c{
+.jc-c {
   justify-content: center;
 }
 
-.ai-c{
+.ai-c {
   align-items: center;
 }
 
@@ -23,11 +23,10 @@
 }
 
 .buttons {
-  margin-top: 0.9375em;
   text-decoration: none;
   background-color: rgb(202, 204, 234);
   border-radius: 10px;
-  padding: 0.6em 1.875em;
+  padding: 0.6em 2.8em;
 }
 
 header {
@@ -39,7 +38,7 @@ header {
 .menu {
   max-width: 1200px;
   height: 100%;
-  padding: 0px 1.25em;
+  padding: 0px 1em;
 }
 
 nav {
@@ -57,67 +56,24 @@ nav ul li {
 }
 
 nav > ul > li > a {
-  text-align: center;
   font-size: 1.6em;
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: #000;
   transition: all 300ms ease;
 }
 
 nav > ul > li {
-  padding: 0px 0px 0px 3.5em;
+  padding-left: 2.5em;
 }
 
 nav > ul > li > a:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
+  z-index: 100;
 }
 
-/* ----------------------- */
-/* nav ul li ul {
-    width: 12.5em;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(202, 204, 234);
-    position: absolute;
-    top: 6.25em;
-    padding: 0.875em 0px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    z-index: 10;
-    transition: all 300ms ease;
-  } */
-
-/* nav ul li:hover ul {
-    visibility: visible;
-    opacity: 1;
-    top: 100px;
-  } */
-
-/* nav ul li ul::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid rgb(202, 204, 234);
-    position: absolute;
-    top: -0.75em;
-    left: 1.25em;
-  } */
-
-/* nav ul li ul li a {
-    font-size: 1.1em;
-    display: block;
-    color: #000;
-    padding: 0.625em;
-    padding-left: 0.875em;
-    margin-top: 0.625em;
-    transition: all 200ms ease;
-  } */
-/* ----------------------- */
 nav ul li ul li a:hover {
   background-color: rgb(202, 204, 234);
   transform: scale(1.2);
@@ -126,9 +82,14 @@ nav ul li ul li a:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.left-nav {
+.titulos {
+  font-size: 4.8em;
+  font-family: "AbibasMedium";
   align-items: center;
-  display: flex;
+}
+
+.titulos > u {
+  font-family: "AbibasMedium";
 }
 
 .redes-icons {
@@ -136,18 +97,17 @@ nav ul li ul li a:hover {
   font-size: 1.8em;
 }
 
+.goodreads {
+  width: 2em;
+}
+
 .social-icons {
   display: flex;
   flex-direction: column;
-  margin: auto;
 }
 
 .bi-box-arrow-in-left {
   color: #a33434;
-}
-
-.titulos > u {
-  font-family: "AbibasMedium";
 }
 
 .search-title {
@@ -164,233 +124,225 @@ nav ul li ul li a:hover {
   font-size: 1.7em;
 }
 
-/* ----------------------------MEDIA QUEIRIS -------------------*/
-
-/* Tamaño por defecto pantallas  */
-/* @media all and (min-width: 1110px) and (max-width: 1360px) {
-    nav > ul > li{
-        padding: 0px 0px 0px 2em;
-    }
-    
-    nav ul li:hover ul {
-        top: 90px;
-    }
-    
-    .buttons {
-        padding: 0.6em 2.3em;
-    }
-    
-    .footer h2 {
-        font-size: 22px;
-    }
-    
-    .menu {
-        padding: 0px;
-    }
-} */
-
-/* Tamaño tablet horizontal */
-/* @media all and (min-width: 950px) and (max-width: 1110px) { 
-    .buttons {
-        padding: 0.6em 2.3em;
-    }
-} */
-
-/* Tamaño tablet  */
-/* @media all and (min-width: 700px) and (max-width: 950px) {
-    .buttons {
-        padding: 0.6em 2.3em;
-    }
-} */
-
-/* Tamaño teléfonos */
-/* @media all and (min-width: 500px) and (max-width: 700px) {
-    .titulo-navbar {
-        color: #fff;
-        font-size: 45px;
-        position: fixed;
-        padding-left: 130px;
-        width: 100%;
-    }
-    
-    .buttons {
-        padding: 0.6em 2.3em;
-    }
-    
-    nav > ul > li > a {
-        text-align: center;
-    }
-    
-    nav ul li {
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-    
-    nav > ul > li {
-        top: 90px;
-        padding: 0;
-        right: 15px;
-    }
-    
-    nav > ul {
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        position: fixed;
-        height: 300px;
-        width: 100%;
-        z-index: 100;
-        opacity: 1;
-    }
-    
-    nav > ul > li > a:hover {
-        transform: scale(1);
-    }
-    
-    .social-icons {
-        padding-left: 150px;
-        width: 100%;
-        display: block;
-        position: fixed;
-        padding-top: 50px;
-    }
-    
-    .redes-icons {
-        padding: 20px;
-    }
-    
-    
-    
-}
-
-@media all and (min-width: 330px) and (max-width: 500px) {
-}
-
-@media all and (max-width: 330px) {
-}
-
-
-/*------------------------- FIN ESTILOS BLOG -------------------------*/
-
-/* -------------------INICIO ESTILOS BRUNO PORTFOLIO------------------- */
-
-/* .hero-nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 1);
-  } */
-
 .menu-btn {
   color: #fff;
   background-color: rgba(164, 167, 212, 0.718);
   display: none;
 }
 
-/*   
-  .buttons:active {
-    box-shadow: 5px 3px 3px #d4af37;
-  } */
-
-/* .bi {
-    font-size: 0.8625em;
-  } */
-
 /* 
-   -------------------------------------- Media Queries---------------------------------------------------
-  */
+   -------------------------------------- Media Queries-------------------------------------------*/
 
-@media screen and (max-width: 1100px) {
+@media all and (min-width: 1375px) and (max-width: 1500px) {
+  .titulos {
+    font-size: 4em;
+  }
+
+  .buttons {
+    padding: 0.6em 2.5em;
+  }
+}
+
+/* Tamaño por defecto pantallas  */
+@media all and (min-width: 1110px) and (max-width: 1375px) {
+  .titulos {
+    margin-top: 0.2em;
+    font-size: 4em;
+  }
+
+  .buttons {
+    padding: 0.6em 2.4em;
+  }
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 1024px) and (max-width: 1110px) {
+
+  .titulos {
+    margin-top: 0.2em;
+    font-size: 3.5em;
+  }
+
+  .buttons {
+    padding: 0.6em 1.5em;
+  }
+}
+
+@media all and (min-width: 945px) and (max-width: 1024px) {
+
+  .titulos {
+    margin-top: 0.2em;
+    font-size: 3.5em;
+  }
+
+  .buttons {
+    padding: 0.6em 1.3em;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 18%;
+  }
+}
+
+@media all and (min-width: 899px) and (max-width: 945px) {
+  .buttons {
+    padding: 0.6em 1em;
+  }
+}
+
+/* Tamaño tablet  */
+@media all and (max-width: 990px) {
   .hero-navbar {
     position: fixed;
     z-index: 100;
     top: 0;
   }
 
-  .menu-btn{
-    display: flex;
-    z-index: 100;
-    height: 3rem;
+  .menu {
+    justify-content: center;
   }
 
-  .titulos{
-    font-size: 3em;
-    margin-left: 1.2em;
+  nav > ul > li {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .menu-btn {
+    position: absolute;
+    right: 0;
+    display: flex;
+    z-index: 100;
+    font-size: 30px;
+  }
+
+  .titulos {
+    font-size: 6em;
+  }
+
+  nav {
+    height: 1em;
   }
 
   nav > ul {
     display: block;
-    /* height: 400px; */
+    height: auto;
   }
 
   nav > ul > li > a {
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
-  }
-  .menu-btn {
-    font-size: 35px;
   }
 
   .buttons {
-    padding: 0.6em 1em;
-}
-.social-icons{
-  display: flex !important;
-  flex-flow: row wrap;
-  justify-content: space-around;
+    padding: 1em 5em;
+  }
 
-}
+  .social-icons {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+  }
+
+  .goodreads {
+    width: 1.7em;
+    margin-top: 0.2em;
+  }
 
   .nav__item {
+    font-size: 18px;
     height: 0vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     overflow: hidden;
     pointer-events: none;
-    transition: all 0.5s ease;
-    /* background-color: rgba(0, 0, 0, 0); */
+    padding: 0em 2em;
   }
 
   .nav__item--activo {
     height: auto;
     pointer-events: auto;
-    /* background-color: rgba(0, 0, 0, 1); */
-    /* border: 1px solid #d4af37; */
     transition: all 0.5s ease;
   }
-}
 
-@media screen and (max-width: 999px) {
-  .nav__item {
-    font-size: 20px;
+  .buttons {
+    padding: 0.6em 5em;
   }
 
-  .lgnbtn {
-    width: 40%;
-    margin: auto;
+  nav > ul > li > a {
+    font-size: 1em;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media all and (min-width: 769px) and (max-width: 990px) {
+  .titulos {
+    margin-top: -.2em;
+    font-size: 4em;
+  }
+
+  .nav{
+    height: 4.2em;
+  }
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 769px) {
+  .titulos {
+    margin-top: -.2em;
+    font-size: 4em;
+  }
+
+  .nav {
+    height: 8vh;
+  }
+
+  .buttons {
+    margin-top: 0.5em;
+    padding: 0.6em 6em;
+  }
+
+  .goodreads {
+    width: 1.5em;
+    margin-top: 0.2em;
+  }
+
   .menu-btn {
-    font-size: 30px;
-    /* height: 2rem; */
-
+    font-size: 25px;
   }
+
   .nav__item {
     font-size: 15px;
   }
-
 }
 
-@media screen and (max-width: 480) {
+@media all and (min-width: 330px) and (max-width: 500px) {
+
+  .titulos {
+    margin-top: -.2em;
+    font-size: 3em;
+  }
+
+  .nav {
+    height: 3.5em;
+  }
+
   .n--activo {
     height: auto;
   }
 
   .menu-btn {
-    font-size: 20px;
+    font-size: 1px;
+  }
+
+  nav > ul {
+    padding: 1em 0em 0em 2em;
+  }
+
+  .buttons {
+    padding: 0.6em 4em;
   }
 
   .nav__item {
@@ -402,27 +354,29 @@ nav ul li ul li a:hover {
   }
 
   .menu-btn {
-    font-size: 65px;
+    font-size: 25px;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media all and (max-width: 351px) {
+  .nav {
+    height: 3.2em;
+  }
   .nav__item {
     font-size: 12px;
   }
 
+  .titulos {
+    font-size: 3.2em;
+  }
+
   .menu-btn {
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  .inp-space {
-    width: 100%;
-  }
-
-  .btn-send,
-  .btn-close {
-    display: flex;
-  }
+  /* .menu {
+    margin: 2em 15em 0em 5em;
+  } */
 }
 
-/* ----------------------FIN ESTILOS BRUNO PORTFOLIO------------------- */
+/* ----------------------FINMEDIA QUERIES------------------- */

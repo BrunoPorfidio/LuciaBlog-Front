@@ -1,79 +1,40 @@
-<header>
-    <div class="hero-navbar d-f">
-        <!-- <div class="left-nav"> -->
+<header class=" row hero-navbar d-f">
+    <div class="col-12 col-md-12 col-lg-3">
+        <div class="nav">
+            <p class="titulos d-f"><u routerLink="/login">L</u>ucibookslu </p>
             <button (click)="setActive()" class="menu-btn">
                 <i class="bi bi-list"></i>
             </button>
-            <div class="menu d-f ">
-                <nav class="nav__item jc-c" [ngClass]="{ 'nav__item--activo': active }">
-                    <ul>
-                        <div class="nav jc-c" >
-                            <h1 class="titulos"><u routerLink="/login">L</u>ucibookslu </h1>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://www.instagram.com/lucibookslu/" target="_blank" class="insta"> <i
-                                    class="bi bi-instagram redes-icons"></i></a>
-                            <a href="mailto:luciamedina722@gmail.com?Subject=Quisiera%20colaborar%20contigo"
-                                target="_blank" class="mail"><i class="bi bi-envelope redes-icons"></i></a>
-                            <a href="https://www.goodreads.com/lucibookslu" target="_blank" class="twitter"><img src="https://www.svgrepo.com/show/306117/goodreads.svg"
-                                    class="redes-icons" width="25"/></a>
-                        </div>
-                        <li><a class="buttons" routerLink="/luciBlog">Inicio</a></li>
-                        <li><a class="buttons" routerLink="/publicaciones">Reseñas</a>
-                            <!-- <ul>
+        </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-8">
+   
+    <div class="menu d-f">
+        <nav class="nav__item jc-c" [ngClass]="{ 'nav__item--activo': active }">
+            <ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/lucibookslu/" target="_blank" class="insta"> <i
+                            class="bi bi-instagram redes-icons"></i></a>
+                    <a href="mailto:luciamedina722@gmail.com?Subject=Quisiera%20colaborar%20contigo" target="_blank"
+                        class="mail"><i class="bi bi-envelope redes-icons"></i></a>
+                    <a href="https://www.goodreads.com/lucibookslu" target="_blank" class="goodreads"><img
+                            src="https://www.svgrepo.com/show/306117/goodreads.svg" class=" goodreads" /></a>
+                </div>
+                <li><a class="buttons" routerLink="/luciBlog">Inicio</a></li>
+                <li><a class="buttons" routerLink="/publicaciones">Reseñas</a>
+                    <!-- <ul>
                                 <li><a routerLink="/publicaciones">Todo</a></li>
                                 <li><a href="#">Genero Literario</a></li>
                                 <li><a href="#">Autores</a></li>
                                 <li><a href="#">Libro en Fisico</a></li>
                                 <li><a href="#">Libros en Digital</a></li>
                             </ul> -->
-                        </li>
-                        <li><a class="buttons" routerLink="/colaboraciones">Colaboraciones</a></li>
-                        <li><a class="buttons" routerLink="/reflexiones">Reflexiones</a></li>
-                        <li class="btn-search"><a class="buttons" routerLink="/busqueda"><i class="bi bi-search"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-        <!-- </div> -->
+                </li>
+                <li><a class="buttons" routerLink="/colaboraciones">Colaboraciones</a></li>
+                <li><a class="buttons" routerLink="/reflexiones">Reflexiones</a></li>
+                <li class="btn-search"><a class="buttons" routerLink="/busqueda"><i class="bi bi-search"></i></a></li>
+            </ul>
+        </nav>
     </div>
+</div>
 </header>
-
-<!-- <div class="hero-nav">
-    <div class="container-fluid navbar">
-        <button (click)="setActive()" class="menu-btn">
-            <i class="bi bi-list"></i>
-        </button>
-        <div class="nav__item" [ngClass]="{ 'nav__item--activo': active }">
-            <a (click)="toHome()"><button class="buttons btn-nav">
-                    <p class="nav-txt"><i class="bi bi-house"></i> Inicio</p>
-                </button></a>
-            <a (click)="toAbout()"><button class="buttons btn-nav">
-                    <p class="nav-txt">
-                        <i class="bi bi-file-earmark-person"></i> Sobre Mi
-                    </p>
-                </button></a>
-            <a (click)="toExperience()"><button class="buttons btn-nav">
-                <p class="nav-txt"><i class="bi bi-code-square"></i> Experiencia</p>
-            </button></a>
-            <a (click)="toProyects()"><button class="buttons btn-nav">
-                    <p class="nav-txt"><i class="bi bi-view-list"></i> Mis Proyectos</p>
-                </button></a>
-            <a (click)="toContact()"><button class="buttons btn-nav">
-                <p class="nav-txt"><i class="bi bi-person-plus"></i> Contacto</p>
-            </button></a>
-             
-            <a href="/login" class="buttons lgnbtn" (click)="login()" *ngIf="!isLogged">
-                <p class="login-txt">
-                    <i class="bi bi-box-arrow-in-right"></i> Iniciar sesion
-                </p>
-            </a>
-            <button class="buttons lgnbtn" (click)="onLogout()" *ngIf="isLogged">
-                <p class="logout-txt" style="color: yellow">
-                    <i class="bi bi-box-arrow-in-left"></i> Cerrar Sesion
-                </p>
-            </button>
-        </div>
-    </div>
-</div> -->
-
-

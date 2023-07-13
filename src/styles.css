@@ -24,10 +24,8 @@
 body {
   
   background: radial-gradient(circle, rgba(255,205,205,1) 3%, rgba(148,185,255,1) 100%);
-  /* background-image: url(/src/assets/img/Corazonbackground-min.png); */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-size: 100vw 100vh; */
   font-size: 16px;
 }
 
@@ -50,7 +48,7 @@ body {
 
 /*---------------------- INICIO ESTILOS NAVBAR ----------------------*/
 
-.card-destacado,
+
 .footer {
   color: #000;
   width: 100%;
@@ -84,28 +82,18 @@ body {
   padding: 0.6em 1.875em;
 }
 
-.titulos {
+/* .titulos {
   font-size: 6em;
   font-family: "AbibasMedium";
   justify-content: left;
   margin: 0px 25px 0px -15px;
-}
+} */
 
-.subtitulos {
+/* .subtitulos {
   font-family: "AbibasMedium";
   font-size: 4em;
-}
+} */
 
-.subtitulo-centrado {
-  margin: 20px;
-  text-align: center;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 hr {
   border: solid 0.18em #000;
@@ -113,169 +101,18 @@ hr {
 
 /*------------------------- FIN ESTILOS GLOBALES -------------------------*/
 
-/*---------------------- INICIO SECCION DESTACADOS ----------------------*/
-.hero-destacado,
-.hero-novedades,
-.hero-sobre-mi,
-.footer {
-  margin-top: 2%;
-}
-
-.novedades-container {
-  width: 75%;
-  margin: 0em;
-}
-
-.card-destacado {
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.novedades-especific {
-  margin: 0em -2em 2em 2em;
-}
-
-.card-destacado-lg {
-  object-fit: cover;
-}
-
-.card-img-top-lg {
-  max-height: 25em;
-  background-size: 100vw;
-  transform: scale(var(--escala, 1));
-  transition: transform 0.25s;
-}
-
-.card-img-top-lg:hover {
-  --escala: 1.1;
-  cursor: pointer;
-}
-
-.card-img-top {
-  max-height: 25em;
-  background-size: 100vw;
-  transform: scale(var(--escala, 1));
-  transition: transform 0.25s;
-}
-
-.card-img-top:hover {
-  --escala: 1.1;
-  cursor: pointer;
-}
-
-.card-title-destacado {
-  font-size: 2em;
-}
-
-/*------------------------- FIN SECCION DESTACADOS -------------------------*/
-
-/*---------------------- INICIO SOBRE MI ----------------------*/
-
-.sobremi-txt {
-  background-color: rgba(164, 167, 212, 0.718);
-  font-size: 1em;
-  width: 70%;
-  padding: 30px;
-  margin: 20px;
-  border-radius: 10px;
-  white-space: pre-line;
-
-
-}
-
-/*------------------------- FIN SOBRE MI -------------------------*/
-
-/*---------------------- INICIO SECCION NOVEDADES ----------------------*/
-
-.card-novedades {
-  max-height: 1400px;
-}
-
-.titulo-novedad {
-  font-size: 2.5em;
-}
-
-.descrip-novedad {
-  font-size: 1.5em;
-  height: 100px;
-}
-
-.card-destacado > .card-body {
-  overflow: hidden;
-}
-
-/*------------------------- FIN SECCION NOVEDADES -------------------------*/
 
 /*---------------------- INICIO SECCION RESEÑAS ----------------------*/
 
-.hero-publicaciones {
-  display: flex;
-}
 
-.publicaciones-row-main {
-  justify-content: center;
-}
-
-.imagen-publicacion {
-  margin-top: 1em;
-  width: 100%;
-}
-
-.seccion-cuerpo > h2 {
-  font-family: "AbibasMedium";
-  word-break: break-all;
-}
-
-.publicacion-info {
-  font-size: 2em;
-}
-
-.card-container {
-  margin: 20px 10px;
-  border: solid #000;
-  border-radius: 10px;
-  background-color: rgba(164, 167, 212, 0.718);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
-  transform: scale(var(--escala, 1));
-  transition: transform 0.25s;
-}
-
-.card-container:hover {
-  --escala: 1.1;
-}
-
-.seccion-cuerpo {
-  overflow: hidden;
-}
-
-.card-descrip {
-  font-size: 1.4em;
-  height: 150px;
-}
-
-.btn-ir {
-  background-color: rgba(255, 255, 255, 0.647);
-  font-size: 1.3em;
-  width: 90%;
-  margin-bottom: 0.625em;
-}
-
-.btn-ir:hover,
-.btn-edit:hover,
-.btn-delete:hover {
-  color: #fff;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  background-color: rgba(164, 167, 212, 0.718);
-}
 
 /*------------------------- FIN SECCION RESEÑAS -------------------------*/
 
 /*------------------- INICIO SECCION RESEÑA -------------------*/
 
-.titulo-txt {
+/* .titulo-txt {
   font-size: 4em;
   font-family: "AbibasMedium";
-
 }
 
 .long-text {
@@ -286,38 +123,10 @@ hr {
 
 .contenido h2 {
   font-size: 4em;
-}
+} */
 
 /*------------------------- FIN SECCION RESEÑA -------------------------*/
 
-/*------------------- INICIO SECCION COLABORACIONES -------------------*/
-
-
-
-.aviso-colaboracion {
-  display: flex;
-  padding-top: 2%;
-}
-
-.aviso-txt {
-  margin-left: 10em;
-  width: 70%;
-  font-size: 2em;
-  text-align: center;
-  border: solid rgb(83, 32, 138);
-  background-color: rgba(164, 167, 212, 0.718);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
-}
-
-.info-detail{
-  width: 27vw;
-  padding: 1em 2em;
-  border-radius: 1em;
-  background-color: rgba(164, 167, 212, 0.484);
-}
-
-
-/*------------------------- FIN SECCION COLABORACIONES -------------------------*/
 
 /*------------------- INICIO SECCION MODALES --------------------------*/
 
@@ -395,8 +204,8 @@ hr {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
-.btn-add:hover {
-  --scale: 1.1;
+.btn__add:hover {
+  --escala: 1.1;
 }
 
 .btn-back:hover,
@@ -527,8 +336,6 @@ hr {
     font-size: 12px;
   }
 
-  
-
   .sobremi-txt > h2{
     font-size: 2.2em;
   }
@@ -542,70 +349,15 @@ hr {
     margin-top: 0.8em;
   }
 
-  .card-img-top-lg {
+  /* .card-img-top-lg {
     max-height: 25em;
   }
 
   .card-img-top {
     max-height: 25em;
-  }
+  } */
 
-  .subtitulo-txt{
-    font-size: 1.7em;
-  }
+
 
 }
-/*Fin Escritorio*/
 
-/*Tablet*/
-/*Portrait*/
-@media screen and (max-width: 1270px) {
-  body {
-    font-size: 10px;
-  }
-
- 
-
-  .footer h2 {
-    font-size: 20px;
-  }
-
-  .menu {
-    padding: 0px 0px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
-  body {
-    font-size: 7px;
-  }
-
-  .titulo-navbar {
-    font-size: 45px;
-  }
-
-  .footer h2 {
-    font-size: 20px;
-  }
-
-  .menu {
-    padding: 0px 0px;
-  }
-}
-
-/*fin tablet*/
-
-/*movil*/
-/*Portrait*/
-/*Default*/
-@media (max-width: 575.98px) and (orientation: portrait) {
-
-  .sobremi-txt {
-    margin: 0;
-    width: 100%;
-  }
-}
-/*landscape*/
-@media (min-width: 576px) and (max-width: 991.98px) and (orientation: landscape) {
-}
-/*fin movil*/

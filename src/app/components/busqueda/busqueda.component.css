@@ -1,0 +1,256 @@
+.hero-publicaciones {
+  display: flex;
+}
+
+.subtitulos,
+.search-title {
+  text-align: center;
+  font-family: "AbibasMedium";
+  font-size: 4em;
+}
+
+.input-search {
+  width: 60%;
+  height: 2em;
+  border-radius: 0.5em;
+  font-size: 1.7em;
+}
+
+hr {
+  border: solid 0.18em #000;
+}
+
+.publicaciones-row-main {
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.titulo-libro {
+  font-family: "AbibasMedium";
+  font-size: 2.3em;
+  margin-bottom: 0.2em;
+}
+
+.autor-libro {
+  font-family: "AbibasMedium";
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.sinopsis-libro {
+  font-family: "AbibasMedium";
+  word-break: break-all;
+}
+
+.publicacion-info {
+  font-size: 2em;
+}
+
+.card-container {
+  margin: 2em 1em;
+  padding: 0.8em;
+  border: solid #000;
+  border-radius: 10px;
+  background-color: rgba(164, 167, 212, 0.718);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.card-container:hover {
+  --escala: 1.1;
+}
+
+.seccion-cuerpo {
+  overflow: hidden;
+}
+
+.card-descrip {
+  font-size: 1.4em;
+  max-height: 150px;
+}
+
+.imagen-publicacion {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.btn-ir {
+  background-color: rgba(255, 255, 255, 0.647);
+  font-size: 1.3em;
+  width: 40%;
+  margin: 0.5em 0em 0.5em 15vw;
+  justify-content: center;
+}
+
+.btn-ir:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: rgba(164, 167, 212, 0.718);
+}
+
+/* --------------SECCION BOTONES ADMIN--------------- */
+.btn__add {
+  display: flex;
+  justify-content: center;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.btn__add:hover {
+  --escala: 1.1;
+}
+
+.btn-add {
+  font-size: 3.5em;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+.btn__add:hover {
+  --escala: 1.1;
+}
+
+/* --------------SECCION BOTONES ADMIN--------------- */
+
+
+/* --------------INICIO MEDIA QUERIES--------------- */
+
+
+/* Tamaño por defecto pantallas  */
+@media all and (max-width: 1360px) {
+  .imagen-publicacion {
+    margin-top: 3vh;
+  }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 20vw;
+  }
+
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 990px) and (max-width: 1110px) {
+
+  .titulo-libro{
+    font-size: 2em;
+  }
+
+  .autor-libro{
+    font-size: 1.4em;
+  }
+
+  .card-descrip{
+    font-size: 1em;
+    max-height: 100px;
+
+  }
+
+  .btn-ir {
+    font-size: 1em;
+    margin: 0.5em 0em 0.5em 15vw;
+  }
+}
+
+/* Tamaño tablet  */
+@media all and (min-width: 768px) and (max-width: 990px) {
+  .hero-search {
+    margin-top: 3em;
+  }
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 768px) {
+  .subtitulos {
+    margin-top: 2.5em;
+  }
+
+  .titulo-libro {
+    font-size: 2em;
+  }
+
+  .autor-libro {
+    font-size: 1.5em;
+  }
+
+  .card-descrip {
+    font-size: 1em;
+    max-height: 100px;
+  }
+
+  .imagen-publicacion {
+    margin-top: 3.5vh;
+  }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 30vw;
+  }
+
+}
+
+@media all and (min-width: 350px) and (max-width: 500px) {
+  .subtitulos {
+    margin-top: 2em;
+    font-size: 3em;
+  }
+
+  .aviso-txt {
+    font-size: 1.5em
+  }
+
+  .titulo-libro {
+    font-size: 2em;
+  }
+
+  .autor-libro {
+    font-size: 1.5em;
+  }
+
+  .card-descrip {
+    font-size: 1.4em;
+    max-height: 100px;
+  }
+
+  .imagen-publicacion {
+    margin-top: 3.5vh;
+  }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 40vw;
+  }
+}
+
+@media all and (max-width: 350px) {
+
+  .subtitulos {
+    font-size: 2.3em;
+  }
+
+  .aviso-txt {
+    font-size: 1.2em
+  }
+
+  .titulo-libro {
+    font-size: 1.5em;
+  }
+
+  .autor-libro {
+    font-size: 1em;
+  }
+
+  .card-descrip {
+    font-size: 1em;
+    max-height: 70px;
+  }
+
+  .btn-ir {
+    font-size: 0.7em;
+    margin: 0.5em 0em 0.5em 40vw;
+  }
+}
+/* --------------FIN MEDIA QUERIES--------------- */

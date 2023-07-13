@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 2%;
+}
+
+.col > h1 {
+  font-family: "AbibasMedium";
+}
+
+.col > h4 {
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}

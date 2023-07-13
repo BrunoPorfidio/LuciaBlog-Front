@@ -1,27 +1,27 @@
 <app-navbar></app-navbar>
-<div class="hero-publicaciones">
+<div class="hero-reflexion">
     <div class="container-fluid">
-        <h1 class="subtitulos subtitulo-centrado">REFLEXIONES</h1>
+        <h1 class="subtitulos">REFLEXIONES</h1>
         <div class="btn__add" *ngIf="isAdmin">
             <i class="bi bi-journal-plus btn-add" routerLink="/nueva-reflexion"></i>
         </div>
-        <div class="row publicaciones-row-main">
-            <div class="col-5" *ngFor="let reflexion of reflexiones | orderBy: '-idReflexion'" [id]="reflexion.idReflexion">
+        <div class="row reflexion-row-main">
+            <div class="col-12 col-md-6" *ngFor="let reflexion of reflexiones | orderBy: '-idReflexion'"
+                [id]="reflexion.idReflexion">
                 <div class="row card-container">
-                    <div class="col-4">
+                    <div class="col-6">
                         <div class="seccion-imagen">
-                            <img class="imagen-publicacion"
-                                [src]="reflexion.fotoReflexion" alt="" srcset="">
+                            <img class="imagen-publicacion" [src]="reflexion.fotoReflexion" alt="" srcset="">
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-6">
                         <div class="seccion-cuerpo">
-                            <h2>{{reflexion.titulo}}</h2>
-                            <h3>{{reflexion.subtitulos}}</h3>
+                            <p class="titulo-libro">{{reflexion.titulo}}</p>
+                            <p class="subtitulo-libro">{{reflexion.subtitulos}}</p>
                             <p class="card-descrip">{{reflexion.cuerpoReflexion}}</p>
                         </div>
-                        <button class="btn-ir" routerLink="/reflexion/{{reflexion.idReflexion}}">Seguir leyendo</button>
                     </div>
+                    <button class="btn-ir" routerLink="/reflexion/{{reflexion.idReflexion}}">Seguir leyendo</button>
                 </div>
             </div>
         </div>
