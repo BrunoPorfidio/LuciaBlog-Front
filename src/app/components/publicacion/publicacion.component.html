@@ -1,11 +1,11 @@
 <app-navbar></app-navbar>
-<div class="hero-publicacion" style="margin-top: 3em" *ngIf="publicacion" [id]="publicacion.idPublicacion">
+<div class="hero-publicacion mt-3" *ngIf="publicacion" [id]="publicacion.idPublicacion">
     <div class="container">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="titulo-txt">{{publicacion.titulo}}</h1>
-                    <h2 class="subtitulo-txt">Por: <b>LuciBooksLu</b></h2>
+                    <p class="titulo-libro AbibasMedium">{{publicacion.titulo}}</p>
+                    <p class="subtitulo-txt AbibasMedium">Por: <b>LuciBooksLu</b></p>
                 </div>
             </div>
 
@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-5">
-                <img src="{{publicacion.fotoLibro}}" alt="" style="width: 32em;">
+                <img class="imagen-libro" src="{{publicacion.fotoLibro}}" alt="">
             </div>
             <div class="col-6 publicacion-info">
                 <div class="info-detail">
@@ -37,10 +37,10 @@
     </div>
     <div class="container mt-5">
         <div class="contenido">
-            <h2>Sinopsis</h2>
+            <b class="AbibasMedium">Sinopsis</b>
             <p class="long-text">{{this.publicacion.sinopsis}} </p>
             <hr>
-            <h2 class="mt-5">Reseña</h2>
+            <b class="mt-5 AbibasMedium">Reseña</b>
             <p class="long-text">{{this.publicacion.resenia}}</p>
         </div>
     </div>
