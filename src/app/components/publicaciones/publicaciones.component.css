@@ -16,13 +16,13 @@
 .titulo-libro {
   font-family: "AbibasMedium";
   font-size: 2.3em;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 .autor-libro {
   font-family: "AbibasMedium";
   font-size: 1.5em;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 .sinopsis-libro {
@@ -67,7 +67,7 @@
   background-color: rgba(255, 255, 255, 0.647);
   font-size: 1.3em;
   width: 40%;
-  margin: .5em 0em .5em 24vw;
+  margin: 0.5em 0em 0.5em 24vw;
   justify-content: center;
 }
 
@@ -80,24 +80,25 @@
 }
 
 /* --------------SECCION BOTONES ADMIN--------------- */
-.btn__add {
+/* .btn__add {
   display: flex;
   justify-content: center;
-  transform: scale(var(--escala, 1));
-  transition: transform 0.25s;
-}
+  overflow-x: hidden;
+} */
 
 .btn__add:hover {
   --escala: 1.1;
 }
 
 .btn-add {
-  font-size: 3.5em;
+  font-size: 3em;
   border-radius: 15px;
   color: #fff;
   background: linear-gradient(90deg, pink, rgb(106, 156, 199));
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
 }
 
 .btn__add:hover {
@@ -108,11 +109,9 @@
 
 /* Tamaño por defecto pantallas  */
 @media all and (max-width: 1360px) {
-
   .imagen-publicacion {
     margin-top: 3vh;
   }
-
 }
 
 /* Tamaño tablet horizontal */
@@ -121,19 +120,16 @@
 
 /* Tamaño tablet  */
 @media all and (min-width: 700px) and (max-width: 950px) {
-
-    .imagen-publicacion {
-        margin-top: 3vh;
-      }
-
+  .imagen-publicacion {
+    margin-top: 3vh;
+  }
 }
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
-
-    .hero-publicaciones {
-      margin-top: 8em;
-    }
+  .hero-publicaciones {
+    margin-top: 8em;
+  }
 
   .titulo-libro {
     font-size: 2.2em;
@@ -152,11 +148,9 @@
     margin-top: 3.5vh;
   }
 
-  .btn-ir{
+  .btn-ir {
     font-size: 1em;
   }
-  
-
 }
 
 @media all and (min-width: 350px) and (max-width: 500px) {
@@ -186,9 +180,8 @@
   }
 
   .btn-ir {
-    margin: .5em 0em .5em 44vw;
+    margin: 0.5em 0em 0.5em 44vw;
   }
-
 }
 
 @media all and (max-width: 350px) {
@@ -214,8 +207,7 @@
   }
 
   .btn-ir {
-    font-size: .7em;
-    margin: .5em 0em .5em 40vw;
+    font-size: 0.7em;
+    margin: 0.5em 0em 0.5em 40vw;
   }
-
 }

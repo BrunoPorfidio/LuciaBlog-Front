@@ -91,11 +91,6 @@
 
 /* --------------SECCION BOTONES ADMIN--------------- */
 
-.add-container{
-  overflow: hidden;
-
-}
-
 .btn__add {
   display: flex;
   justify-content: center;
@@ -107,8 +102,6 @@
 }
 
 .btn-add {
-  /* transform: scale(var(--escala, 1));
-  transition: transform 0.25s; */
   font-size: 3em;
   border-radius: 15px;
   color: #fff;

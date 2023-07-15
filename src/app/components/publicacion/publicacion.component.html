@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="hero-publicacion mt-3" *ngIf="publicacion" [id]="publicacion.idPublicacion">
+<div class="hero-publicacion" *ngIf="publicacion" [id]="publicacion.idPublicacion">
     <div class="container">
         <div class="container">
             <div class="row">
@@ -13,8 +13,8 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-5">
-                <img class="imagen-libro" src="{{publicacion.fotoLibro}}" alt="">
+            <div class="col-6 col-md-5">
+                <img class="imagen-libro" src="{{publicacion.fotoLibro}}" alt="Foto del libro">
             </div>
             <div class="col-6 publicacion-info">
                 <div class="info-detail">
@@ -23,13 +23,11 @@
                     <p>Editorial: {{publicacion.editorial}}</p>
                     <p>Genero: {{publicacion.genero}}</p>
                     <p>Num. Paginas: {{publicacion.numPaginas}}</p>
-                </div>
-                <br>
-                <br>
-                <br>
-                <div class="btn-admin" *ngIf="isAdmin">
-                    <i class="bi bi-pen btn-edit" routerLink="/editar-publicacion/{{publicacion.idPublicacion}}"></i>
-                    <i class="bi bi-trash btn-delete" (click)="borrar(publicacion.idPublicacion)"></i>
+                    <div class="btn-admin d-f" *ngIf="isAdmin">
+                        <i class="bi bi-pen btn-edit"
+                            routerLink="/editar-publicacion/{{publicacion.idPublicacion}}"></i>
+                        <i class="bi bi-trash btn-delete" (click)="borrar(publicacion.idPublicacion)"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,9 +36,13 @@
     <div class="container mt-5">
         <div class="contenido">
             <b class="AbibasMedium">Sinopsis</b>
+            <br>
+            <br>
             <p class="long-text">{{this.publicacion.sinopsis}} </p>
             <hr>
             <b class="mt-5 AbibasMedium">Reseña</b>
+            <br>
+            <br>
             <p class="long-text">{{this.publicacion.resenia}}</p>
         </div>
     </div>
