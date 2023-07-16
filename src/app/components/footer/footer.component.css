@@ -1,8 +1,6 @@
-.footer {
-  margin-top: 2%;
-}
 
-.col > h1 {
+
+.col > h3 {
   font-family: "AbibasMedium";
 }
 
@@ -11,3 +9,38 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.footer {
+  color: #000;
+  width: 100%;
+  height: 10%;
+  justify-content: space-evenly;
+  justify-content: center;
+  background-color: rgba(164, 167, 212, 0.718);
+  margin: auto;
+}
+
+/* --------------INICIO MEDIA QUERIES--------------- */
+
+/* Tamaño por defecto pantallas  */
+@media all and (max-width: 1360px) {
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 950px) and (max-width: 1110px) {
+}
+
+/* Tamaño tablet  */
+@media all and (min-width: 768px) and (max-width: 950px) {
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 768px) {
+}
+
+@media all and (min-width: 350px) and (max-width: 500px) {
+}
+
+@media all and (max-width: 350px) {
+}
+/* --------------FIN MEDIA QUERIES--------------- */
