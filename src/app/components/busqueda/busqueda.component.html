@@ -4,13 +4,11 @@
     <div class="input-container d-f jc-c">
         <input type="text" class="input-search " name="filterPost" placeholder=" Buscar..." [(ngModel)]="filterPost">
     </div>
-
     <hr>
-    <div class="row">
-
+    <!-- <div class="row"> -->
         <div class="hero-publicaciones">
             <div class="container-fluid">
-                <h1 class="subtitulos subtitulo-centrado">RESEÑAS</h1>
+                <h1 class="subtitulos">RESEÑAS</h1>
                 <div class="row publicaciones-row-main">
                     <div class="col-12 col-md-6"
                         *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion' | filter:filterPost"

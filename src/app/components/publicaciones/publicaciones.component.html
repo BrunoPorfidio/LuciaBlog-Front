@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="hero-publicaciones">
     <div class="container-fluid">
-        <p class="subtitulos subtitulo-centrado">RESEÑAS</p>
+        <p class="subtitulos AbibasMedium">RESEÑAS</p>
         <div class="container btn__add" *ngIf="isAdmin">
             <i class="bi bi-journal-plus btn-add" routerLink="/nueva-publicacion"></i>
         </div>
@@ -15,8 +15,8 @@
                     </div>
                     <div class="col-6 d-f">
                         <div class="seccion-cuerpo">
-                            <p class="titulo-libro">{{publicaciones.titulo}}</p>
-                            <p class="autor-libro">{{publicaciones.autor}}</p>
+                            <p class="titulo-libro AbibasMedium">{{publicaciones.titulo}}</p>
+                            <p class="autor-libro AbibasMedium">{{publicaciones.autor}}</p>
                             <p class="card-descrip">{{publicaciones.sinopsis}}</p>
                         </div>
                     </div>

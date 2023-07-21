@@ -99,10 +99,6 @@
   justify-content: center;
 }
 
-.btn-add:hover {
-  --escala: 1.1;
-}
-
 .btn-add {
   transform: scale(var(--escala, 1));
   transition: transform 0.25s;
@@ -114,6 +110,10 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
+.btn-add:hover {
+  --escala: 1.1;
+}
+
 /* --------------FIN SECCION BOTONES ADMIN--------------- */
 
 /* Tamaño por defecto pantallas  */
@@ -123,22 +123,22 @@
   }
 }
 
-/* Tamaño tablet horizontal */
-@media all and (min-width: 950px) and (max-width: 1110px) {
+@media all and (min-width: 350px) and (max-width: 1110px) {
+  .hero-reflexion {
+    margin-top: 4em;
+  }
+
+  .btn-add{
+    font-size: 2.5em;
+  }
 }
 
 /* Tamaño tablet  */
 @media all and (min-width: 768px) and (max-width: 950px) {
-  .subtitulos {
-    margin-top: 1em;
-  }
 }
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
-  .subtitulos {
-    margin-top: 2.5em;
-  }
 
   .titulo-libro{
     font-size: 2em;
@@ -160,7 +160,6 @@
 
 @media all and (min-width: 350px) and (max-width: 500px) {
   .subtitulos {
-    margin-top: 2em;
     font-size: 3em;
   }
 

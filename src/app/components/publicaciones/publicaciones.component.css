@@ -2,9 +2,12 @@
   display: flex;
 }
 
+.AbibasMedium{
+  font-family: "AbibasMedium";
+}
+
 .subtitulos {
   text-align: center;
-  font-family: "AbibasMedium";
   font-size: 4em;
 }
 
@@ -14,20 +17,13 @@
 }
 
 .titulo-libro {
-  font-family: "AbibasMedium";
   font-size: 2.3em;
   margin-bottom: 0.2em;
 }
 
 .autor-libro {
-  font-family: "AbibasMedium";
   font-size: 1.5em;
   margin-bottom: 0.2em;
-}
-
-.sinopsis-libro {
-  font-family: "AbibasMedium";
-  word-break: break-all;
 }
 
 .publicacion-info {
@@ -80,14 +76,9 @@
 }
 
 /* --------------SECCION BOTONES ADMIN--------------- */
-/* .btn__add {
+.btn__add {
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
-} */
-
-.btn__add:hover {
-  --escala: 1.1;
 }
 
 .btn-add {
@@ -101,7 +92,7 @@
   transition: transform 0.25s;
 }
 
-.btn__add:hover {
+.btn-add:hover {
   --escala: 1.1;
 }
 
@@ -114,8 +105,15 @@
   }
 }
 
-/* Tamaño tablet horizontal */
-@media all and (min-width: 950px) and (max-width: 1110px) {
+
+@media all and (min-width: 350px) and (max-width: 1110px) {
+  .hero-publicaciones {
+    margin-top: 4em;
+  }
+
+  .btn-add{
+    font-size: 2.5em;
+  }
 }
 
 /* Tamaño tablet  */
@@ -127,9 +125,6 @@
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
-  .hero-publicaciones {
-    margin-top: 8em;
-  }
 
   .titulo-libro {
     font-size: 2.2em;
@@ -154,9 +149,6 @@
 }
 
 @media all and (min-width: 350px) and (max-width: 500px) {
-  .hero-publicaciones {
-    margin-top: 6em;
-  }
 
   .subtitulos {
     font-size: 3em;
@@ -185,9 +177,6 @@
 }
 
 @media all and (max-width: 350px) {
-  .hero-publicaciones {
-    margin-top: 5em;
-  }
 
   .subtitulos {
     font-size: 2.5em;

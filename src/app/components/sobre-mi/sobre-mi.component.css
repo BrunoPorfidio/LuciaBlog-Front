@@ -17,17 +17,12 @@
   }
 
   .btn__add {
-    margin: auto;
+    padding: 1em;
     display: flex;
-    justify-content: center;
-    transform: scale(var(--escala, 1));
-    transition: transform 0.25s;
+    justify-content: start;
+  
   }
-
-  .btn__add:hover {
-    --escala: 1.1;
-  }
-
+  
   .btn-add {
     font-size: 2.5em;
     border-radius: 15px;
@@ -35,12 +30,13 @@
     background: linear-gradient(90deg, pink, rgb(106, 156, 199));
     cursor: pointer;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    transform: scale(var(--escala, 1));
+    transition: transform 0.25s;
   }
-
-  .btn__add:hover {
+  
+  .btn-add:hover {
     --escala: 1.1;
   }
-
 
   /* Tamaño por defecto pantallas  */
 @media all and (min-width: 1110px) and (max-width: 1360px) {
