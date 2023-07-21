@@ -60,9 +60,9 @@ body {
 /*------------------------- FIN ESTILOS GLOBALES -------------------------*/
 
 
-/*------------------- INICIO SECCION MODALES --------------------------*/
+/* ------------------- INICIO SECCION MODALES --------------------------*/
 
-.icon__sup,
+/* .icon__sup,
 .icons,
 .btn-start,
 .register__txt,
@@ -254,9 +254,9 @@ body {
 
 .bi-upload {
   margin: auto;
-}
+} */
 
-/*------------------------- FIN SECCION MODALES -------------------------*/
+/*------------------------- FIN SECCION MODALES ------------------------- */
 
 /*---------------------- INICIO MEDIA QUERIES ----------------------*/
 

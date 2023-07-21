@@ -1,7 +1,7 @@
-<ng-container>
+
     <section class="container-fluid form-section">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6 d-f al-c">
                 <div class="image-container">
                     <input 
                     [(ngModel)]="publicacion.fotoLibro"
@@ -14,11 +14,11 @@
                     accept="image/png, image/jpeg" 
                     >
                     <div class="foto-container" *ngIf="previsualizacion">
-                        <img class="img-libro" [src]="previsualizacion" alt="" srcset="">
+                        <img class="img-libro " [src]="previsualizacion" alt="" srcset="">
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <div class="form">
                     <div class="form__body">
                         <form (ngSubmit)="publicar()" novalidate #f="ngForm">
@@ -31,13 +31,12 @@
                                 </div>
                             </div>
                             <br>
-                            <br>
                             <div class="row form__inputs__joined">
                                 <div class="col-4">
                                     <div class="icon-container">
                                         <p class="logotipo__title">FOTO LIBRO *</p>
                                         <label for="image-libro">
-                                            <span class="container form__input__add img-btn___buscar">
+                                            <span class="container form__input__add img-btn___buscar d-f jc-c al-c">
                                                 <i class="bi bi-plus-lg"></i>
                                             </span>
                                         </label>
@@ -143,4 +142,3 @@
             </div>
         </div>
     </section>
-</ng-container>
