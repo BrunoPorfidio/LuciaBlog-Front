@@ -115,7 +115,7 @@ body {
   cursor: pointer;
 }
 
-.btn__add {
+/* .btn__add {
   display: flex;
   justify-content: center;
   transform: scale(var(--escala, 1));
@@ -137,7 +137,7 @@ body {
 
 .btn__add:hover {
   --escala: 1.1;
-}
+} */
 
 .btn-back:hover,
 .bi-x-circle-fill:hover,

@@ -1,21 +1,19 @@
-.hero-colaboracion {
-  display: flex;
+.aviso-txt {
+  width: 70%;
+  font-size: 2em;
+  text-align: center;
+  border: solid rgb(83, 32, 138);
+  background-color: rgba(164, 167, 212, 0.718);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
-  
-  .aviso-txt {
-    width: 70%;
-    font-size: 2em;
-    text-align: center;
-    border: solid rgb(83, 32, 138);
-    background-color: rgba(164, 167, 212, 0.718);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
-  }
-  
+
+.AbibasMedium{
+  font-family: "AbibasMedium";
+}
 
 .subtitulos {
   text-align: center;
-  font-family: "AbibasMedium";
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
 .colaboracion-row-main {
@@ -24,20 +22,13 @@
 }
 
 .titulo-libro {
-  font-family: "AbibasMedium";
   font-size: 2.3em;
   margin-bottom: 0.2em;
 }
 
 .autor-libro {
-  font-family: "AbibasMedium";
   font-size: 1.5em;
   margin-bottom: 0.2em;
-}
-
-.sinopsis-libro {
-  font-family: "AbibasMedium";
-  word-break: break-all;
 }
 
 .publicacion-info {
@@ -94,11 +85,6 @@
 .btn__add {
   display: flex;
   justify-content: center;
-
-}
-
-.btn-add:hover {
-  --escala: 1.1;
 }
 
 .btn-add {
@@ -108,13 +94,17 @@
   background: linear-gradient(90deg, pink, rgb(106, 156, 199));
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
 }
 
+.btn-add:hover {
+  --escala: 1.1;
+}
 
 /* --------------FIN SECCION BOTONES ADMIN--------------- */
 
 /* --------------INICIO MEDIA QUERIES--------------- */
-
 
 /* Tamaño por defecto pantallas  */
 @media all and (max-width: 1360px) {
@@ -124,7 +114,14 @@
 }
 
 /* Tamaño tablet horizontal */
-@media all and (min-width: 950px) and (max-width: 1110px) {
+@media all and (min-width: 350px) and (max-width: 1110px) {
+  .hero-colaboracion {
+    margin-top: 4em;
+  }
+
+  .btn-add {
+    font-size: 2.5em;
+  }
 }
 
 /* Tamaño tablet  */
@@ -136,8 +133,9 @@
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
-  .subtitulos {
-    margin-top: 2.5em;
+
+  .aviso-txt {
+    font-size: 1.4em;
   }
 
   .titulo-libro {
@@ -160,12 +158,11 @@
 
 @media all and (min-width: 350px) and (max-width: 500px) {
   .subtitulos {
-    margin-top: 2em;
     font-size: 3em;
   }
 
   .aviso-txt {
-    font-size: 1.5em
+    font-size: 1.2em;
   }
 
   .titulo-libro {
@@ -191,13 +188,12 @@
 }
 
 @media all and (max-width: 350px) {
-
   .subtitulos {
     font-size: 2.3em;
   }
 
   .aviso-txt {
-    font-size: 1.2em
+    font-size: 1.2em;
   }
 
   .titulo-libro {
