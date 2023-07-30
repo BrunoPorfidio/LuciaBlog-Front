@@ -10,7 +10,7 @@
             <div class="container-fluid">
                 <h1 class="subtitulos">RESEÑAS</h1>
                 <div class="row publicaciones-row-main">
-                    <div class="col-12 col-md-6"
+                    <div class="col-12 col-lg-6"
                         *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion' | filter:filterPost"
                         [id]="publicaciones.idPublicacion">
                         <div class="row card-container">
@@ -39,7 +39,7 @@
             <div class="hero-publicaciones">
                 <div class="container-fluid">
                     <div class="row publicaciones-row-main">
-                        <div class="col-12 col-md-6" *ngFor="let colaboracion of colaboraciones | filter:filterPost"
+                        <div class="col-12 col-lg-6" *ngFor="let colaboracion of colaboraciones | filter:filterPost"
                             [id]="colaboracion.idColaboraciones">
                             <div class="row card-container">
                                 <div class="col-6">
@@ -69,7 +69,7 @@
                 <div class="container-fluid">
                     <h1 class="subtitulos subtitulo-centrado">REFLEXIONES</h1>
                     <div class="row publicaciones-row-main">
-                        <div class="col-12 col-md-6"
+                        <div class="col-12 col-lg-6"
                             *ngFor="let reflexion of reflexiones | orderBy: '-idReflexion' | filter:filterPost"
                             [id]="reflexion.idReflexion">
                             <div class="row card-container">

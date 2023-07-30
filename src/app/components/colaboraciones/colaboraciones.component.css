@@ -7,7 +7,7 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
-.AbibasMedium{
+.AbibasMedium {
   font-family: "AbibasMedium";
 }
 
@@ -129,11 +129,14 @@
   .subtitulos {
     margin-top: 1em;
   }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 44vw;
+  }
 }
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
-
   .aviso-txt {
     font-size: 1.4em;
   }
@@ -154,6 +157,11 @@
   .imagen-publicacion {
     margin-top: 3.5vh;
   }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 44vw;
+    font-size: 1em;
+  }
 }
 
 @media all and (min-width: 350px) and (max-width: 500px) {
@@ -166,15 +174,15 @@
   }
 
   .titulo-libro {
-    font-size: 2em;
+    font-size: 1.6em;
   }
 
   .autor-libro {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .card-descrip {
-    font-size: 1.4em;
+    font-size: 1em;
     max-height: 100px;
   }
 
@@ -183,6 +191,7 @@
   }
 
   .btn-ir {
+    font-size: 1em;
     margin: 0.5em 0em 0.5em 44vw;
   }
 }
@@ -197,7 +206,7 @@
   }
 
   .titulo-libro {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .autor-libro {

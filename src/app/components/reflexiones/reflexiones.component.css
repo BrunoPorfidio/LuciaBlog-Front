@@ -135,6 +135,9 @@
 
 /* Tamaño tablet  */
 @media all and (min-width: 768px) and (max-width: 950px) {
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 44vw;
+  }
 }
 
 /* Tamaño teléfonos */
@@ -156,6 +159,11 @@
   .imagen-publicacion {
     margin-top: 3.5vh;
   }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 44vw;
+    font-size: 1em;
+  }
 }
 
 @media all and (min-width: 350px) and (max-width: 500px) {
@@ -167,12 +175,8 @@
     font-size: 2em;
   }
 
-  .autor-libro {
-    font-size: 1.5em;
-  }
-
   .card-descrip {
-    font-size: 1.4em;
+    font-size: 1em;
     max-height: 100px;
   }
 
@@ -181,6 +185,7 @@
   }
 
   .btn-ir {
+    font-size: 1em;
     margin: 0.5em 0em 0.5em 44vw;
   }
 }
@@ -191,11 +196,7 @@
   }
 
   .titulo-libro {
-    font-size: 1.5em;
-  }
-
-  .autor-libro {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .card-descrip {

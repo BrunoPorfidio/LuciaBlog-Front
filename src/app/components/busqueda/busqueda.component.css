@@ -143,12 +143,60 @@ hr {
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
 
+  .search-title{
+    font-size: 3em;
+  }
+
   .titulo-libro {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   .autor-libro {
     font-size: 1.5em;
+  }
+
+  .card-descrip {
+    font-size: 1.2em;
+    max-height: 100px;
+  }
+
+  .imagen-publicacion {
+    margin-top: 3.5vh;
+  }
+
+  .btn-ir {
+    font-size: 1em;
+    margin: 0.5em 0em 0.5em 30vw;
+  }
+
+}
+
+@media all and (min-width: 350px) and (max-width: 500px) {
+
+  .search-title{
+    font-size: 3em;
+  }
+
+  .input-search {
+    width: 80%;
+    height: 1.5em;
+    font-size: 1.5em;
+  }
+
+  .subtitulos {
+    font-size: 3em;
+  }
+
+  .aviso-txt {
+    font-size: 1.5em
+  }
+
+  .titulo-libro {
+    font-size: 1.6em;
+  }
+
+  .autor-libro {
+    font-size: 1.2em;
   }
 
   .card-descrip {
@@ -161,43 +209,22 @@ hr {
   }
 
   .btn-ir {
-    margin: 0.5em 0em 0.5em 30vw;
-  }
-
-}
-
-@media all and (min-width: 350px) and (max-width: 500px) {
-  .subtitulos {
-    font-size: 3em;
-  }
-
-  .aviso-txt {
-    font-size: 1.5em
-  }
-
-  .titulo-libro {
-    font-size: 2em;
-  }
-
-  .autor-libro {
-    font-size: 1.5em;
-  }
-
-  .card-descrip {
-    font-size: 1.4em;
-    max-height: 100px;
-  }
-
-  .imagen-publicacion {
-    margin-top: 3.5vh;
-  }
-
-  .btn-ir {
+    font-size: 1em;
     margin: 0.5em 0em 0.5em 40vw;
   }
 }
 
 @media all and (max-width: 350px) {
+
+  .search-title{
+    font-size: 2.5em;
+  }
+
+  .input-search {
+    width: 80%;
+    height: 1.5em;
+    font-size: 1.5em;
+  }
 
   .subtitulos {
     font-size: 2.3em;

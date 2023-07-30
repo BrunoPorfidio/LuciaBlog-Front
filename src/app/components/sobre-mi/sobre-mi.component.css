@@ -19,8 +19,7 @@
   .btn__add {
     padding: 1em;
     display: flex;
-    justify-content: start;
-  
+    align-items: flex-start
   }
   
   .btn-add {

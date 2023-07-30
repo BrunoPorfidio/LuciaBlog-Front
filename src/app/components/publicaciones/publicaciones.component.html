@@ -6,7 +6,7 @@
             <i class="bi bi-journal-plus btn-add" routerLink="/nueva-publicacion"></i>
         </div>
         <div class="row publicaciones-row-main">
-            <div class="col-12 col-md-6" *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion'" [id]="publicaciones.idPublicacion">
+            <div class="col-12 col-lg-6" *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion'" [id]="publicaciones.idPublicacion">
                 <div class="row card-container">
                     <div class="col-6">
                         <div class="seccion-imagen">
