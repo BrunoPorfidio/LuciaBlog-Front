@@ -83,7 +83,7 @@ nav ul li ul li a:hover {
 }
 
 .titulos {
-  font-size: 4.8em;
+  font-size: 4.5em;
   font-family: "AbibasMedium";
   align-items: center;
 }
@@ -133,25 +133,54 @@ nav ul li ul li a:hover {
 /* 
    -------------------------------------- Media Queries-------------------------------------------*/
 
-@media all and (min-width: 1375px) and (max-width: 1500px) {
+@media all and (min-width: 1250px) and (max-width: 1500px) {
   .titulos {
-    font-size: 4em;
+    margin-top: .4em;
+    font-size: 3.5em;
+  }
+
+  .redes-icons{
+    font-size: 1.5em;
+  }
+
+  .goodreads{
+    font-size: .9em;
   }
 
   .buttons {
-    padding: 0.6em 2.5em;
+    padding: 0.6em 2.2em;
+  }
+
+  nav > ul > li > a {
+    font-size: 1.3em;
   }
 }
 
 /* Tamaño por defecto pantallas  */
-@media all and (min-width: 1110px) and (max-width: 1375px) {
+@media all and (min-width: 1110px) and (max-width: 1250px) {
   .titulos {
-    margin-top: 0.2em;
-    font-size: 4em;
+    margin-top: .4em;
+    font-size: 3em;
   }
 
   .buttons {
-    padding: 0.6em 2.4em;
+    padding: 0.6em 1.8em;
+  }
+
+  
+  .redes-icons{
+    font-size: 1.4em;
+  }
+
+  .goodreads{
+    font-size: .9em;
+  }
+
+  nav > ul > li {
+    padding-left: 1em;
+  }
+  nav > ul > li > a {
+    font-size: 1.4em;
   }
 }
 
@@ -160,36 +189,65 @@ nav ul li ul li a:hover {
 
   .titulos {
     margin-top: 0.2em;
-    font-size: 3.5em;
+    font-size: 2.8em;
   }
 
   .buttons {
     padding: 0.6em 1.5em;
   }
-}
 
-@media all and (min-width: 945px) and (max-width: 1024px) {
+  
+  .redes-icons{
+    font-size: 1.4em;
+  }
 
-  .titulos {
-    margin-top: 0.2em;
-    font-size: 3.5em;
+  .goodreads{
+    font-size: .9em;
   }
 
   .buttons {
-    padding: 0.6em 1.3em;
+    padding: 0.6em 1.5em;
+  }
+  
+  nav > ul > li {
+    padding-left: 1em;
+  }
+  nav > ul > li > a {
+    font-size: 1.3em;
   }
 }
 
-@media all and (min-width: 992px) {
+/* @media all and (max-width: 992px) {
   .col-lg-3 {
     flex: 0 0 auto;
-    width: 18%;
+    width: 20%;
   }
-}
+} */
 
-@media all and (min-width: 899px) and (max-width: 945px) {
+@media all and (min-width: 990px) and (max-width: 1024px) {
+
+  .titulos{
+    font-size: 2.7em;
+    margin-top: .4em;
+  }
+
+  .redes-icons{
+    font-size: 1.3em;
+  }
+
+  .goodreads{
+    font-size: .85em;
+  }
+
   .buttons {
-    padding: 0.6em 1em;
+    padding: 0.6em 1.1em;
+  }
+  
+  nav > ul > li {
+    padding-left: 1em;
+  }
+  nav > ul > li > a {
+    font-size: 1.38em;
   }
 }
 
@@ -219,7 +277,7 @@ nav ul li ul li a:hover {
   }
 
   .titulos {
-    font-size: 6em;
+    font-size: 3em;
   }
 
   nav {
@@ -237,7 +295,7 @@ nav ul li ul li a:hover {
   }
 
   .buttons {
-    padding: 1em 5em;
+    padding: 1em 3em;
   }
 
   .social-icons {
@@ -280,11 +338,15 @@ nav ul li ul li a:hover {
 @media all and (min-width: 769px) and (max-width: 990px) {
   .titulos {
     margin-top: -.2em;
-    font-size: 4em;
+    font-size: 3.5em;
   }
 
   .nav{
-    height: 4.2em;
+    height: 3em;
+  }
+
+  .menu-btn {
+    font-size: 28px;
   }
 }
 
@@ -292,11 +354,11 @@ nav ul li ul li a:hover {
 @media all and (min-width: 500px) and (max-width: 769px) {
   .titulos {
     margin-top: -.2em;
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .nav {
-    height: 8vh;
+    height: 5vh;
   }
 
   .buttons {
@@ -310,7 +372,7 @@ nav ul li ul li a:hover {
   }
 
   .menu-btn {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .nav__item {
@@ -326,7 +388,7 @@ nav ul li ul li a:hover {
   }
 
   .nav {
-    height: 3.5em;
+    height: 2.7em;
   }
 
   .n--activo {
@@ -358,25 +420,5 @@ nav ul li ul li a:hover {
   }
 }
 
-@media all and (max-width: 351px) {
-  .nav {
-    height: 3.2em;
-  }
-  .nav__item {
-    font-size: 12px;
-  }
-
-  .titulos {
-    font-size: 3.2em;
-  }
-
-  .menu-btn {
-    font-size: 18px;
-  }
-
-  /* .menu {
-    margin: 2em 15em 0em 5em;
-  } */
-}
 
 /* ----------------------FINMEDIA QUERIES------------------- */
