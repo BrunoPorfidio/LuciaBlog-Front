@@ -9,12 +9,8 @@
   justify-content: flex-end;
 }
 
-.footer {
+footer {
   color: #000;
   width: 100%;
-  height: 10%;
-  justify-content: space-evenly;
-  justify-content: center;
   background-color: rgba(164, 167, 212, 0.718);
-  margin: auto;
 }
