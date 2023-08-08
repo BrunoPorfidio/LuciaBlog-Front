@@ -1,0 +1,97 @@
+* {
+  overflow-x: hidden;
+}
+
+.sobremi-txt {
+  background-color: rgba(164, 167, 212, 0.718);
+  font-size: 1.8em;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  white-space: pre-line;
+}
+
+.subtitulos {
+  font-family: "AbibasMedium";
+  font-size: 3.5em;
+}
+
+.btn__add {
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn-add {
+  font-size: 2em;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.btn-add:hover {
+  --escala: 1.1;
+}
+
+/* Tamaño por defecto pantallas  */
+@media all and (min-width: 1110px) and (max-width: 1360px) {
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 950px) and (max-width: 1110px) {
+  .btn-add {
+    font-size: 1.7em;
+  }
+}
+
+/* Tamaño tablet  */
+@media all and (min-width: 768px) and (max-width: 950px) {
+  .subtitulos {
+    font-size: 2.5em;
+  }
+
+  .btn-add {
+    font-size: 1.4em;
+  }
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 768px) {
+  .subtitulos {
+    font-size: 2.5em;
+  }
+  .sobremi-txt {
+    font-size: 1.3em;
+  }
+
+  .btn-add {
+    font-size: 1.3em;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+  .subtitulos {
+    font-size: 2.5em;
+  }
+  .sobremi-txt {
+    font-size: 1.2em;
+  }
+
+  .btn-add {
+    font-size: 1.2em;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .sobremi-txt {
+    font-size: 1.2em;
+  }
+
+  .btn-add {
+    font-size: 1.2em;
+  }
+}

@@ -1,6 +1,139 @@
-.section-login{
-    display: grid;
-    place-content: center;
-    place-items: center;
-    margin-top: 30vh;
+form {
+  width: 30em;
+  background-color: rgba(164, 167, 212, 0.718);
+  border-radius: 50px;
+  margin-top: 20vh;
+  padding: 2em;
+  font-size: 1.25em;
+  color: #fff;
 }
+
+.login_txt {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.login_subtext {
+  font-size: 1.5em;
+}
+
+.form__input__name,
+.form__input__password {
+  width: 100%;
+  height: 2.5em;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.btn-desing {
+  font-size: 2.2em;
+  border-radius: 100%;
+  color: #fff;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  cursor: pointer;
+}
+
+.btn-send {
+  font-size: 1em;
+  width: 100%;
+  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  padding: 0.625em 0.625em;
+  cursor: pointer;
+}
+
+.btn-desing:hover,
+.btn-send:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+::placeholder {
+  font-size: 1em;
+}
+
+/* --------------INICIO MEDIA QUERIES--------------- */
+
+/* Tamaño por defecto pantallas  */
+@media all and (max-width: 1360px) {
+  form {
+    width: 30em;
+    font-size: 1.25em;
+    margin-top: 10vh;
+  }
+
+  .btn-desing {
+    font-size: 1.8em;
+  }
+
+  .login_txt {
+    font-size: 1.7em;
+  }
+
+  .login_subtext {
+    font-size: 1em;
+  }
+
+  .form__input__name,
+  .form__input__password {
+    width: 100%;
+    height: 2em;
+  }
+
+  ::placeholder {
+    font-size: .7em;
+  }
+
+  .btn-send {
+    font-size: .8em;
+  }
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 950px) and (max-width: 1110px) {
+}
+
+/* Tamaño tablet  */
+@media all and (min-width: 768px) and (max-width: 950px) {
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 768px) {
+  form {
+    width: 30em;
+    font-size: 1em;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+  form {
+    width: 25em;
+    font-size: 0.9em;
+  }
+
+  .login_txt {
+    font-size: 2em;
+  }
+
+  .login_subtext {
+    font-size: 1.3em;
+  }
+}
+
+@media all and (max-width: 320px) {
+  form {
+    width: 20em;
+    font-size: 0.9em;
+  }
+
+  .login_txt {
+    font-size: 1.6em;
+  }
+
+  .login_subtext {
+    font-size: 1.2em;
+  }
+}
+
+/* --------------FIN MEDIA QUERIES--------------- */

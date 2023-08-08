@@ -1,27 +1,28 @@
 <app-navbar></app-navbar>
 <div class="hero-publicaciones">
     <div class="container-fluid">
-        <h1 class="subtitulos subtitulo-centrado">RESEÑAS</h1>
-        <div class="btn__add" *ngIf="isAdmin">
+        <p class="subtitulos AbibasMedium">RESEÑAS</p>
+        <div class="container btn__add" *ngIf="isAdmin">
             <i class="bi bi-journal-plus btn-add" routerLink="/nueva-publicacion"></i>
         </div>
         <div class="row publicaciones-row-main">
-            <div class="col-5" *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion'" [id]="publicaciones.idPublicacion">
+            <div class="col-12 col-lg-6" *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion'"
+                [id]="publicaciones.idPublicacion">
                 <div class="row card-container">
-                    <div class="col-4">
+                    <div class="col-12 col-sm-6">
                         <div class="seccion-imagen">
                             <img class="imagen-publicacion" src="{{publicaciones.fotoLibro}}" alt="" srcset="">
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-sm-6 d-f">
                         <div class="seccion-cuerpo">
-                            <h2>{{publicaciones.titulo}}</h2>
-                            <h3>{{publicaciones.autor}}</h3>
+                            <p class="titulo-libro AbibasMedium">{{publicaciones.titulo}}</p>
+                            <p class="autor-libro AbibasMedium">{{publicaciones.autor}}</p>
                             <p class="card-descrip">{{publicaciones.sinopsis}}</p>
                         </div>
-                        <button class="btn-ir" routerLink="/publicacion/{{publicaciones.idPublicacion}}">Seguir
-                            leyendo</button>
                     </div>
+                    <button class="btn-ir" routerLink="/publicacion/{{publicaciones.idPublicacion}}">Seguir
+                        leyendo</button>
                 </div>
             </div>
         </div>

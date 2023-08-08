@@ -1,0 +1,190 @@
+.titulo-libro {
+  font-size: 4.5em;
+}
+
+.subtitulo-txt {
+  font-size: 1.5em;
+}
+
+.AbibasMedium {
+  font-family: "AbibasMedium";
+}
+
+.imagen-libro {
+  border-radius: 1em;
+}
+
+.btn-edit,
+.btn-delete {
+  font-size: 2.5em;
+  border-radius: 15px;
+  margin: 0em 1.5em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transform: scale(var(--escala, 1));
+  transition: transform 0.25s;
+}
+
+.btn-edit:hover {
+  color: blue;
+  --escala: 1.2;
+}
+
+.btn-delete:hover {
+  color: brown;
+  --escala: 1.2;
+}
+
+.long-text {
+  font-size: 2em;
+  width: 100%;
+  white-space: pre-line;
+}
+
+.contenido {
+  background-color: rgba(164, 167, 212, 0.484);
+  padding: 1em 2em;
+  border-radius: 1em;
+}
+
+.contenido b {
+  font-size: 2.5em;
+}
+
+.imagen-libro {
+  width: 100%;
+}
+
+hr {
+  border: solid 0.18em #000;
+}
+
+/* --------------INICIO MEDIA QUERIES--------------- */
+
+/* Tamaño por defecto pantallas  */
+@media all and (max-width: 1360px) {
+  .info-detail {
+    font-size: 2em;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    margin: 0em 1.5em;
+  }
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 950px) and (max-width: 1110px) {
+  .hero-novedad {
+    margin-top: 10vh;
+  }
+
+  .titulo-libro {
+    font-size: 4.5em;
+  }
+
+  .subtitulo-txt {
+    font-size: 1.5em;
+  }
+
+  .info-detail {
+    font-size: 1.7em;
+  }
+
+  .long-text {
+    font-size: 2em;
+  }
+}
+
+/* Tamaño tablet  */
+@media all and (min-width: 768px) and (max-width: 950px) {
+  .hero-novedad {
+    margin-top: 10vh;
+  }
+
+  .titulo-libro {
+    font-size: 4em;
+  }
+
+  .info-detail {
+    font-size: 1.7em;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 1.1em;
+  }
+
+  .long-text {
+    font-size: 1.7em;
+  }
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 768px) {
+  .hero-novedad {
+    margin-top: 8vh;
+  }
+
+  .titulo-libro {
+    font-size: 3.5em;
+  }
+
+  .info-detail {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 1em;
+  }
+
+  .long-text {
+    font-size: 1.4em;
+  }
+}
+
+@media all and (min-width: 350px) and (max-width: 500px) {
+  .hero-novedad {
+    margin-top: 8vh;
+  }
+
+  .titulo-libro {
+    font-size: 3em;
+  }
+
+  .info-detail {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 1em;
+  }
+
+  .long-text {
+    font-size: 1.4em;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .hero-novedad {
+    margin-top: 8vh;
+  }
+  .info-detail {
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    font-size: 1em;
+  }
+
+  .long-text {
+    font-size: 1.4em;
+  }
+}
+/* --------------FIN MEDIA QUERIES--------------- */

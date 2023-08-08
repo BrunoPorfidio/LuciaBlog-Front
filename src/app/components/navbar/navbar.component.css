@@ -1,0 +1,412 @@
+/*---------------------- INICIO ESTILOS BLOG ----------------------*/
+
+.d-f {
+  display: flex;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.hero-navbar {
+  display: flex;
+  flex-flow: row wrap;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  background-color: rgba(164, 167, 212, 0.953);
+  margin: auto;
+}
+
+.buttons {
+  text-decoration: none;
+  background-color: rgb(202, 204, 234);
+  border-radius: 10px;
+  padding: 0.3em 3em;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  max-width: 1200px;
+  height: 100%;
+  padding: 0px 1em;
+}
+
+nav {
+  height: 100%;
+}
+
+nav > ul {
+  height: 100%;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+nav > ul > li > a {
+  font-size: 1.6em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  transition: all 300ms ease;
+}
+
+nav > ul > li {
+  padding-left: 2.5em;
+}
+
+nav > ul > li > a:hover {
+  transform: scale(1.2);
+  z-index: 100;
+}
+
+nav ul li ul li a:hover {
+  background-color: rgb(202, 204, 234);
+  transform: scale(1.2);
+  padding-left: 1.875em;
+  font-size: 1.1em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.titulos {
+  font-size: 4em;
+  font-family: "AbibasMedium";
+  align-items: center;
+}
+
+.titulos > u {
+  font-family: "AbibasMedium";
+}
+
+.redes-icons {
+  color: #000;
+  font-size: 1.5em;
+}
+
+.goodreads {
+  width: 1.5em;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.bi-box-arrow-in-left {
+  color: #a33434;
+}
+
+.input-search {
+  width: 60%;
+  height: 2em;
+  border-radius: 0.5em;
+  font-size: 1.7em;
+}
+
+.menu-btn {
+  color: #fff;
+  background-color: rgba(164, 167, 212, 0.718);
+  display: none;
+}
+
+/* 
+   -------------------------------------- Media Queries-------------------------------------------*/
+
+@media all and (min-width: 1250px) and (max-width: 1500px) {
+
+  .hero-navbar{
+    height: 5.5em;
+  }
+
+  .titulos {
+    margin-top: .1em;
+    font-size: 3.2em;
+  }
+
+  .redes-icons{
+    font-size: 1.2em;
+  }
+
+  .goodreads{
+    font-size: .9em;
+  }
+
+  .buttons {
+    padding: 0.4em 2em;
+  }
+
+  nav > ul > li > a {
+    font-size: 1.3em;
+  }
+}
+
+/* Tamaño por defecto pantallas  */
+@media all and (min-width: 1110px) and (max-width: 1250px) {
+  .titulos {
+    margin-top: .4em;
+    font-size: 3em;
+  }
+
+  .buttons {
+    padding: 0.4em 1.8em;
+  }
+
+  
+  .redes-icons{
+    font-size: 1.4em;
+  }
+
+  .goodreads{
+    font-size: .9em;
+  }
+
+  nav > ul > li {
+    padding-left: 1em;
+  }
+  nav > ul > li > a {
+    font-size: 1.4em;
+  }
+}
+
+/* Tamaño tablet horizontal */
+@media all and (min-width: 1024px) and (max-width: 1110px) {
+
+  .titulos {
+    margin-top: 0.2em;
+    font-size: 2.9em;
+  }
+
+  .buttons {
+    padding: 0.4em 1.5em;
+  }
+
+  
+  .redes-icons{
+    font-size: 1.4em;
+  }
+
+  .goodreads{
+    font-size: .9em;
+  }
+
+  .buttons {
+    padding: 0.6em 1.5em;
+  }
+  
+  nav > ul > li {
+    padding-left: 1em;
+  }
+  nav > ul > li > a {
+    font-size: 1.3em;
+  }
+}
+
+@media all and (min-width: 990px) and (max-width: 1024px) {
+
+  .titulos{
+    font-size: 2.7em;
+    margin-top: .4em;
+  }
+
+  .redes-icons{
+    font-size: 1.3em;
+  }
+
+  .goodreads{
+    font-size: .85em;
+  }
+
+  .buttons {
+    padding: 0.4em 1.1em;
+  }
+  
+  nav > ul > li {
+    padding-left: 1em;
+  }
+  nav > ul > li > a {
+    font-size: 1.38em;
+  }
+}
+
+/* Tamaño tablet  */
+@media all and (max-width: 990px) {
+  .hero-navbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  nav > ul > li {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .menu-btn {
+    position: absolute;
+    right: 0;
+    display: flex;
+    z-index: 100;
+    font-size: 30px;
+  }
+
+  .titulos {
+    font-size: 3em;
+  }
+
+  nav {
+    height: 1em;
+  }
+
+  nav > ul {
+    display: block;
+    height: auto;
+  }
+
+  nav > ul > li > a {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .buttons {
+    padding: 1em 3em;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+  }
+
+  .goodreads {
+    width: 1.7em;
+    margin-top: 0.2em;
+  }
+
+  .nav__item {
+    font-size: 18px;
+    height: 0vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    padding: 0em 2em;
+  }
+
+  .nav__item--activo {
+    height: auto;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+  }
+
+  .buttons {
+    padding: 0.6em 5em;
+  }
+
+  nav > ul > li > a {
+    font-size: 1em;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 990px) {
+  .titulos {
+    margin-top: -.2em;
+    font-size: 3em;
+  }
+
+  .nav{
+    height: 3em;
+  }
+
+  .menu-btn {
+    font-size: 28px;
+  }
+}
+
+/* Tamaño teléfonos */
+@media all and (min-width: 500px) and (max-width: 769px) {
+  .titulos {
+    margin-top: -.2em;
+    font-size: 2.7em;
+  }
+
+  .nav {
+    height: 4.5vh;
+  }
+
+  .buttons {
+    margin-top: 0.5em;
+    padding: 0.6em 6em;
+  }
+
+  .goodreads {
+    width: 1.5em;
+    margin-top: 0.2em;
+  }
+
+  .menu-btn {
+    font-size: 22px;
+  }
+
+  .nav__item {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+
+  .titulos {
+    margin-top: -.2em;
+    font-size: 2.2em;
+  }
+
+  .nav {
+    height: 2em;
+  }
+
+  .n--activo {
+    height: auto;
+  }
+
+  .menu-btn {
+    font-size: 18px;
+  }
+
+  nav > ul {
+    padding: 1em 0em 0em 2em;
+  }
+
+  .buttons {
+    padding: 0.6em 4em;
+  }
+
+  .nav__item {
+    font-size: 13px;
+  }
+
+  .navbar {
+    align-items: center;
+  }
+
+}
+
+
+/* ----------------------FINMEDIA QUERIES------------------- */

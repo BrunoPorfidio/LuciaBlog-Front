@@ -1,23 +1,20 @@
 <app-navbar></app-navbar>
-<div class="hero-publicacion" style="margin-top: 3em" *ngIf="novedades" [id]="novedades.idNovedad">
+<div class="hero-novedad" *ngIf="novedades" [id]="novedades.idNovedad">
     <div class="container">
-        <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="titulo-txt">{{novedades.tituloNovedad}}</h1>
-                    <h2 class="subtitulo-txt">Por: <b>LuciBooksLu</b></h2>
+                    <h1 class="titulo-libro AbibasMedium">{{novedades.tituloNovedad}}</h1>
+                    <h2 class="subtitulo-txt AbibasMedium">Por: <b>LuciBooksLu</b></h2>
                 </div>
-            </div>
-
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-5">
-                <img src="{{novedades.fotoLibro}}" alt="" style="width: 32em;">
+            <div class="col-12 col-sm-6 col-md-5 col-lg-6">
+                <img class="imagen-libro" src="{{novedades.fotoLibro}}" alt="">
             </div>
-            <div class="col-6 publicacion-info">
-                <div class="btn-admin" *ngIf="isAdmin">
+            <div class="col-12 col-sm-6 publicacion-info">
+                <div class="btn-admin d-f jc-c" *ngIf="isAdmin">
                     <i class="bi bi-pen btn-edit" routerLink="/editar-novedad/{{novedades.idNovedad}}"></i>
                     <i class="bi bi-trash btn-delete" (click)="borrar(novedades.idNovedad)"></i>
                 </div>
@@ -27,7 +24,7 @@
     </div>
     <div class="container mt-5">
         <div class="contenido">
-            <h2>Contenido</h2>
+            <b class="mt-5 AbibasMedium">Contenido</b>
             <p class="long-text">{{novedades.descripcionNovedad}} </p>
             <hr>
         </div>

@@ -1,73 +1,71 @@
-<ng-container>
-    <section class="container-fluid form-section" *ngIf="reflexiones">
+<section class="container-fluid form-section" *ngIf="reflexiones">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6 d-f al-c jc-c">
                 <div class="image-container">
                     <input 
-                    class="img-btn mb-5"
+                    class="img-btn"
                     name="image-libro"
                     (change)="capturarImagen($event)"
                     type="file" 
                     alife-file-to-base64  
                     id="image-libro" 
-                    accept="image/png, image/jpeg" 
-                    >
+                    accept="image/png, image/jpeg">
                     <div class="foto-container" *ngIf="previsualizacion">
                         <img class="img-libro" [src]="previsualizacion" alt="" srcset="">
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6 d-f al-c jc-c">
                 <div class="form">
                     <div class="form__body">
                         <form (ngSubmit)="editar()" novalidate #f="ngForm">
-                            <div class="row row-header">
-                                <div class="col-11">
-                                    <h2>EDITAR REFLEXION</h2>
+                            <div class="d-f">
+                                <div class="col form-header jc-c al-c">
+                                    <p class="titulo">EDITAR REFLEXION</p>
                                 </div>
-                                <div class="col-1">
+                                <div>
                                     <i class="bi bi-x btn-desing" routerLink="/reflexiones"></i>
                                 </div>
                             </div>
-                            <br>
-                            <br>
                             <div class="row form__inputs__joined">
                                 <div class="col-6">
                                     <div class="icon-container-novedades">
-                                        <p class="logotipo__title">FOTO REFLEXION *</p>
-                                        <label for="image-libro">
-                                            <span class="container form__input__add form__input__add-novedades img-btn___buscar">
+                                        <p class="logotipo__title">FOTO REFLEXION</p>
+                                        <label class="d-f" for="image-libro">
+                                            <span class="container form__input__add d-f jc-c al-c">
                                                 <i class="bi bi-plus-lg"></i>
                                             </span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <label for="tituloNovedad">NOMBRE DE LA REFLEXION *</label>
+                                    <label for="tituloNovedad">NOMBRE DE REFLEXION</label>
                                     <br>
                                     <input 
                                     class="form__input__name form__input__name_novedad" 
-                                    type="text" name="tituloNovedad"
+                                    type="text" 
+                                    name="tituloNovedad"
                                     placeholder="Ej: Libro del Dia" 
-                                    [(ngModel)]="reflexiones.titulo" required>
+                                    [(ngModel)]="reflexiones.titulo" 
+                                    required>
                                     <br>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <label for="descripcionNovedad">Descripcion de Reflexion *</label>
+                                    <label for="descripcionNovedad">DESCRIPCION DE LA REFLEXION</label>
                                     <br>
                                     <textarea 
                                     class="form__input__textarea" 
                                     name="descripcionNovedad"
                                     placeholder="Ingrese la Descripcion" 
-                                    [(ngModel)]="reflexiones.cuerpoReflexion" required></textarea>
+                                    [(ngModel)]="reflexiones.cuerpoReflexion" 
+                                    required></textarea>
                                     <br>
                                 </div>
                             </div>
-                            <br>
-                            <div class="submit__btn">
+                            <div class="d-f jc-c">
                                 <button class="btn btn-send" type="submit">Editar Reflexion</button>
                             </div>
                         </form>
@@ -75,5 +73,4 @@
                 </div>
             </div>
         </div>
-    </section>
-</ng-container>
+</section>

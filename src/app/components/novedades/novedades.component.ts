@@ -43,10 +43,10 @@ export class NovedadesComponent implements OnInit{
       (err) => {
         Swal.fire(
           'ERROR!',
-          'Error al cargar los Datos',
+          'Error al cargar las Novedades',
           'error'
         )
-        this.router.navigate(['/luciBlog']);
+        // this.router.navigate(['/luciBlog']);
       }
     )
   }

@@ -1,36 +1,40 @@
-<header>
-    <div class="container-fluid hero-navbar">
-        <div class="left-nav">
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <div class="nav">
-                            <h1 class="titulos"><u routerLink="/login">L</u>ucibookslu </h1>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://www.instagram.com/lucibookslu/" target="_blank" class="insta"> <i
-                                    class="bi bi-instagram redes-icons"></i></a>
-                            <a href="mailto:luciamedina722@gmail.com?Subject=Quisiera%20colaborar%20contigo"
-                                target="_blank" class="mail"><i class="bi bi-envelope redes-icons"></i></a>
-                            <a href="https://www.goodreads.com/lucibookslu" target="_blank" class="twitter"><img src="https://www.svgrepo.com/show/306117/goodreads.svg"
-                                    class="redes-icons" width="25"/></a>
-                        </div>
-                        <li><a class="buttons" routerLink="/luciBlog">Inicio</a></li>
-                        <li><a class="buttons" routerLink="/publicaciones">Reseñas</a>
-                            <!-- <ul>
+<header class=" row hero-navbar d-f">
+    <div class="col-12 col-md-12 col-lg-2">
+        <div class="nav">
+            <p class="titulos d-f"><u routerLink="/login">L</u>ucibookslu </p>
+            <button (click)="setActive()" class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-8">
+   
+    <div class="menu d-f">
+        <nav class="nav__item jc-c" [ngClass]="{ 'nav__item--activo': active }">
+            <ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/lucibookslu/" target="_blank" class="insta"> <i
+                            class="bi bi-instagram redes-icons"></i></a>
+                    <a href="mailto:luciamedina722@gmail.com?Subject=Quisiera%20colaborar%20contigo" target="_blank"
+                        class="mail"><i class="bi bi-envelope redes-icons"></i></a>
+                    <a href="https://www.goodreads.com/lucibookslu" target="_blank" class="goodreads"><img
+                            src="https://www.svgrepo.com/show/306117/goodreads.svg" class=" goodreads" /></a>
+                </div>
+                <li><a class="buttons" routerLink="/luciBlog">Inicio</a></li>
+                <li><a class="buttons" routerLink="/publicaciones">Reseñas</a>
+                    <!-- <ul>
                                 <li><a routerLink="/publicaciones">Todo</a></li>
                                 <li><a href="#">Genero Literario</a></li>
                                 <li><a href="#">Autores</a></li>
                                 <li><a href="#">Libro en Fisico</a></li>
                                 <li><a href="#">Libros en Digital</a></li>
                             </ul> -->
-                        </li>
-                        <li><a class="buttons" routerLink="/colaboraciones">Colaboraciones</a></li>
-                        <li><a class="buttons" routerLink="/reflexiones">Reflexiones</a></li>
-                        <li class="btn-search"><a class="buttons" routerLink="/busqueda"><i class="bi bi-search"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+                </li>
+                <li><a class="buttons" routerLink="/colaboraciones">Colaboraciones</a></li>
+                <li><a class="buttons" routerLink="/reflexiones">Reflexiones</a></li>
+                <li class="btn-search"><a class="buttons" routerLink="/busqueda"><i class="bi bi-search"></i></a></li>
+            </ul>
+        </nav>
     </div>
+</div>
 </header>

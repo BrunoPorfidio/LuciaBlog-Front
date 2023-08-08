@@ -43,7 +43,7 @@ export class PublicacionesComponent implements OnInit {
       (err) => {
         Swal.fire(
           'ERROR!',
-          'Error al cargar los Datos',
+          'Error al cargar las Reseñas',
           'error'
         )
         this.router.navigate(['/publicaciones']);

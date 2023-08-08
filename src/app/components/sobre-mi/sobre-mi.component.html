@@ -1,17 +1,19 @@
 <div class="hero-sobre-mi mt-5">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3">
-                <h1 class="subtitulos">¿Quien soy?</h1>
-            </div>
-            <div class="col-1">
+            <div class="col d-f">
+                <p class="subtitulos">¿Quien soy?</p>
                 <div class="btn__add" *ngIf="isAdmin">
                     <i class="bi bi-pen btn-edit btn-add" routerLink="/editar-persona/1"></i>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sobremi-txt" *ngIf="persona">
-        <h2>{{persona.acercaMi}}</h2>
+    <div class="row">
+        <div class="col-12 col-md-11">
+            <div class="sobremi-txt" *ngIf="persona">
+                <p>{{persona.acercaMi}}</p>
+            </div>
+        </div>
     </div>
 </div>
