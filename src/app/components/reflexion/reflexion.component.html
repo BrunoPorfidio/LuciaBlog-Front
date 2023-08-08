@@ -1,23 +1,20 @@
 <app-navbar></app-navbar>
-<div class="hero-publicacion" *ngIf="reflexion" [id]="reflexion.idReflexion">
+<div class="hero-reflexion" *ngIf="reflexion" [id]="reflexion.idReflexion">
     <div class="container">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="titulo-txt AbibasMedium">{{reflexion.titulo}}</h1>
-                    <h2 class="subtitulo-txt">Por: <b>LuciBooksLu</b></h2>
-                </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="titulo-libro AbibasMedium">{{reflexion.titulo}}</h1>
+                <h2 class="subtitulo-txt AbibasMedium">Por: <b>LuciBooksLu</b></h2>
             </div>
-
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-6 col-md-5">
-                <img class="imagen-libro" src="{{reflexion.fotoReflexion}}" alt="" >
+            <div class="col-12 col-sm-6 col-md-5 col-lg-6">
+                <img class="imagen-libro" src="{{reflexion.fotoReflexion}}" alt="">
             </div>
-            <div class="col-6 publicacion-info">
-                <div class="btn-admin" *ngIf="isAdmin">
+            <div class="col-12 col-sm-6 publicacion-info">
+                <div class="btn-admin d-f jc-c" *ngIf="isAdmin">
                     <i class="bi bi-pen btn-edit" routerLink="/editar-reflexion/{{reflexion.idReflexion}}"></i>
                     <i class="bi bi-trash btn-delete" (click)="borrar(reflexion.idReflexion)"></i>
                 </div>
@@ -27,7 +24,7 @@
     </div>
     <div class="container mt-5">
         <div class="contenido">
-            <h2 class="mt-5 AbibasMedium">Contenido</h2>
+            <b class="mt-5 AbibasMedium">Contenido</b>
             <p class="long-text">{{this.reflexion.cuerpoReflexion}}</p>
         </div>
     </div>

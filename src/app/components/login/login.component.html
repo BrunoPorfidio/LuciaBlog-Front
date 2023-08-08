@@ -1,36 +1,34 @@
-<section class="container d-f jc-c">
-    <div class="form__body">
-        <form id="form" #form="ngForm" (ngSubmit)="onLogin($event)" novalidate>
-            <div class="row row-header">
-                <div class="col-10 col-md-11">
-                    <p class="login_txt">LOGIN</p>
-                </div>
-                <div class="col-1">
-                    <i class="bi bi-x btn-desing" routerLink="/luciBlog"></i>
-                </div>
-            </div>
+<section class="container-fluid d-f jc-c">
+    <form id="form" #form="ngForm" (ngSubmit)="onLogin($event)" novalidate>
+        <div class="form-header d-f">
             <div class="col">
-                <label for="nombreUsuario">
-                    <p class="login_subtext">Nombre de Usuario</p>
-                </label>
-                <br>
-                <input class="form__input__name" type="text" name="nombreUsuario" [(ngModel)]="nombreUsuario" required
-                    placeholder="Ejemplo: BrandonSanderson">
-                <br>
+                <p class="login_txt">LOGIN</p>
             </div>
+            <div >
+                <i class="bi bi-x btn-desing" routerLink="/luciBlog"></i>
+            </div>
+        </div>
+        <div class="col">
+            <label for="nombreUsuario">
+                <p class="login_subtext">Nombre de Usuario</p>
+            </label>
             <br>
-            <div class="col">
-                <label for="password">
-                    <p class="login_subtext">Contraseña</p>
-                </label>
-                <br>
-                <input class="form__input__password" type="password" name="password" [(ngModel)]="password" required
-                    placeholder="Ejemplo: Password">
-            </div>
+            <input class="form__input__name" type="text" name="nombreUsuario" [(ngModel)]="nombreUsuario" required
+                placeholder="Ejemplo: BrandonSanderson">
             <br>
-            <div class="submit__btn">
-                <button class="btn btn-send" type="submit">Iniciar Sesion</button>
-            </div>
-        </form>
-    </div>
+        </div>
+        <br>
+        <div class="col">
+            <label for="password">
+                <p class="login_subtext">Contraseña</p>
+            </label>
+            <br>
+            <input class="form__input__password" type="password" name="password" [(ngModel)]="password" required
+                placeholder="Ejemplo: Password">
+        </div>
+        <br>
+        <div class="submit__btn">
+            <button class="btn btn-send" type="submit">Iniciar Sesion</button>
+        </div>
+    </form>
 </section>

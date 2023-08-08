@@ -1,4 +1,4 @@
-.hero-destacado{
+.hero-destacado {
   margin-top: 2%;
 }
 
@@ -15,7 +15,7 @@
 
 .subtitulos {
   font-family: "AbibasMedium";
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
 .novedades-especific {
@@ -55,15 +55,23 @@
 }
 
 .card-img-top-lg {
-    max-height: 25em;
+  max-height: 25em;
+}
+
+.card-img-top {
+  max-height: 25em;
+}
+
+@media all and (max-width: 990px) {
+  .hero-destacado {
+    margin-top: 10%;
   }
 
-  .card-img-top {
-    max-height: 25em;
+  .subtitulos {
+    font-size: 2.5em;
   }
 
-  @media all and (min-width: 990px) {
-
-    
-    
+  .card-title-destacado{
+    font-size: 1.3em;
   }
+}

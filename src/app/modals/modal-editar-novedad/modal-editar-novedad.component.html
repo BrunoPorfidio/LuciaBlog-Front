@@ -1,7 +1,6 @@
-<ng-container>
-    <section class="container-fluid form-section" *ngIf="novedades">
+<section class="container-fluid form-section" *ngIf="novedades">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6 d-f al-c jc-c">
                 <div class="image-container">
                     <input 
                     class="img-btn mb-5"
@@ -17,36 +16,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6 d-f al-c jc-c">
                 <div class="form">
                     <div class="form__body">
                         <form (ngSubmit)="editar()" novalidate #f="ngForm">
-                            <div class="row row-header">
-                                <div class="col-11">
-                                    <h2>EDITAR NOVEDAD</h2>
+                            <div class="d-f">
+                                <div class="col form-header jc-c al-c">
+                                    <p class="titulo">EDITAR NOVEDAD</p>
                                 </div>
-                                <div class="col-1">
-                                    <i class="bi bi-x btn-desing" routerLink="/publicaciones"></i>
+                                <div>
+                                    <i class="bi bi-x btn-desing" routerLink="/luciBlog"></i>
                                 </div>
                             </div>
-                            <br>
-                            <br>
                             <div class="row form__inputs__joined">
                                 <div class="col-6">
                                     <div class="icon-container-novedades">
-                                        <p class="logotipo__title">FOTO NOVEDAD *</p>
-                                        <label for="image-libro">
-                                            <span class="container form__input__add form__input__add-novedades img-btn___buscar">
+                                        <p class="logotipo__title">FOTO NOVEDAD</p>
+                                        <label class="d-f" for="image-libro">
+                                            <span class="container form__input__add d-f jc-c al-c">
                                                 <i class="bi bi-plus-lg"></i>
                                             </span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <label for="tituloNovedad">NOMBRE DE LA NOVEDAD *</label>
+                                    <label for="tituloNovedad">NOMBRE DE LA NOVEDAD</label>
                                     <br>
                                     <input 
-                                    class="form__input__name form__input__name_novedad" 
+                                    class="form__input__name" 
                                     type="text" name="tituloNovedad"
                                     placeholder="Ej: Libro del Dia" 
                                     [(ngModel)]="novedades.tituloNovedad" required>
@@ -56,7 +53,7 @@
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <label for="descripcionNovedad">Descripcion de Novedad *</label>
+                                    <label for="descripcionNovedad">DESCRIPCION DE LA NOVEDAD</label>
                                     <br>
                                     <textarea 
                                     class="form__input__textarea" 
@@ -67,7 +64,7 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="submit__btn">
+                            <div class="d-f jc-c">
                                 <button class="btn btn-send" type="submit">Editar Novedad</button>
                             </div>
                         </form>
@@ -75,5 +72,4 @@
                 </div>
             </div>
         </div>
-    </section>
-</ng-container>
+</section>

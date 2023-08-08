@@ -43,7 +43,7 @@ export class ColaboracionesComponent implements OnInit{
       (err) => {
         Swal.fire(
           'ERROR!',
-          'Error al cargar los Datos',
+          'Error al cargar las Colaboraciones',
           'error'
         )
         this.router.navigate(['/publicaciones']);

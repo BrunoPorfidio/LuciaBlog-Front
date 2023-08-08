@@ -42,7 +42,7 @@ export class SobreMiComponent implements OnInit {
           'Ah ocurrido un error al cargar los Datos Personales',
           'error'
         )
-        this.router.navigate(['/publicaciones']);
+        // this.router.navigate(['/publicaciones']);
       }
     )
 

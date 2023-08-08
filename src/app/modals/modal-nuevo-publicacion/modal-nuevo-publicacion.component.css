@@ -1,26 +1,31 @@
-.image-container {
-  max-width: 35em;
+.form-section {
+  margin-top: 10vh;
+}
+
+.form {
+  width: 100%;
+  background-color: rgba(164, 167, 212, 0.718);
+  border-radius: 50px;
+  padding: 1em 2em;
+  font-size: 1.25em;
   color: #fff;
 }
 
-.img-libro {
+.image-container {
   max-width: 35em;
-  /* margin: 12.5em 0 0 9.375em; */
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
-.icon-container {
-  margin-left: 2em;
+.img-libro {
+  border-radius: 10px;
+  max-width: 35em;
 }
 
-.icon-container-novedades {
-  display: grid;
-  margin-left: 0;
-  place-content: center;
-}
-
-.col-11 > h2 {
+.titulo {
+  font-size: 1.7em;
   text-align: center;
-  margin-left: 2em;
 }
 
 .btn-desing {
@@ -34,13 +39,14 @@
 .btn-back:hover,
 .bi-x-circle-fill:hover,
 .form__input__add:hover,
-.btn-send:hover {
+.btn-send:hover,
+.btn-desing:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 }
 
 .btn-send {
   font-size: 1em;
-  width: 100%;
+  width: 80%;
   background: linear-gradient(90deg, pink, rgb(106, 156, 199));
   border-radius: 5px;
   border: 0;
@@ -49,36 +55,16 @@
   cursor: pointer;
 }
 
-.form {
-  width: 100%;
-  background-color: rgba(164, 167, 212, 0.718);
-  border-radius: 50px;
-  padding: 1em 2em;
-  font-size: 1.25em;
-  color: #fff;
-}
-
-.form-about {
-  margin: 5em 25em;
-  width: 50%;
-  background-color: rgba(164, 167, 212, 0.718);
-  border-radius: 50px;
-  padding: 1em 2em;
-  font-size: 1.25em;
-  color: #fff;
-}
-
-.logotipo__title {
-  margin-bottom: -1.375em;
-  margin-left: 30px;
-}
-
 .bi-plus-lg {
   font-size: 2em;
 }
 
+.logotipo__title {
+  display: flex;
+  justify-content: center;
+}
+
 .form__input__add {
-  margin: 25px 0px 0px 40px;
   width: 4em;
   height: 4em;
   background: linear-gradient(90deg, pink, rgb(106, 156, 199));
@@ -86,16 +72,8 @@
   cursor: pointer;
 }
 
-.form__input__add-novedades {
-  margin: 25px 0px 0px 60px;
-}
-
 .img-btn {
   display: none;
-}
-
-.img-btn + label {
-  display: flex;
 }
 
 .form__input {
@@ -107,10 +85,7 @@
 
 .form__inputs__joined {
   display: flex;
-}
-
-.large_text {
-  margin-top: -1.5em;
+  margin: 1em 0em;
 }
 
 .form__input__name,
@@ -147,36 +122,238 @@
   margin: auto;
 }
 
+.col-4 {
+  width: 37.5% !important;
+}
+::placeholder {
+  font-size: 0.8em;
+}
+
 /* --------------INICIO MEDIA QUERIES--------------- */
 
 /* Tamaño por defecto pantallas  */
 @media all and (max-width: 1360px) {
+  .form-section {
+    margin-top: 0vh;
+  }
+
+  label,
+  .logotipo__title {
+    font-size: 0.9em;
+  }
+
+  .icon-container {
+    margin-left: 0em;
+  }
+
+  .img-libro {
+    max-width: 25em;
+  }
+
+  .form__input__name,
+  .form__input__type {
+    font-size: 0.8em;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .form__input__textarea {
+    font-size: .8em;
+  }
 }
 
 /* Tamaño tablet horizontal */
 @media all and (min-width: 950px) and (max-width: 1110px) {
+  .form {
+    width: 90%;
+    margin-left: 2em;
+  }
 
-    .img-libro {
-        max-width: 40%;
-        margin: 0em;
-      }
+  .titulo {
+    font-size: 1.3em;
+  }
 
-      .large_text {
-        margin-top: 0em;
-      }
+  .btn-desing {
+    font-size: 1.5em;
+  }
+
+  .img-btn___buscar {
+    font-size: 1em;
+  }
+
+  label,
+  .logotipo__title {
+    font-size: 0.7em;
+  }
+
+  .form__input {
+    width: 90%;
+    height: 2em;
+  }
+
+  .form__input__name,
+  .form__input__type {
+    font-size: 0.8em;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .form__input__textarea {
+    font-size: 1em;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 1110px) {
+  .form-section {
+    margin-top: 0vh;
+  }
 }
 
 /* Tamaño tablet  */
 @media all and (min-width: 768px) and (max-width: 950px) {
+  .form-section {
+    margin-top: 0vh;
+  }
+
+  .form__input__add{
+    font-size: .9em;
+  }
+
+  .form__input__name,
+  .form__input__type {
+    font-size: 0.8em;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .form__input__textarea {
+    font-size: 1em;
+  }
 }
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
+  .titulo {
+    font-size: 1.4em;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0.5em 0.5em;
+  }
+  .btn-desing {
+    font-size: 1.5em;
+  }
+
+  .form__input__add {
+    font-size: 0.8em;
+  }
+
+  .form__input__name,
+  .form__input__type {
+    font-size: 0.8em;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .form__input__textarea {
+    font-size: 1em;
+  }
 }
 
-@media all and (min-width: 350px) and (max-width: 500px) {
+@media all and (min-width: 320px) and (max-width: 500px) {
+  .form-section {
+    margin-top: 0vh;
+  }
+  .img-libro {
+    max-width: 100%;
+    margin: 0em;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0.5em 0.5em;
+  }
+
+  .form__input__add{
+    font-size: .6em;
+  }
+
+  .titulo {
+    font-size: 1em;
+  }
+
+  .btn-desing {
+    font-size: 1.2em;
+  }
+
+  label,
+  .logotipo__title {
+    font-size: 0.7em;
+  }
+
+  .form__input {
+    width: 90%;
+    height: 2em;
+  }
+  .form__input__name,
+  .form__input__type {
+    font-size: 0.6em;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .form__input__textarea {
+    font-size: .8em;
+  }
+
+  .btn-send {
+    font-size: 0.6em;
+  }
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 320px) {
+
+  .form {
+    width: 100%;
+    padding: 0.5em 0.5em;
+  }
+
+  .titulo {
+    font-size: 1em;
+    padding-top: 0.5em;
+  }
+
+  .col-11 > h2 {
+    font-size: 0.5em;
+  }
+
+  .btn-desing {
+    font-size: 1em;
+  }
+
+  .img-btn___buscar {
+    font-size: 0.8em;
+  }
+
+  label,
+  .logotipo__title {
+    font-size: 0.6em;
+  }
+
+  .form__input__name,
+  .form__input__type {
+    font-size: 0.6em;
+    width: 100%;
+    height: 2.5em;
+  }
+
+  .form__input__textarea {
+    font-size: 0.7em;
+  }
+
+  .btn-send {
+    font-size: 0.6em;
+  }
 }
 /* --------------FIN MEDIA QUERIES--------------- */

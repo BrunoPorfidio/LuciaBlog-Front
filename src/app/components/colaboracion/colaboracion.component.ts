@@ -70,7 +70,7 @@ export class ColaboracionComponent implements OnInit{
             }, err =>{
               Swal.fire(
                 'ERROR!',
-                'Ah ocurrido un error al borrar la Reseña',
+                'Ah ocurrido un error al borrar la Colaboracion',
                 'error'
               )
               this.router.navigate(['/colaboraciones']);

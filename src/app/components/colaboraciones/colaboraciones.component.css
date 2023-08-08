@@ -1,6 +1,6 @@
 .aviso-txt {
-  width: 70%;
-  font-size: 2em;
+  width: 50%;
+  font-size: 1.7em;
   text-align: center;
   border: solid rgb(83, 32, 138);
   background-color: rgba(164, 167, 212, 0.718);
@@ -108,20 +108,20 @@
 
 /* Tamaño por defecto pantallas  */
 @media all and (max-width: 1360px) {
-  .imagen-publicacion {
-    margin-top: 3vh;
-  }
-}
 
-/* Tamaño tablet horizontal */
-@media all and (min-width: 350px) and (max-width: 1110px) {
-  .hero-colaboracion {
-    margin-top: 4em;
+  .titulo-libro {
+    font-size: 1.7em;
   }
 
-  .btn-add {
-    font-size: 2.5em;
+  .autor-libro {
+    font-size: 1.5em;
   }
+
+  .card-descrip {
+    font-size: 1em;
+    max-height: 100px;
+  }
+
 }
 
 /* Tamaño tablet  */
@@ -136,7 +136,12 @@
 }
 
 /* Tamaño teléfonos */
-@media all and (min-width: 500px) and (max-width: 768px) {
+@media all and (min-width: 575px) and (max-width: 768px) {
+
+  .hero-colaboracion {
+    margin-top: 2em;
+  }
+
   .aviso-txt {
     font-size: 1.4em;
   }
@@ -154,23 +159,29 @@
     max-height: 100px;
   }
 
-  .imagen-publicacion {
-    margin-top: 3.5vh;
-  }
-
   .btn-ir {
     margin: 0.5em 0em 0.5em 44vw;
     font-size: 1em;
   }
 }
 
-@media all and (min-width: 350px) and (max-width: 500px) {
+@media all and (min-width: 320px) and (max-width: 575px) {
+
+  .hero-colaboracion {
+    margin-top: 2em;
+  }
+
   .subtitulos {
     font-size: 3em;
   }
 
+  .btn-add {
+    font-size: 2em;
+  }
+
   .aviso-txt {
-    font-size: 1.2em;
+    width: 80%;
+    font-size: 1em;
   }
 
   .titulo-libro {
@@ -186,23 +197,30 @@
     max-height: 100px;
   }
 
-  .imagen-publicacion {
-    margin-top: 3.5vh;
-  }
-
   .btn-ir {
-    font-size: 1em;
-    margin: 0.5em 0em 0.5em 44vw;
+    font-size: 0.9em;
+    width: 90%;
+    margin: 0.5em 0em 0.5em 4vw;
   }
 }
 
-@media all and (max-width: 350px) {
-  .subtitulos {
-    font-size: 2.3em;
+@media all and (max-width: 320px) {
+
+  .hero-colaboracion {
+    margin-top: 2em;
   }
 
   .aviso-txt {
-    font-size: 1.2em;
+    width: 80%;
+    font-size: .8em;
+  }
+
+  .btn-add {
+    font-size: 1.5em;
+  }
+
+  .subtitulos {
+    font-size: 2em;
   }
 
   .titulo-libro {
@@ -210,17 +228,17 @@
   }
 
   .autor-libro {
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .card-descrip {
-    font-size: 1em;
+    font-size: .8em;
     max-height: 70px;
   }
 
   .btn-ir {
-    font-size: 0.7em;
-    margin: 0.5em 0em 0.5em 40vw;
+  width: 100%;
+  margin: 0.4em 0em;
   }
 }
 /* --------------FIN MEDIA QUERIES--------------- */

@@ -22,7 +22,6 @@
 }
 
 body {
-  
   background: radial-gradient(circle, rgba(255,205,205,1) 3%, rgba(148,185,255,1) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -139,7 +138,7 @@ body {
   --escala: 1.1;
 } */
 
-.btn-back:hover,
+/* .btn-back:hover,
 .bi-x-circle-fill:hover,
 .form__input__add:hover,
 .btn-send:hover {
@@ -158,7 +157,6 @@ body {
 }
 
 .form {
-  margin-top: 10%;
   width: 100%;
   background-color: rgba(164, 167, 212, 0.718);
   border-radius: 50px;
@@ -263,7 +261,7 @@ body {
 /*Escritorio*/
 
 @media screen and (max-width: 1367px) {
-  body {
+  /* body {
     font-size: 12px;
   }
 
@@ -278,7 +276,7 @@ body {
   .login--txt {
     font-size: 0.7em;
     margin-top: 0.8em;
-  }
+  } */
 
   /* .card-img-top-lg {
     max-height: 25em;

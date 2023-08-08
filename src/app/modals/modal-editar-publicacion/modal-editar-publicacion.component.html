@@ -1,7 +1,7 @@
-<ng-container>
+
     <section class="container-fluid form-section" *ngIf="publicacion">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6 d-f al-c jc-c">
                 <div class="image-container">
                     <input 
                     class="img-btn"
@@ -17,43 +17,43 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <div class="form">
                     <div class="form__body">
                         <form (ngSubmit)="editar()" novalidate #f="ngForm">
-                            <div class="row row-header">
-                                <div class="col-11">
-                                    <h2 >EDITAR RESEÑA</h2>
+                            <div class="d-f">
+                                <div class="col form-header jc-c al-c">
+                                    <p class="titulo">PUBLICAR RESEÑA</p>
                                 </div>
-                                <div class="col-1">
-                                    <i class="bi bi-x btn-back btn-desing" routerLink="/publicaciones"></i>
+                                <div>
+                                    <i class="bi bi-x btn-desing" routerLink="/publicaciones"></i>
                                 </div>
                             </div>
-                            <br>
-                            <br>
                             <div class="row form__inputs__joined">
-                                <div class="col-4">
+                                <div class="col-3">
+                                    <p class="logotipo__title">FOTO</p>
                                     <div class="icon-container">
-                                        <p class="logotipo__title">FOTO LIBRO *</p>
-                                        <label for="image-libro" >
-                                            <span class="container form__input__add img-btn___buscar">
+                                        <label class="d-f" for="image-libro" >
+                                            <span class="container form__input__add d-f jc-c al-c">
                                                 <i class="bi bi-plus-lg"></i>
                                             </span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <label for="titulo">NOMBRE DEL LIBRO *</label>
+                                    <label for="titulo">TITULO</label>
                                     <br>
                                     <input 
                                     class="form__input__name" 
-                                    type="text" name="titulo"
+                                    type="text" 
+                                    name="titulo"
                                     placeholder="Ej: Nacidos de la Bruma" 
-                                    [(ngModel)]="publicacion.titulo" required>
+                                    [(ngModel)]="publicacion.titulo" 
+                                    required>
                                     <br>
                                 </div>
                                 <div class="col-4">
-                                    <label for="autor">AUTOR *</label>
+                                    <label for="autor">AUTOR</label>
                                     <br>
                                     <input 
                                     class="form__input__type" 
@@ -63,9 +63,9 @@
                                     [(ngModel)]="publicacion.autor" required>
                                 </div>
                             </div>
-                            <div class="row form__inputs__joined mt-5">
-                                <div class="col-3">
-                                    <label for="editorial">EDITORIAL *</label>
+                            <div class="row form__inputs__joined">
+                                <div class="col-6 col-sm-3">
+                                    <label for="editorial">EDITORIAL</label>
                                     <br>
                                     <input 
                                     class="form__input__name" 
@@ -75,65 +75,69 @@
                                     [(ngModel)]="publicacion.editorial" required>
                                     <br>
                                 </div>
-                                <div class="col-3 large_text">
-                                    <label for="anoPublicacion"> AÑO DE PUBLICACION *</label>
+                                <div class="col-6 col-sm-3">
+                                    <label for="anoPublicacion">AÑO</label>
                                     <br>
                                     <input 
                                     class="form__input__name" 
                                     type="number" 
                                     name="anoPublicacion"
                                     placeholder="Ej: 2007" 
-                                    [(ngModel)]="publicacion.anoPublicacion" required>
+                                    [(ngModel)]="publicacion.anoPublicacion" 
+                                    required>
                                     <br>
                                 </div>
-                                <br>
-                                <div class="col-3 large_text">
-                                    <label for="numPaginas"> NUMERO DE PAGINAS *</label>
+    
+                                <div class="col-6 col-sm-3">
+                                    <label for="numPaginas"> N° PAGINAS</label>
                                     <br>
                                     <input 
                                     class="form__input__type" 
                                     type="number" 
-                                    name="numPaginas"
-                                    placeholder="Ej: 784" 
-                                    [(ngModel)]="publicacion.numPaginas" required>
+                                    name="numPaginas" 
+                                    placeholder="Ej: 784"
+                                    [(ngModel)]="publicacion.numPaginas" 
+                                    required>
                                 </div>
-                                <div class="col-3">
-                                    <label for="genero">GENERO *</label>
+                                <div class="col-6 col-sm-3">
+                                    <label for="genero">GENERO</label>
                                     <br>
                                     <input 
                                     class="form__input__type" 
                                     type="text" 
-                                    name="genero" 
+                                    name="genero"
                                     placeholder="Ej: Fantasia Epica" 
-                                    [(ngModel)]="publicacion.genero" required>
+                                    [(ngModel)]="publicacion.genero" 
+                                    required>
                                     <br>
                                 </div>
                             </div>
-                            <br>
                             <div class="row">
-                                <div class="col-6">
-                                    <label for="sinopsis">SINOPSIS *</label>
+                                <div class="col-12 col-sm-6">
+                                    <label for="sinopsis">SINOPSIS</label>
                                     <br>
                                     <textarea 
                                     class="form__input__textarea" 
                                     name="sinopsis"
                                     placeholder="Ingrese la Sinopsis" 
-                                    [(ngModel)]="publicacion.sinopsis" required></textarea>
+                                    [(ngModel)]="publicacion.sinopsis" 
+                                    required></textarea>
                                     <br>
                                 </div>
-                                <div class="col-6">
-                                    <label for="resenia">RESEÑA *</label>
+                                <div class="col-12 col-sm-6">
+                                    <label for="resenia">RESEÑA</label>
                                     <br>
                                     <textarea 
                                     class="form__input__textarea" 
                                     name="resenia"  
                                     placeholder="Ingrese la Reseña"
-                                    [(ngModel)]="publicacion.resenia" required></textarea>
+                                    [(ngModel)]="publicacion.resenia" 
+                                    required></textarea>
                                     <br>
                                 </div>
                             </div>
                             <br>
-                            <div class="submit__btn">
+                            <div class="d-f jc-c">
                                 <button class="btn btn-send" type="submit">Editar Reseña</button>
                             </div>
                         </form>
@@ -142,4 +146,3 @@
             </div>
         </div>
     </section>
-</ng-container>

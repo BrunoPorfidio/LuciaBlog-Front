@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="hero-colaboracion">
-<h1 class="subtitulos AbibasMedium">COLABORACIONES</h1>
+<p class="subtitulos AbibasMedium">COLABORACIONES</p>
 <div class="aviso-colaboracion d-f jc-c">
     <p class="aviso-txt">Para colaborar conmigo pueden contactarme en: luciamedina722@gmail.com</p>
 </div>
@@ -11,15 +11,16 @@
 </div>
     <div class="container-fluid">
         <div class="row colaboracion-row-main">
-            <div class="col-12 col-lg-6" *ngFor="let colaboracion of colaboraciones"
-                [id]="colaboracion.idColaboraciones">
+            <div class="col-12 col-lg-6" *ngFor="let colaboracion of colaboraciones 
+            | orderBy: '-idColaboraciones'"
+            [id]="colaboracion.idColaboraciones">
                 <div class="row card-container">
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6">
                         <div class="seccion-imagen">
                             <img class="imagen-publicacion" [src]="colaboracion.fotoLibro" alt="" srcset="">
                         </div>
                     </div>
-                    <div class="col-6 d-f">
+                    <div class="col-12 col-sm-6 d-f">
                         <div class="seccion-cuerpo">
                             <p class="titulo-libro AbibasMedium">{{colaboracion.titulo}}</p>
                             <p class="autor-libro AbibasMedium">{{colaboracion.autor}}</p>

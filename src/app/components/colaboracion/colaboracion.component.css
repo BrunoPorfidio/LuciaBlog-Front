@@ -71,19 +71,27 @@ hr {
 
 /* Tamaño por defecto pantallas  */
 @media all and (max-width: 1360px) {
+  
   .info-detail {
-    font-size: 2em;
+    font-size: 1.5em;
+    width: 30vw;
   }
 
   .btn-edit,
   .btn-delete {
     margin: 0em 1.5em;
   }
+
+  .long-text {
+    font-size: 1.5em;
+  }
+  
 }
 
 /* Tamaño tablet horizontal */
 @media all and (min-width: 950px) and (max-width: 1110px) {
-  .hero-publicacion {
+  
+  .hero-publicacion{
     margin-top: 10vh;
   }
 
@@ -106,7 +114,8 @@ hr {
 
 /* Tamaño tablet  */
 @media all and (min-width: 768px) and (max-width: 950px) {
-  .hero-publicacion {
+
+  .hero-publicacion{
     margin-top: 10vh;
   }
 
@@ -115,7 +124,8 @@ hr {
   }
 
   .info-detail {
-    font-size: 1.7em;
+    font-size: 1.3em;
+    width: 100%;
   }
 
   .btn-edit,
@@ -130,8 +140,8 @@ hr {
 
 /* Tamaño teléfonos */
 @media all and (min-width: 500px) and (max-width: 768px) {
-  .hero-publicacion {
-    margin-top: 8vh;
+  .hero-publicacion{
+    margin-top: 5vh;
   }
 
   .titulo-libro {
@@ -140,7 +150,7 @@ hr {
 
   .info-detail {
     width: 100%;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .btn-edit,
@@ -154,13 +164,14 @@ hr {
 }
 
 @media all and (min-width: 350px) and (max-width: 500px) {
-  .hero-publicacion {
-    margin-top: 8vh;
+  .hero-publicacion{
+    margin-top: 5vh;
   }
 
   .titulo-libro {
-    font-size: 3em;
+    font-size: 4em;
   }
+
 
   .info-detail {
     width: 100%;
@@ -171,28 +182,32 @@ hr {
   .btn-delete {
     font-size: 1em;
   }
-
+  
   .long-text {
     font-size: 1.4em;
   }
 }
 
 @media all and (max-width: 350px) {
-  .hero-publicacion {
-    margin-top: 8vh;
+  .hero-publicacion{
+    margin-top: 5vh;
   }
+
+  .titulo-libro{
+    font-size: 2.5em;
+  }
+
   .info-detail {
     width: 100%;
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
 
   .btn-edit,
   .btn-delete {
     font-size: 1em;
   }
-
+  
   .long-text {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }
-/* --------------FIN MEDIA QUERIES--------------- */

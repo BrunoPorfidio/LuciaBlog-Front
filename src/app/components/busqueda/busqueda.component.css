@@ -75,7 +75,7 @@ hr {
   background-color: rgba(255, 255, 255, 0.647);
   font-size: 1.3em;
   width: 40%;
-  margin: 0.5em 0em 0.5em 15vw;
+  margin: 0.5em 0em 0.5em 14em;
   justify-content: center;
 }
 
@@ -93,12 +93,23 @@ hr {
 
 /* Tamaño por defecto pantallas  */
 @media all and (max-width: 1360px) {
-  .imagen-publicacion {
-    margin-top: 3vh;
+
+  .titulo-libro{
+    font-size: 1.7em;
+  }
+
+  .autor-libro{
+    font-size: 1.2em;
+  }
+
+  .card-descrip{
+    font-size: 1em;
+    max-height: 100px;
   }
 
   .btn-ir {
-    margin: 0.5em 0em 0.5em 20vw;
+    font-size: .9em;
+    margin: 0.5em 0em 0.5em 14em;
   }
 
 }
@@ -114,37 +125,48 @@ hr {
 @media all and (min-width: 990px) and (max-width: 1110px) {
 
   .titulo-libro{
-    font-size: 2em;
+    font-size: 1.7em;
   }
 
   .autor-libro{
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   .card-descrip{
     font-size: 1em;
     max-height: 100px;
-
   }
 
   .btn-ir {
-    font-size: 1em;
-    margin: 0.5em 0em 0.5em 15vw;
+    font-size: .9em;
+    margin: 0.5em 0em 0.5em 14em;
   }
 }
 
 /* Tamaño tablet  */
 @media all and (min-width: 768px) and (max-width: 990px) {
   .hero-search {
-    margin-top: 3em;
+    margin-top: 2vh;
+  }
+
+  .btn-ir {
+    margin: 0.5em 0em 0.5em 16em;
   }
 }
 
 /* Tamaño teléfonos */
-@media all and (min-width: 500px) and (max-width: 768px) {
+@media all and (min-width: 575px) and (max-width: 768px) {
+
+  .hero-search {
+    margin-top: 3vh;
+  }
 
   .search-title{
     font-size: 3em;
+  }
+
+  .subtitulos {
+    font-size: 2.5em;
   }
 
   .titulo-libro {
@@ -156,25 +178,24 @@ hr {
   }
 
   .card-descrip {
-    font-size: 1.2em;
+    font-size: 1em;
     max-height: 100px;
-  }
-
-  .imagen-publicacion {
-    margin-top: 3.5vh;
   }
 
   .btn-ir {
     font-size: 1em;
-    margin: 0.5em 0em 0.5em 30vw;
+    margin: 0.5em 0em 0.5em 14em;
   }
-
 }
 
-@media all and (min-width: 350px) and (max-width: 500px) {
+@media all and (min-width: 320px) and (max-width: 575px) {
+
+  .hero-search {
+    margin-top: 2vh;
+  }
 
   .search-title{
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .input-search {
@@ -184,11 +205,7 @@ hr {
   }
 
   .subtitulos {
-    font-size: 3em;
-  }
-
-  .aviso-txt {
-    font-size: 1.5em
+    font-size: 2em;
   }
 
   .titulo-libro {
@@ -204,20 +221,21 @@ hr {
     max-height: 100px;
   }
 
-  .imagen-publicacion {
-    margin-top: 3.5vh;
-  }
-
   .btn-ir {
-    font-size: 1em;
-    margin: 0.5em 0em 0.5em 40vw;
+    font-size: 0.9em;
+    width: 90%;
+    margin: 0.5em 0em 0.5em 4vw;
   }
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 320px) {
+
+  .hero-search {
+    margin-top: 3vh;
+  }
 
   .search-title{
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .input-search {
@@ -227,25 +245,25 @@ hr {
   }
 
   .subtitulos {
-    font-size: 2.3em;
+    font-size: 2em;
   }
 
   .titulo-libro {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .autor-libro {
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .card-descrip {
-    font-size: 1em;
+    font-size: .8em;
     max-height: 70px;
   }
 
   .btn-ir {
-    font-size: 0.7em;
-    margin: 0.5em 0em 0.5em 40vw;
-  }
+    width: 100%;
+    margin: 0.4em 0em;
+    }
 }
 /* --------------FIN MEDIA QUERIES--------------- */

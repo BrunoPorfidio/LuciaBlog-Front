@@ -5,21 +5,21 @@
         <input type="text" class="input-search " name="filterPost" placeholder=" Buscar..." [(ngModel)]="filterPost">
     </div>
     <hr>
-    <!-- <div class="row"> -->
         <div class="hero-publicaciones">
             <div class="container-fluid">
-                <h1 class="subtitulos">RESEÑAS</h1>
+                <p class="subtitulos">RESEÑAS</p>
                 <div class="row publicaciones-row-main">
-                    <div class="col-12 col-lg-6"
-                        *ngFor="let publicaciones of publicacion | orderBy: '-idPublicacion' | filter:filterPost"
-                        [id]="publicaciones.idPublicacion">
+                    <div class="col-12 col-lg-6" *ngFor="let publicaciones of publicacion 
+                    | orderBy: '-idPublicacion' 
+                    | filter:filterPost"
+                    [id]="publicaciones.idPublicacion">
                         <div class="row card-container">
-                            <div class="col-6">
+                            <div class="col-12 col-sm-6">
                                 <div class="seccion-imagen">
                                     <img class="imagen-publicacion" src="{{publicaciones.fotoLibro}}" alt="" srcset="">
                                 </div>
                             </div>
-                            <div class="col-6 d-f">
+                            <div class="col-12 col-sm-6 d-f">
                                 <div class="seccion-cuerpo">
                                     <p class="titulo-libro">{{publicaciones.titulo}}</p>
                                     <p class="autor-libro">{{publicaciones.autor}}</p>
@@ -35,19 +35,20 @@
         </div>
         <hr>
         <div class="row">
-            <h1 class="subtitulos subtitulo-centrado">COLABORACIONES</h1>
+            <p class="subtitulos">COLABORACIONES</p>
             <div class="hero-publicaciones">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row publicaciones-row-main">
-                        <div class="col-12 col-lg-6" *ngFor="let colaboracion of colaboraciones | filter:filterPost"
-                            [id]="colaboracion.idColaboraciones">
+                        <div class="col-12 col-lg-6" *ngFor="let colaboracion of colaboraciones 
+                        | filter:filterPost"
+                        [id]="colaboracion.idColaboraciones">
                             <div class="row card-container">
-                                <div class="col-6">
+                                <div class="col-12 col-sm-6">
                                     <div class="seccion-imagen">
                                         <img class="imagen-publicacion" [src]="colaboracion.fotoLibro" alt="" srcset="">
                                     </div>
                                 </div>
-                                <div class="col-6 d-f">
+                                <div class="col-12 col-sm-6 d-f">
                                     <div class="seccion-cuerpo">
                                         <p class="titulo-libro">{{colaboracion.titulo}}</p>
                                         <p class="autor-libro">{{colaboracion.autor}}</p>
@@ -67,19 +68,20 @@
         <div class="row">
             <div class="hero-publicaciones">
                 <div class="container-fluid">
-                    <h1 class="subtitulos subtitulo-centrado">REFLEXIONES</h1>
+                    <p class="subtitulos subtitulo-centrado">REFLEXIONES</p>
                     <div class="row publicaciones-row-main">
-                        <div class="col-12 col-lg-6"
-                            *ngFor="let reflexion of reflexiones | orderBy: '-idReflexion' | filter:filterPost"
+                        <div class="col-12 col-lg-6" *ngFor="let reflexion of reflexiones 
+                        | orderBy: '-idReflexion' 
+                        | filter:filterPost"
                             [id]="reflexion.idReflexion">
                             <div class="row card-container">
-                                <div class="col-6">
+                                <div class="col-12 col-sm-6">
                                     <div class="seccion-imagen">
                                         <img class="imagen-publicacion" [src]="reflexion.fotoReflexion" alt=""
                                             srcset="">
                                     </div>
                                 </div>
-                                <div class="col-6 d-f">
+                                <div class="col-12 col-sm-6 d-f">
                                     <div class="seccion-cuerpo">
                                         <h2>{{reflexion.titulo}}</h2>
                                         <h3>{{reflexion.subtitulos}}</h3>
