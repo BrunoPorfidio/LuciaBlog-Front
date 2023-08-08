@@ -116,7 +116,7 @@ hr {
 
 @media all and (min-width:350px) and (max-width: 1110px) {
   .hero-search {
-    margin-top: 4em;
+    margin-top: 4vh;
   }
   
 }
@@ -146,7 +146,7 @@ hr {
 /* Tamaño tablet  */
 @media all and (min-width: 768px) and (max-width: 990px) {
   .hero-search {
-    margin-top: 2vh;
+    margin-top: 5vh;
   }
 
   .btn-ir {
@@ -191,11 +191,11 @@ hr {
 @media all and (min-width: 320px) and (max-width: 575px) {
 
   .hero-search {
-    margin-top: 2vh;
+    margin-top: 5vh;
   }
 
   .search-title{
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 
   .input-search {
@@ -231,7 +231,7 @@ hr {
 @media all and (max-width: 320px) {
 
   .hero-search {
-    margin-top: 3vh;
+    margin-top: 5vh;
   }
 
   .search-title{
