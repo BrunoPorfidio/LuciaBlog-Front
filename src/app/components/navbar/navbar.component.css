@@ -349,7 +349,7 @@ nav ul li ul li a:hover {
   }
 
   .nav {
-    height: 4.5vh;
+    height: 2.5em;
   }
 
   .buttons {
@@ -379,7 +379,7 @@ nav ul li ul li a:hover {
   }
 
   .nav {
-    height: 2em;
+    height: 2.5em;
   }
 
   .n--activo {
@@ -387,7 +387,7 @@ nav ul li ul li a:hover {
   }
 
   .menu-btn {
-    font-size: 18px;
+    font-size: 23px;
   }
 
   nav > ul {
