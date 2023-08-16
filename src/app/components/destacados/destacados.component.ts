@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Colaboraciones } from 'src/app/Models/Colaboraciones';
 import { Publicacion } from 'src/app/Models/Publicacion';
+import { ColaboracionesService } from 'src/app/Services/colaboraciones.service';
 import { PublicacionService } from 'src/app/Services/publicacion.service';
 import Swal from 'sweetalert2';
 
@@ -13,12 +15,22 @@ export class DestacadosComponent implements OnInit{
 
   public publicacion: Publicacion;
 
+  public colaboracion: Colaboraciones;
+
   constructor(
     private publicacionService: PublicacionService,
-    private router: Router
+    private colaboracionService: ColaboracionesService,
   ){}
 
   ngOnInit(): void {
+    
+    this.verUltimaPublicacion();
+
+    this.verUltimaColaboracion();
+    
+  }
+
+  public verUltimaPublicacion(){
     this.publicacionService.verUltimo().subscribe(
       (data) => {
         this.publicacion = data;
@@ -26,12 +38,26 @@ export class DestacadosComponent implements OnInit{
       (err) => {
         Swal.fire(
           'ERROR!',
-          'Error al cargar los Datos',
+          'Error al cargar la Ultima Reseña',
           'error'
         )
-        this.router.navigate(['/luciBlog']);
       }
     );
+  }
+
+  public verUltimaColaboracion(){
+    this.colaboracionService.verUltimo().subscribe(
+      (data) => {
+        this.colaboracion = data;
+      },
+      (err) => {
+        Swal.fire(
+          'ERROR!',
+          'Error al cargar la Ultima Colaboracion',
+          'error'
+        )
+      }
+    )
   }
 
 }

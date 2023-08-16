@@ -51,16 +51,14 @@
 }
 
 .card-title-destacado {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
+.card-img-top,
 .card-img-top-lg {
   max-height: 25em;
 }
 
-.card-img-top {
-  max-height: 25em;
-}
 
 @media all and (max-width: 990px) {
   .hero-destacado {

@@ -22,6 +22,10 @@ export class ColaboracionesService {
     return this.http.get<Colaboraciones[]>(this.ApiColaboraciones + 'ver');
   }
 
+  public verUltimo(){
+    return this.http.get<Colaboraciones>(this.ApiColaboraciones + 'ultimo');
+  }
+
   public buscarColaboracion(id: number){
     return this.http.get<Colaboraciones>(`${this.ApiColaboraciones}${id}`);
   }
