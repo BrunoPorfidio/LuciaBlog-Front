@@ -127,7 +127,7 @@
   /* Tamaño por defecto pantallas  */
   @media all and (max-width: 1360px) {
     .form-section {
-      margin-top: 0vh;
+      padding-top: 0vh;
     }
   
     label,
@@ -198,7 +198,7 @@
   
   @media all and (min-width: 320px) and (max-width: 1110px) {
     .form-section {
-      margin-top: 0vh;
+      padding-top: 0vh;
     }
   }
   
@@ -256,7 +256,7 @@
   
   @media all and (min-width: 320px) and (max-width: 500px) {
     .form-section {
-      margin-top: 0vh;
+      padding-top: 0vh;
     }
     .img-libro {
       max-width: 100%;
