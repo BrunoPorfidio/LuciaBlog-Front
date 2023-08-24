@@ -1,18 +1,17 @@
-<div class="form-about" *ngIf="persona">
+<div class="container-fluid form d-f jc-c al-c" *ngIf="persona">
     <div class="form__body ">
         <form (ngSubmit)="editar()" novalidate #f="ngForm">
-            <div class="row row-header">
-                <div class="col-11">
-                    <h2 >EDITAR INFORMACION PERSONAL</h2>
+            <div class="d-f">
+                <div class="col form-header jc-c al-c">
+                    <p class="titulo">EDITAR INFORMACION PERSONAL</p>
                 </div>
-                <div class="col-1">
+                <div>
                     <i class="bi bi-x btn-back btn-desing" routerLink="/luciBlog"></i>
                 </div>
             </div>
-            <br>
-            <div class="row form__inputs__joined">
+            <div class="row form__inputs__joined jc-c">
                 <div class="col-6">
-                    <label for="nombre"> NOMBRE *</label>
+                    <label for="nombre">NOMBRE</label>
                     <br>
                     <input 
                     class="form__input__name" 
@@ -22,7 +21,7 @@
                     <br>
                 </div>
                 <div class="col-6">
-                    <label for="apellido"> APELLIDO *</label>
+                    <label for="apellido">APELLIDO</label>
                     <br>
                     <input 
                     class="form__input__type" 
@@ -32,10 +31,9 @@
                     [(ngModel)]="persona.apellido" required>
                 </div>
             </div>
-            <br>
             <div class="row">
-                <div class="col-12">
-                    <label for="acercaMi"> ACERCA DE MI *</label>
+                <div class="col-12 jc-c">
+                    <label for="acercaMi">ACERCA DE MI</label>
                     <br>
                     <textarea 
                     class="form__input__textarea" 
@@ -44,20 +42,9 @@
                     [(ngModel)]="persona.acercaMi" required></textarea>
                 </div>
             </div>
-            <div class="row form__inputs__joined mt-5">
-                <div class="col-4">
-                    <label for="celular"> CELULAR *</label>
-                    <br>
-                    <input 
-                    class="form__input__name" 
-                    type="number" 
-                    name="celular"
-                    placeholder="Ej: 11243643" 
-                    [(ngModel)]="persona.celular" required>
-                    <br>
-                </div>
-                <div class="col-4">
-                    <label for="email"> EMAIL *</label>
+            <div class="row form__inputs__joined jc-c">
+                <div class="col-6 col-md-4">
+                    <label for="email">EMAIL</label>
                     <br>
                     <input 
                     class="form__input__name" 
@@ -67,9 +54,19 @@
                     [(ngModel)]="persona.email" required>
                     <br>
                 </div>
-                <br>
-                <div class="col-4">
-                    <label for="ubicacion"> UBICACION *</label>
+                <div class="col-6 col-md-4">
+                    <label for="celular">CELULAR</label>
+                    <br>
+                    <input 
+                    class="form__input__name" 
+                    type="number" 
+                    name="celular"
+                    placeholder="Ej: 11243643" 
+                    [(ngModel)]="persona.celular" required>
+                    <br>
+                </div>
+                <div class="col-6 col-md-4">
+                    <label for="ubicacion">UBICACION</label>
                     <br>
                     <input 
                     class="form__input__type" 
@@ -80,9 +77,8 @@
                 </div>
             </div>
             <br>
-            <br>
-            <div class="submit__btn">
-                <button class="btn btn-send" type="submit">Editar Reseña</button>
+            <div class="d-f jc-c">
+                <button class="btn btn-send" type="submit">Editar Sobre Mi</button>
             </div>
         </form>
     </div>
