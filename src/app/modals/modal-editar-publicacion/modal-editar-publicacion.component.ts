@@ -53,6 +53,13 @@ export class ModalEditarPublicacionComponent implements OnInit{
     )
   }
 
+  cargarImagenDesdeURL(event: ClipboardEvent) {
+    const pastedText = event.clipboardData?.getData('text');
+    if (pastedText) {
+      this.previsualizacion = pastedText;
+    }
+  }
+
   editar(): void{
     const id = this.activatedRoute.snapshot.params['idPublicacion'];
     this.publicacionService.editarPublicacion(id, this.publicacion).subscribe(
@@ -72,32 +79,4 @@ export class ModalEditarPublicacionComponent implements OnInit{
         this.router.navigate(['/publicaciones']);
       })
   }
-
-  capturarImagen(event: any){
-    const imagenCapturada = event.target.files[0];
-    this.extraerBase64(imagenCapturada).then((imagen: any) => {
-      this.previsualizacion = imagen.base;
-      this.publicacion.fotoLibro = imagen.base;
-    });
-  }
-
-  extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
-    try{
-      const unsafeImg = window.URL.createObjectURL($event);
-      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-      const reader = new FileReader();
-      reader.readAsDataURL($event);
-      reader.onload = () => {
-        resolve({
-          base: reader.result
-        });
-      };
-      reader.onerror = error => {
-        resolve({
-          base: null
-        });
-      };
-    } catch(e){
-    }
-  })
 }

@@ -50,6 +50,13 @@ export class ModalEditarNovedadComponent implements OnInit {
     );
   }
 
+  cargarImagenDesdeURL(event: ClipboardEvent) {
+    const pastedText = event.clipboardData?.getData('text');
+    if (pastedText) {
+      this.previsualizacion = pastedText;
+    }
+  }
+
   editar(): void {
     const id = this.activatedRoute.snapshot.params['idNovedad'];
     this.novedadesService.editarNovedad(id, this.novedades).subscribe(
@@ -69,32 +76,4 @@ export class ModalEditarNovedadComponent implements OnInit {
       }
     );
   }
-
-  capturarImagen(event: any) {
-    const imagenCapturada = event.target.files[0];
-    this.extraerBase64(imagenCapturada).then((imagen: any) => {
-      this.previsualizacion = imagen.base;
-      this.novedades.fotoLibro = imagen.base;
-    });
-  }
-
-  extraerBase64 = async ($event: any) =>
-    new Promise((resolve, reject) => {
-      try {
-        const unsafeImg = window.URL.createObjectURL($event);
-        const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-        const reader = new FileReader();
-        reader.readAsDataURL($event);
-        reader.onload = () => {
-          resolve({
-            base: reader.result,
-          });
-        };
-        reader.onerror = (error) => {
-          resolve({
-            base: null,
-          });
-        };
-      } catch (e) {}
-    });
 }

@@ -36,8 +36,15 @@ export class ModalNuevoColaboracionComponent implements OnInit {
         this.isAdmin = true;
       }
     })
-
   }
+
+  cargarImagenDesdeURL(event: ClipboardEvent) {
+    const pastedText = event.clipboardData?.getData('text');
+    if (pastedText) {
+      this.previsualizacion = pastedText;
+    }
+  }
+  
 
   publicar(): void {
     const formData = {
@@ -77,31 +84,4 @@ export class ModalNuevoColaboracionComponent implements OnInit {
       }
     );
   }
-
-  capturarImagen(event: any) {
-    const imagenCapturada = event.target.files[0];
-    this.extraerBase64(imagenCapturada).then((imagen: any) => {
-      this.previsualizacion = imagen.base;
-    });
-  }
-
-  extraerBase64 = async ($event: any) =>
-    new Promise((resolve, reject) => {
-      try {
-        const unsafeImg = window.URL.createObjectURL($event);
-        const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-        const reader = new FileReader();
-        reader.readAsDataURL($event);
-        reader.onload = () => {
-          resolve({
-            base: reader.result,
-          });
-        };
-        reader.onerror = (error) => {
-          resolve({
-            base: null,
-          });
-        };
-      } catch (e) {}
-    });
 }

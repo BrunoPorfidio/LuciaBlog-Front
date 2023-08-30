@@ -1,5 +1,5 @@
 .form-section {
-    margin-top: 10vh;
+    padding-top: 15vh;
   }
   
   .form {
@@ -82,7 +82,8 @@
   }
   
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url {
     width: 100%;
     height: 2.5em;
     text-align: center;
@@ -144,7 +145,8 @@
     }
   
     .form__input__name,
-    .form__input__type {
+    .form__input__type,
+    .form__input__url {
       font-size: 0.8em;
       width: 100%;
       height: 2.5em;
@@ -185,7 +187,8 @@
     }
   
     .form__input__name,
-    .form__input__type {
+    .form__input__type,
+    .form__input__url {
       font-size: 0.8em;
       width: 100%;
       height: 2.5em;
@@ -213,7 +216,8 @@
     }
   
     .form__input__name,
-    .form__input__type {
+    .form__input__type,
+    .form__input__url {
       font-size: 0.8em;
       width: 100%;
       height: 2.5em;
@@ -243,7 +247,8 @@
     }
   
     .form__input__name,
-    .form__input__type {
+    .form__input__type,
+    .form__input__url {
       font-size: 0.8em;
       width: 100%;
       height: 2.5em;
@@ -290,7 +295,8 @@
       height: 2em;
     }
     .form__input__name,
-    .form__input__type {
+    .form__input__type,
+    .form__input__url {
       font-size: 0.6em;
       width: 100%;
       height: 2.5em;
@@ -335,7 +341,8 @@
     }
   
     .form__input__name,
-    .form__input__type {
+    .form__input__type,
+    .form__input__url {
       font-size: 0.6em;
       width: 100%;
       height: 2.5em;

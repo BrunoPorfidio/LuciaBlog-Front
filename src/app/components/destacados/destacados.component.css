@@ -13,6 +13,11 @@
   overflow: hidden;
 }
 
+.destacado-body{
+  z-index: 100;
+  overflow: hidden;
+}
+
 .subtitulos {
   font-family: "AbibasMedium";
   font-size: 3.5em;
@@ -22,11 +27,8 @@
   margin: 0em -2em 2em 2em;
 }
 
-.card-destacado-lg {
-  object-fit: cover;
-}
-
 .card-img-top-lg {
+  object-fit: cover;
   max-height: 25em;
   background-size: 100vw;
   transform: scale(var(--escala, 1));
@@ -58,6 +60,10 @@
 .card-img-top-lg {
   max-height: 25em;
 }
+
+/* .card-body{
+  overflow: hidden;
+} */
 
 
 @media all and (max-width: 990px) {

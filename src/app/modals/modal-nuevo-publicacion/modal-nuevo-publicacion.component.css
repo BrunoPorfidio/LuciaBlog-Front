@@ -38,7 +38,6 @@
 
 .btn-back:hover,
 .bi-x-circle-fill:hover,
-.form__input__add:hover,
 .btn-send:hover,
 .btn-desing:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
@@ -64,17 +63,6 @@
   justify-content: center;
 }
 
-.form__input__add {
-  width: 4em;
-  height: 4em;
-  background: linear-gradient(90deg, pink, rgb(106, 156, 199));
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.img-btn {
-  display: none;
-}
 
 .form__input {
   width: 90%;
@@ -89,7 +77,8 @@
 }
 
 .form__input__name,
-.form__input__type {
+.form__input__type,
+.form__input__url {
   width: 100%;
   height: 2.5em;
   text-align: center;
@@ -151,7 +140,8 @@
   }
 
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url {
     font-size: 0.8em;
     width: 100%;
     height: 2.5em;
@@ -192,7 +182,8 @@
   }
 
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url  {
     font-size: 0.8em;
     width: 100%;
     height: 2.5em;
@@ -220,7 +211,8 @@
   }
 
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url  {
     font-size: 0.8em;
     width: 100%;
     height: 2.5em;
@@ -250,7 +242,8 @@
   }
 
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url  {
     font-size: 0.8em;
     width: 100%;
     height: 2.5em;
@@ -297,7 +290,8 @@
     height: 2em;
   }
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url  {
     font-size: 0.6em;
     width: 100%;
     height: 2.5em;
@@ -341,7 +335,8 @@
   }
 
   .form__input__name,
-  .form__input__type {
+  .form__input__type,
+  .form__input__url  {
     font-size: 0.6em;
     width: 100%;
     height: 2.5em;

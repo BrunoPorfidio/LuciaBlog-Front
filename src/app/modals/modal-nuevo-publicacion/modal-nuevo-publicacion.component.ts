@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Publicacion } from 'src/app/Models/Publicacion';
 import { PublicacionService } from 'src/app/Services/publicacion.service';
 import { TokenService } from 'src/app/Services/token.service';
 import Swal from 'sweetalert2';
+import {NgxImageCompressService} from 'ngx-image-compress';
 
 @Component({
   selector: 'app-modal-nuevo-publicacion',
@@ -14,7 +14,6 @@ import Swal from 'sweetalert2';
 export class ModalNuevoPublicacionComponent implements OnInit {
   publicacion: Publicacion = new Publicacion('', '', '', 0, '', '', 0, '', '');
 
-  public imagenes: any = [];
   public previsualizacion: string;
 
   roles: string[];
@@ -22,10 +21,30 @@ export class ModalNuevoPublicacionComponent implements OnInit {
 
   constructor(
     private publicacionService: PublicacionService,
-    private sanitizer: DomSanitizer,
     private router: Router,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private imageCompress: NgxImageCompressService
   ) {}
+
+
+  cargarImagenDesdeURL(event: ClipboardEvent) {
+    const pastedText = event.clipboardData?.getData('text');
+    if (pastedText) {
+      this.previsualizacion = pastedText;
+    }
+  }
+  
+
+//   compressFile() {
+//     this.imageCompress.uploadFile().then(({image, orientation}) => {
+
+//         this.imageCompress
+//             .compressFile(image, orientation, 55, 50) // 50% ratio, 50% quality
+//             .then(compressedImage => {
+//                 this.previsualizacion = compressedImage;
+//             });
+//     });
+// }
 
   ngOnInit(): void {
 
@@ -77,30 +96,5 @@ export class ModalNuevoPublicacionComponent implements OnInit {
     );
   }
 
-  capturarImagen(event: any) {
-    const imagenCapturada = event.target.files[0];
-    this.extraerBase64(imagenCapturada).then((imagen: any) => {
-      this.previsualizacion = imagen.base;
-    });
-  }
 
-  extraerBase64 = async ($event: any) =>
-    new Promise((resolve, reject) => {
-      try {
-        const unsafeImg = window.URL.createObjectURL($event);
-        const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-        const reader = new FileReader();
-        reader.readAsDataURL($event);
-        reader.onload = () => {
-          resolve({
-            base: reader.result,
-          });
-        };
-        reader.onerror = (error) => {
-          resolve({
-            base: null,
-          });
-        };
-      } catch (e) {}
-    });
 }

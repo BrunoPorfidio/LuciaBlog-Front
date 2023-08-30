@@ -2,15 +2,6 @@
     <div class="row">
         <div class="col-12 col-lg-6 d-f al-c jc-c">
             <div class="image-container">
-                <input 
-                [(ngModel)]="reflexiones.fotoReflexion" 
-                class="img-btn" 
-                name="image-libro"
-                (change)="capturarImagen($event)" 
-                type="file"
-                alife-file-to-base64 
-                id="image-libro"
-                accept="image/png, image/jpeg">
                 <div class="foto-container" *ngIf="previsualizacion">
                     <img class="img-libro" [src]="previsualizacion" alt="" srcset="">
                 </div>
@@ -30,16 +21,6 @@
                         </div>
                         <div class="row form__inputs__joined">
                             <div class="col-6">
-                                <div class="icon-container-novedades">
-                                    <p class="logotipo__title">FOTO REFLEXION</p>
-                                    <label class="d-f" for="image-libro">
-                                        <span class="container form__input__add d-f jc-c al-c">
-                                            <i class="bi bi-plus-lg"></i>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-6">
                                 <label for="tituloReflexion">NOMBRE DE REFLEXION</label>
                                 <br>
                                 <input 
@@ -50,6 +31,20 @@
                                 [(ngModel)]="reflexiones.titulo" 
                                 required>
                                 <br>
+                            </div>
+                            <div class="col-6">
+                                <label class="d-f" for="image-libro">URL FOTO
+                                </label>
+                                <input 
+                                [(ngModel)]="reflexiones.fotoReflexion" 
+                                (paste)="cargarImagenDesdeURL($event)" 
+                                class="form__input__url"
+                                name="image-libro"
+                                type="text" 
+                                alife-file-to-base64 
+                                id="image-libro"
+                                accept="image/png, image/jpeg"
+                                placeholder="https://www.google/com/image.png">
                             </div>
                         </div>
                         <div class="row">

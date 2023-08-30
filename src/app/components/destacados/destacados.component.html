@@ -6,21 +6,21 @@
       </div>
       <div class="col-12 col-md-6">
         <div class="card card-destacado">
-          <img class="card-img-top-lg card-destacado-lg" *ngIf="publicacion" 
-          [src]="publicacion.fotoLibro"
-          alt="Imagen de la Ultima Reseña" 
-          routerLink="/publicacion/{{publicacion.idPublicacion}}">
+          <img class="card-img-top-lg" *ngIf="publicacion" 
+            [src]="publicacion.fotoLibro"
+            alt="Imagen de la Ultima Reseña" 
+            routerLink="/publicacion/{{publicacion.idPublicacion}}">
           <div class="card-body">
-            <h5 class="card-title-destacado">Ultima Reseña</h5>
+          <h5 class="card-title-destacado">Ultima Reseña</h5>
           </div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="card card-destacado">
           <img class="card-img-top card-destacado" *ngIf="colaboracion" 
-          [src]="colaboracion.fotoLibro"
-          alt="Imagen del Ultimo Libro Colaboracion" 
-          routerLink="/colaboracion/{{colaboracion.idColaboraciones}}">
+            [src]="colaboracion.fotoLibro"
+            alt="Imagen del Ultimo Libro Colaboracion" 
+            routerLink="/colaboracion/{{colaboracion.idColaboraciones}}">
           <div class="card-body">
             <h5 class="card-title-destacado">Ultima Colaboracion</h5>
           </div>
