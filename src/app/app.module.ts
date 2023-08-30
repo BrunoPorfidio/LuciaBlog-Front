@@ -33,6 +33,8 @@ import { ModalNuevoReflexionComponent } from './modals/modal-nuevo-reflexion/mod
 import { ModalEditarReflexionComponent } from './modals/modal-editar-reflexion/modal-editar-reflexion.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { ModalEditarSobreMiComponent } from './modals/modal-editar-sobre-mi/modal-editar-sobre-mi.component';
+import {NgxImageCompressService} from 'ngx-image-compress';
+
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { ModalEditarSobreMiComponent } from './modals/modal-editar-sobre-mi/moda
     ReactiveFormsModule,
     SweetAlert2Module
   ],
-  providers: [interceptorPorvider],
+  providers: [
+    interceptorPorvider,
+    NgxImageCompressService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
